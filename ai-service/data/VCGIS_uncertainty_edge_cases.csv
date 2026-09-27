@@ -1,0 +1,19 @@
+complaint_id,complaint_text,department,subcategory,priority,is_ambiguous,needs_volunteer_review,expected_confidence_band,ambiguity_reason,edge_case_code
+EDGE-A,Fix this road.,UNCERTAIN,UNCERTAIN,LOW,true,true,LOW,Too little detail,A
+EDGE-B,It is bad there send someone.,UNCERTAIN,UNCERTAIN,LOW,true,true,LOW,No issue or location identified,O
+EDGE-C,Road is flooded and live wire is hanging there.,UNCERTAIN,UNCERTAIN,CRITICAL,true,true,LOW,Multiple departments and immediate hazard,C
+EDGE-D,There is a leak and road is broken.,UNCERTAIN,UNCERTAIN,HIGH,true,true,LOW,Mixed road and water issue,D
+EDGE-E,The light is gone.,UNCERTAIN,UNCERTAIN,LOW,true,true,LOW,Streetlight or power supply is unclear,E
+EDGE-F,No pothole now but streetlight is out.,UNCERTAIN,UNCERTAIN,MEDIUM,true,true,LOW,Negated cue conflicts with actual issue,F
+EDGE-G,Maybe transformer or pump is failing.,UNCERTAIN,UNCERTAIN,MEDIUM,true,true,LOW,Conflicting equipment symptoms,P
+EDGE-H,Power problem near the place mentioned earlier.,UNCERTAIN,UNCERTAIN,MEDIUM,true,true,LOW,Missing location and symptom,B
+EDGE-I,Water supply is low and road has a pothole.,UNCERTAIN,UNCERTAIN,MEDIUM,true,true,LOW,Two separate civic issues,D
+EDGE-J,A hole by bridge may be road or culvert failure.,UNCERTAIN,UNCERTAIN,HIGH,true,true,LOW,Overlapping categories,E
+EDGE-K,Current hogtide agide wire down ide near school.,ELECTRICITY,Broken/Low-Hanging Wire,HIGH,false,true,MEDIUM,Mixed transliterated language,K
+EDGE-L,Namma area alli neeru baralla borewell work agtilla.,WATER,No Water Supply,HIGH,false,false,MEDIUM,Mixed transliterated language,L
+EDGE-M,Fix the road before rain potholes are growing.,ROAD,Pothole,MEDIUM,false,false,HIGH,Repeated complaint pattern,N
+EDGE-N,A public water leak is near market but street is unknown.,UNCERTAIN,UNCERTAIN,MEDIUM,true,true,LOW,Insufficient location detail,B
+EDGE-O,Something is wrong with supply and no location is given.,UNCERTAIN,UNCERTAIN,MEDIUM,true,true,LOW,Vague incomplete description,O
+EDGE-P,Smell by road and people sick could be water or wire smoke.,UNCERTAIN,UNCERTAIN,HIGH,true,true,LOW,Conflicting evidence and safety concern,P
+EDGE-Q,The word road appears but complaint is about pension payment.,OUT_OF_SCOPE,OUT_OF_SCOPE,LOW,false,false,MEDIUM,Misleading keyword,H
+EDGE-R,I heard a transformer may be noisy but have no report.,OUT_OF_SCOPE,OUT_OF_SCOPE,LOW,true,true,LOW,Hypothetical mention,G
