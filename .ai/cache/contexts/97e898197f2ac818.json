@@ -1,0 +1,50 @@
+{
+  "task": "Phase 10 Administrator Portal",
+  "mode": "compact",
+  "graph_version": 27,
+  "generated": "2026-09-13T08:10:50+0530",
+  "features": [],
+  "apis": [],
+  "services": [
+    "backend"
+  ],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/features/volunteer-portal.md"
+  ],
+  "decisions": [],
+  "changes": [
+    "change-2026-09-13-026",
+    "change-2026-09-13-025",
+    "change-2026-09-13-024",
+    "change-2026-09-13-023",
+    "change-2026-09-13-022"
+  ],
+  "confidence": 0.36,
+  "files": [
+    {
+      "path": ".ai/docs/features/volunteer-portal.md",
+      "reason": "direct name/concept match",
+      "priority": 1,
+      "type": "documentation",
+      "hash": "7123e9108633721fdf967833b92ccad3a7400569094be423ead18c31916f98a7"
+    },
+    {
+      "path": "PROJECT_PHASES_AND_AUTH_GUIDE.md",
+      "reason": "direct name/concept match",
+      "priority": 2,
+      "type": "file",
+      "hash": "534759e081d7fdd4ea0db1dc74c0d1d83033bb70df24c3bb30e48cb8eed52cc9"
+    },
+    {
+      "path": "backend/src/scripts/verify-official-portal.ts",
+      "reason": "direct name/concept match",
+      "priority": 3,
+      "type": "file",
+      "hash": "010c1df1bd5c48c75325744cb0d28baaa6aa311d5e6ea4a86e916fa8da48813d"
+    }
+  ],
+  "text": "TASK\nPhase 10 Administrator Portal\n\nFEATURE\n  (no strong feature match)\n\nSERVICES\n  Express Backend\n\nRELEVANT EXPRESS BACKEND\n  backend/src/scripts/verify-official-portal.ts\n\nRELEVANT OTHER\n  .ai/docs/features/volunteer-portal.md\n  PROJECT_PHASES_AND_AUTH_GUIDE.md\n\nRECENT RELATED CHANGES\n  [change-2026-09-13-026] Phase 9 RAG Knowledge System (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-025] Phase 8 Generative AI Decision Support (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-024] Phase 7 AI Intelligence Microservice (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-023] Phase 7 AI Intelligence Microservice (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-022] Phase 6: SLA Monitoring and Multi-Tier Escalation Engine (unknown, 2026-09-13, confirmed)\n\nDOCUMENTATION\n  .ai/docs/features/volunteer-portal.md \u2014 Feature: Village Volunteer Portal & Assisted Access Layer\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: architecture.jpeg\n  Relevant relationships:\n    Administrator --MANAGES_THROUGH--> Web App / Frontend (confidence 0.94)\n\nRECOMMENDED FILES TO READ\n  1. .ai/docs/features/volunteer-portal.md  (direct name/concept match)\n  2. PROJECT_PHASES_AND_AUTH_GUIDE.md  (direct name/concept match)\n  3. backend/src/scripts/verify-official-portal.ts  (direct name/concept match)\n\nPOTENTIAL IMPACT\n  Express Backend\n\nCONFIDENCE\n  0.36\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`.",
+  "last_used": "2026-09-13T08:13:23+0530"
+}

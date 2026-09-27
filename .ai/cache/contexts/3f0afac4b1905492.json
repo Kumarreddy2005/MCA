@@ -1,0 +1,74 @@
+{
+  "task": "Citizen Portal",
+  "mode": "compact",
+  "graph_version": 13,
+  "generated": "2026-09-12T20:18:12+0530",
+  "features": [
+    "auth-otp",
+    "complaint-registration"
+  ],
+  "apis": [
+    "GET /api/auth/me",
+    "POST /api/auth/citizen/send-otp",
+    "POST /api/auth/citizen/verify-otp",
+    "POST /api/auth/logout",
+    "POST /api/auth/refresh",
+    "POST /api/auth/staff",
+    "POST /api/auth/staff/login",
+    "POST /api/v1/auth/citizen/request-otp",
+    "POST /api/v1/auth/citizen/send-otp",
+    "POST /api/v1/auth/citizen/signup",
+    "POST /api/v1/auth/citizen/verify-otp"
+  ],
+  "services": [
+    "backend",
+    "frontend"
+  ],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/decisions/0002-volunteer-human-in-loop.md"
+  ],
+  "decisions": [
+    "decision:0002-volunteer-human-in-loop"
+  ],
+  "changes": [
+    "change-2026-09-12-014",
+    "change-2026-09-12-011",
+    "change-2026-09-12-008",
+    "change-2026-09-12-006",
+    "change-2026-09-12-002"
+  ],
+  "confidence": 0.95,
+  "files": [
+    {
+      "path": "backend/src/controllers/auth.controller.ts",
+      "reason": "direct name/concept match; implements feature auth-otp",
+      "priority": 1,
+      "type": "backend-controller",
+      "hash": "1efcba8e6aee121015333ddb66f52899bc6c8c307149935a6c405ab949e712cd"
+    },
+    {
+      "path": "backend/src/routes/auth.routes.ts",
+      "reason": "direct name/concept match; implements feature auth-otp",
+      "priority": 2,
+      "type": "module",
+      "hash": "43a6f9b232b47de965438f0f10dbd23bf2d14755f8788924a536157b9be2b5a0"
+    },
+    {
+      "path": "backend/src/models/user.model.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 3,
+      "type": "model",
+      "hash": "fd4dc5d882e875c80c337dbe52e016941e97bd93e7a286d62eb59f381197b304"
+    },
+    {
+      "path": "frontend/src/pages/citizen/CitizenDashboard.tsx",
+      "reason": "direct name/concept match",
+      "priority": 4,
+      "type": "frontend-page",
+      "hash": "ece12ea73fb2a213d53374aefb871d38c521fd91241d5bbdfca1af04e21ab1b3"
+    }
+  ],
+  "text": "TASK\nCitizen Portal\n\nFEATURE\n  auth-otp \u2014 Citizen OTP Authentication\n  complaint-registration \u2014 Complaint Registration (Volunteer)\n\nSERVICES\n  Express Backend\n  Frontend (React)\n\nRELEVANT FRONTEND\n  frontend/src/pages/citizen/CitizenDashboard.tsx\n\nRELEVANT EXPRESS BACKEND\n  backend/src/controllers/auth.controller.ts\n  backend/src/routes/auth.routes.ts\n  backend/src/models/user.model.ts\n\nRELEVANT APIs\n  GET /api/auth/me  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/auth/citizen/send-otp  \u2190 backend/src/routes/auth.routes.ts, task keyword match\n  POST /api/auth/citizen/verify-otp  \u2190 backend/src/routes/auth.routes.ts, task keyword match\n  POST /api/auth/logout  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/auth/refresh  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/auth/staff  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/auth/staff/login  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/v1/auth/citizen/request-otp  \u2190 task keyword match\n  POST /api/v1/auth/citizen/send-otp  \u2190 task keyword match\n  POST /api/v1/auth/citizen/signup  \u2190 task keyword match\n  POST /api/v1/auth/citizen/verify-otp  \u2190 task keyword match\n\nRECENT RELATED CHANGES\n  [change-2026-09-12-014] Phase 1: Authentication & RBAC (Citizen OTP, Staff bcrypt auth, JWT tokens, RBAC middleware, User models, seed script, frontend auth state & protected portals) (unknown, 2026-09-12, confirmed)\n  [change-2026-09-12-011] VCGIS Phase 0 Foundation: clean reset, project state, frontend/backend/AI service setup (unknown, 2026-09-12, confirmed)\n  [change-2026-09-12-008] Implement citizen signup, authentication, admin staff creation, RBAC, account status, and frontend auth integration (github_copilot_vscode_agent, 2026-09-12, confirmed)\n  [change-2026-09-12-006] Implement citizen signup and role-based account provisioning (github_copilot_vscode_agent, 2026-09-12, confirmed)\n  [change-2026-09-12-002] Implement volunteer complaint registration with AI analysis (github_copilot_vscode_agent, 2026-09-12, confirmed)\n\nARCHITECTURAL DECISIONS\n  0002-volunteer-human-in-loop \u2014 0002 Volunteer Human In Loop (.ai/docs/decisions/0002-volunteer-human-in-loop.md)\n\nDOCUMENTATION\n  .ai/docs/decisions/0002-volunteer-human-in-loop.md \u2014 ADR 0002 \u2014 Volunteer as Human-in-the-Loop Access Layer\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: architecture.jpeg\n  Relevant relationships:\n    Citizen --SUBMITS_TO--> Web App / Frontend (confidence 0.96)\n\nRECOMMENDED FILES TO READ\n  1. backend/src/controllers/auth.controller.ts  (direct name/concept match; implements feature auth-otp)\n  2. backend/src/routes/auth.routes.ts  (direct name/concept match; implements feature auth-otp)\n  3. backend/src/models/user.model.ts  (implements feature auth-otp)\n  4. frontend/src/pages/citizen/CitizenDashboard.tsx  (direct name/concept match)\n\nPOTENTIAL IMPACT\n  Express Backend \u2192 Frontend (React)\n\nCONFIDENCE\n  0.95\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

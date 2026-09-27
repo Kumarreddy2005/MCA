@@ -1,0 +1,140 @@
+{
+  "task": "add SMS notification when complaint is resolved",
+  "mode": "compact",
+  "graph_version": 1,
+  "generated": "2026-09-12T07:45:06+0530",
+  "features": [
+    "complaint-tracking",
+    "notifications"
+  ],
+  "apis": [
+    "GET /api/v1/notifications",
+    "GET /api/v1/notifications/unread-count",
+    "PATCH /api/v1/notifications/:id/read",
+    "PATCH /api/v1/notifications/read-all"
+  ],
+  "services": [
+    "backend",
+    "frontend",
+    "mongodb"
+  ],
+  "database": [
+    "notification_model",
+    "status_history_model"
+  ],
+  "tests": [],
+  "docs": [
+    ".ai/docs/features/complaint-lifecycle.md"
+  ],
+  "decisions": [],
+  "changes": [],
+  "confidence": 0.95,
+  "files": [
+    {
+      "path": "backend/src/controllers/notification.controller.ts",
+      "reason": "direct name/concept match; implements feature notifications",
+      "priority": 1,
+      "type": "backend-controller",
+      "hash": "352bdceed6f5f997d7332b40550a6553d66c150e81b7ded9598221904e4d92a4"
+    },
+    {
+      "path": "backend/src/models/notification.model.ts",
+      "reason": "direct name/concept match; implements feature notifications",
+      "priority": 2,
+      "type": "model",
+      "hash": "c435af05cd9d0aace33951cd44bdc857ee59a3394e9b653e5a323389adf403f4"
+    },
+    {
+      "path": "backend/src/repositories/notification.repository.ts",
+      "reason": "direct name/concept match; implements feature notifications",
+      "priority": 3,
+      "type": "backend-repository",
+      "hash": "597d6d8bb3e478fa47bbabba3276fe98cb6f9fc213cdc1378e03fd0d7c121b4c"
+    },
+    {
+      "path": "backend/src/routes/notification.routes.ts",
+      "reason": "direct name/concept match; implements feature notifications",
+      "priority": 4,
+      "type": "module",
+      "hash": "3627bf10fadbdec9f6f2aa79f083dfd103f25847f976fab5ca723a4985d97162"
+    },
+    {
+      "path": "backend/src/services/notification.service.ts",
+      "reason": "direct name/concept match; implements feature notifications",
+      "priority": 5,
+      "type": "backend-service",
+      "hash": "57a6d5d330f88e037cdd071e43a31b12f94debedd2462687d5ce4265be6a021c"
+    },
+    {
+      "path": "backend/src/models/statusHistory.model.ts",
+      "reason": "implements feature complaint-tracking",
+      "priority": 6,
+      "type": "model",
+      "hash": "b47acedc8d269e6f5124b1a98855ad801c39d8256238152d01c734ee9876579a"
+    },
+    {
+      "path": "backend/src/repositories/statusHistory.repository.ts",
+      "reason": "implements feature complaint-tracking",
+      "priority": 7,
+      "type": "backend-repository",
+      "hash": "c255205e7fa9d90fcda3955189b0e3b809b88ff3efdaea4e7f9c13f875579e70"
+    },
+    {
+      "path": "backend/src/services/complaint.service.ts",
+      "reason": "implements feature complaint-tracking",
+      "priority": 8,
+      "type": "backend-service",
+      "hash": "26a74259828d19ac6ee4d2e100e053bc80af2a024d1de2e1594a369aeb5b8985"
+    },
+    {
+      "path": "frontend/src/components/timeline/Timeline.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 9,
+      "type": "frontend-component",
+      "hash": "495c71c914052db19ab97eef50566488415803d45a031fafbd8e01bfc7f480ca"
+    },
+    {
+      "path": "frontend/src/pages/Department/ComplaintDetails/DepartmentComplaintDetails.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 10,
+      "type": "frontend-page",
+      "hash": "c4aa9001d3af0f76ec29b2d1130574ed738f2e384ec99c7eb97780a8d93fc637"
+    },
+    {
+      "path": "frontend/src/pages/Department/Complaints/DepartmentComplaints.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 11,
+      "type": "frontend-page",
+      "hash": "783ac7c64de2704acb8ec0b29f74e130c1ec1d555ce95df6d47eb575e25b25f6"
+    },
+    {
+      "path": "frontend/src/pages/User/ComplaintDetails/ComplaintDetails.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 12,
+      "type": "frontend-page",
+      "hash": "9af1dbe258e986cfa1e4cf99a7fd898426c9d947c37971552a43de36592e3d07"
+    },
+    {
+      "path": "frontend/src/pages/User/Complaints/MyComplaints.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 13,
+      "type": "frontend-page",
+      "hash": "62d11b2299c27be8ff814b1df10c24cb124b427610277c29a9dd14e0ae2c0644"
+    },
+    {
+      "path": "frontend/src/pages/Volunteer/ComplaintDetails/VolunteerComplaintDetails.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 14,
+      "type": "frontend-page",
+      "hash": "7801eef167b75f3e135ada4d52cfd6fdfc5210c7b42f885589af647b09ce3db7"
+    },
+    {
+      "path": "frontend/src/pages/Volunteer/Complaints/VolunteerComplaints.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 15,
+      "type": "frontend-page",
+      "hash": "f5c5fa0de9ed18dd31ff59f03cbf15db188cf231e46bbedc1b0793d95541a58c"
+    }
+  ],
+  "text": "TASK\nadd SMS notification when complaint is resolved\n\nFEATURE\n  complaint-tracking \u2014 Complaint Tracking & Status History\n  notifications \u2014 Notifications\n\nSERVICES\n  Express Backend\n  Frontend (React)\n  MongoDB\n\nRELEVANT FRONTEND\n  frontend/src/components/timeline/Timeline.tsx\n  frontend/src/pages/Department/ComplaintDetails/DepartmentComplaintDetails.tsx\n  frontend/src/pages/Department/Complaints/DepartmentComplaints.tsx\n  frontend/src/pages/User/ComplaintDetails/ComplaintDetails.tsx\n  frontend/src/pages/User/Complaints/MyComplaints.tsx\n  frontend/src/pages/Volunteer/ComplaintDetails/VolunteerComplaintDetails.tsx\n  frontend/src/pages/Volunteer/Complaints/VolunteerComplaints.tsx\n\nRELEVANT EXPRESS BACKEND\n  backend/src/controllers/notification.controller.ts\n  backend/src/models/notification.model.ts\n  backend/src/repositories/notification.repository.ts\n  backend/src/routes/notification.routes.ts\n  backend/src/services/notification.service.ts\n  backend/src/models/statusHistory.model.ts\n  backend/src/repositories/statusHistory.repository.ts\n  backend/src/services/complaint.service.ts\n\nRELEVANT DATABASE\n  notification_model\n  status_history_model\n\nRELEVANT APIs\n  GET /api/v1/notifications  \u2190 backend/src/routes/notification.routes.ts, task keyword match\n  GET /api/v1/notifications/unread-count  \u2190 backend/src/routes/notification.routes.ts, task keyword match\n  PATCH /api/v1/notifications/:id/read  \u2190 backend/src/routes/notification.routes.ts, task keyword match\n  PATCH /api/v1/notifications/read-all  \u2190 backend/src/routes/notification.routes.ts, task keyword match\n\nDOCUMENTATION\n  .ai/docs/features/complaint-lifecycle.md \u2014 Complaint Lifecycle\n\nRECOMMENDED FILES TO READ\n  1. backend/src/controllers/notification.controller.ts  (direct name/concept match; implements feature notifications)\n  2. backend/src/models/notification.model.ts  (direct name/concept match; implements feature notifications)\n  3. backend/src/repositories/notification.repository.ts  (direct name/concept match; implements feature notifications)\n  4. backend/src/routes/notification.routes.ts  (direct name/concept match; implements feature notifications)\n  5. backend/src/services/notification.service.ts  (direct name/concept match; implements feature notifications)\n  6. backend/src/models/statusHistory.model.ts  (implements feature complaint-tracking)\n\nPOTENTIAL IMPACT\n  Express Backend \u2192 Frontend (React) \u2192 MongoDB\n\nCONFIDENCE\n  0.95\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

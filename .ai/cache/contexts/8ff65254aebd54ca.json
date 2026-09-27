@@ -1,0 +1,35 @@
+{
+  "task": "add a new complaint AI feature",
+  "mode": "normal",
+  "graph_version": 1,
+  "generated": "2026-09-12T12:39:10+0530",
+  "features": [],
+  "apis": [],
+  "services": [],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/features/ai-pipeline.md",
+    ".ai/docs/features/complaint-lifecycle.md"
+  ],
+  "decisions": [],
+  "changes": [],
+  "confidence": 0.29,
+  "files": [
+    {
+      "path": ".ai/docs/features/ai-pipeline.md",
+      "reason": "direct name/concept match",
+      "priority": 1,
+      "type": "documentation",
+      "hash": "0ce431a45c696ae6c454805ade1c65ae1a839204852d62b63cd5261f864ad967"
+    },
+    {
+      "path": ".ai/docs/features/complaint-lifecycle.md",
+      "reason": "direct name/concept match",
+      "priority": 2,
+      "type": "documentation",
+      "hash": "da3d1b866db8b1d5d2cd321a11cd544ad5ed04d3e432cac03dfbfb1382432ccc"
+    }
+  ],
+  "text": "TASK\nadd a new complaint AI feature\n\nFEATURE\n  (no strong feature match)\n\nSERVICES\n  (undetermined)\n\nRELEVANT OTHER\n  .ai/docs/features/ai-pipeline.md\n  .ai/docs/features/complaint-lifecycle.md\n\nDOCUMENTATION\n  .ai/docs/features/ai-pipeline.md \u2014 AI Analysis Pipeline\n  .ai/docs/features/complaint-lifecycle.md \u2014 Complaint Lifecycle\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: Volunteer_CGIS_Final_Architecture.pdf\n  Relevant relationships:\n    Application Backend --SENDS_COMPLAINT_DATA--> FastAPI AI Service (confidence 0.9)\n\nRECOMMENDED FILES TO READ\n  1. .ai/docs/features/ai-pipeline.md  (direct name/concept match)\n  2. .ai/docs/features/complaint-lifecycle.md  (direct name/concept match)\n\nPOTENTIAL IMPACT\n  local\n\nCONFIDENCE\n  0.29\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

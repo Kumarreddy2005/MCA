@@ -1,0 +1,93 @@
+{
+  "task": "Phase 3: Village Volunteer Portal",
+  "mode": "normal",
+  "graph_version": 15,
+  "generated": "2026-09-12T20:28:46+0530",
+  "features": [
+    "complaint-registration",
+    "admin-user-management"
+  ],
+  "apis": [
+    "GET /api/complaints/:id",
+    "GET /api/complaints/categories",
+    "GET /api/complaints/my",
+    "POST /api/complaints",
+    "POST /api/complaints/:id/feedback",
+    "POST /api/complaints/:id/reopen"
+  ],
+  "services": [
+    "backend",
+    "frontend"
+  ],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/decisions/0002-volunteer-human-in-loop.md",
+    ".ai/docs/features/auth-otp.md",
+    ".ai/docs/features/complaint-lifecycle.md"
+  ],
+  "decisions": [
+    "decision:0002-volunteer-human-in-loop",
+    "constraint:C3"
+  ],
+  "changes": [
+    "change-2026-09-12-016",
+    "change-2026-09-12-015",
+    "change-2026-09-12-014",
+    "change-2026-09-12-012",
+    "change-2026-09-12-011"
+  ],
+  "confidence": 0.95,
+  "files": [
+    {
+      "path": "backend/src/controllers/complaint.controller.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 1,
+      "type": "backend-controller",
+      "hash": "7a50d0a84a9c25b3a1bfc78746b885cd9b008a88b725e8bcb3a85198bd8795a2"
+    },
+    {
+      "path": "backend/src/middlewares/upload.middleware.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 2,
+      "type": "file",
+      "hash": "5e8a5a1756bf8b7cc320d5b3216efaf21c38d2c7f37cfd61f9ed22cc9690d2b9"
+    },
+    {
+      "path": "backend/src/models/complaint.model.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 3,
+      "type": "model",
+      "hash": "f6e25c3dbac2b9bf81c62f93b2ea4d2655b46515ca00ace3edb907c3d0256ee5"
+    },
+    {
+      "path": "backend/src/routes/complaint.routes.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 4,
+      "type": "module",
+      "hash": "20183c0e7f6412bb9913a3399467dcf8097e8c20554a5a78ad0052def2d9b011"
+    },
+    {
+      "path": ".ai/docs/decisions/0002-volunteer-human-in-loop.md",
+      "reason": "direct name/concept match",
+      "priority": 5,
+      "type": "documentation",
+      "hash": "45974597187c03d8dace3f878057866d2f6f17e0a307041c5a1dd2577e3cdf5d"
+    },
+    {
+      "path": "PROJECT_PHASES_AND_AUTH_GUIDE.md",
+      "reason": "direct name/concept match",
+      "priority": 6,
+      "type": "file",
+      "hash": "c16fcadc099dbb7a87345f9b6de037a467e0dcc81f7e7c97e3b339cb9be326c4"
+    },
+    {
+      "path": "frontend/src/pages/volunteer/VolunteerDashboard.tsx",
+      "reason": "direct name/concept match",
+      "priority": 7,
+      "type": "frontend-page",
+      "hash": "7ec7f55f6a35254e080bb2ed55e9f572dde9104f7ab72187aa940090d38d7aaa"
+    }
+  ],
+  "text": "TASK\nPhase 3: Village Volunteer Portal\n\nFEATURE\n  complaint-registration \u2014 Complaint Registration (Volunteer)\n  admin-user-management \u2014 Admin User & Department Management\n\nSERVICES\n  Express Backend\n  Frontend (React)\n\nRELEVANT FRONTEND\n  frontend/src/pages/volunteer/VolunteerDashboard.tsx\n\nRELEVANT EXPRESS BACKEND\n  backend/src/controllers/complaint.controller.ts\n  backend/src/middlewares/upload.middleware.ts\n  backend/src/models/complaint.model.ts\n  backend/src/routes/complaint.routes.ts\n\nRELEVANT OTHER\n  .ai/docs/decisions/0002-volunteer-human-in-loop.md\n  PROJECT_PHASES_AND_AUTH_GUIDE.md\n\nRELEVANT APIs\n  GET /api/complaints/:id  \u2190 backend/src/routes/complaint.routes.ts\n  GET /api/complaints/categories  \u2190 backend/src/routes/complaint.routes.ts\n  GET /api/complaints/my  \u2190 backend/src/routes/complaint.routes.ts\n  POST /api/complaints  \u2190 backend/src/routes/complaint.routes.ts\n  POST /api/complaints/:id/feedback  \u2190 backend/src/routes/complaint.routes.ts\n  POST /api/complaints/:id/reopen  \u2190 backend/src/routes/complaint.routes.ts\n\nRECENT RELATED CHANGES\n  [change-2026-09-12-016] PROJECT_PHASES_AND_AUTH_GUIDE.md (unknown, 2026-09-12, PENDING_AGENT_CONFIRMATION)\n  [change-2026-09-12-015] Phase 2: Citizen Portal (Grievance submission, evidence uploads, location GPS, complaint tracking timeline, feedback, reopen, and dashboard UI) (unknown, 2026-09-12, confirmed)\n  [change-2026-09-12-014] Phase 1: Authentication & RBAC (Citizen OTP, Staff bcrypt auth, JWT tokens, RBAC middleware, User models, seed script, frontend auth state & protected portals) (unknown, 2026-09-12, confirmed)\n  [change-2026-09-12-012] VCGIS Phase 0 Foundation: clean reset, project state, frontend/backend/AI service setup (unknown, 2026-09-12, confirmed)\n  [change-2026-09-12-011] VCGIS Phase 0 Foundation: clean reset, project state, frontend/backend/AI service setup (unknown, 2026-09-12, confirmed)\n\nARCHITECTURAL DECISIONS\n  0002-volunteer-human-in-loop \u2014 0002 Volunteer Human In Loop (.ai/docs/decisions/0002-volunteer-human-in-loop.md)\n  constraint:C3 \u2014 Volunteer is the primary registration path (.ai/metadata/architecture-memory.json)\n\nDOCUMENTATION\n  .ai/docs/decisions/0002-volunteer-human-in-loop.md \u2014 ADR 0002 \u2014 Volunteer as Human-in-the-Loop Access Layer\n  .ai/docs/features/auth-otp.md \u2014 Citizen OTP & Staff Authentication\n  .ai/docs/features/complaint-lifecycle.md \u2014 Complaint Lifecycle\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: architecture.jpeg\n  Relevant relationships:\n    Village Volunteer --REGISTERS_THROUGH--> Web App / Frontend (confidence 0.96)\n\nRECOMMENDED FILES TO READ\n  1. backend/src/controllers/complaint.controller.ts  (implements feature complaint-registration)\n  2. backend/src/middlewares/upload.middleware.ts  (implements feature complaint-registration)\n  3. backend/src/models/complaint.model.ts  (implements feature complaint-registration)\n  4. backend/src/routes/complaint.routes.ts  (implements feature complaint-registration)\n  5. .ai/docs/decisions/0002-volunteer-human-in-loop.md  (direct name/concept match)\n  6. PROJECT_PHASES_AND_AUTH_GUIDE.md  (direct name/concept match)\n\nPOTENTIAL IMPACT\n  Express Backend \u2192 Frontend (React)\n\nCONFIDENCE\n  0.95\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

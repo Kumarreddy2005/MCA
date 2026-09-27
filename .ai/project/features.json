@@ -1,0 +1,189 @@
+{
+  "auth-otp": {
+    "name": "Citizen OTP Authentication",
+    "status": "active",
+    "description": "Phone-based OTP login for citizens, email/password admin login, JWT access and refresh tokens.",
+    "globs": [
+      "backend/src/controllers/auth.controller.ts",
+      "backend/src/services/auth.service.ts",
+      "backend/src/services/otp*.service.ts",
+      "backend/src/services/otpProvider.service.ts",
+      "backend/src/services/token.service.ts",
+      "backend/src/services/password.service.ts",
+      "backend/src/routes/auth.routes.ts",
+      "backend/src/models/otpVerification.model.ts",
+      "backend/src/repositories/otpVerification.repository.ts",
+      "backend/src/repositories/user.repository.ts",
+      "backend/src/models/user.model.ts",
+      "frontend/src/pages/Auth/*.tsx",
+      "frontend/src/contexts/AuthContext.tsx"
+    ],
+    "keywords": ["auth", "otp", "login", "token", "jwt", "password"]
+  },
+  "complaint-registration": {
+    "name": "Complaint Registration (Volunteer)",
+    "status": "active",
+    "description": "Volunteers register complaints on behalf of citizens with text and file/image/PDF evidence upload.",
+    "globs": [
+      "backend/src/controllers/complaint.controller.ts",
+      "backend/src/services/complaint.service.ts",
+      "backend/src/routes/complaint.routes.ts",
+      "backend/src/models/complaint.model.ts",
+      "backend/src/repositories/complaint.repository.ts",
+      "backend/src/middlewares/upload.middleware.ts",
+      "frontend/src/pages/Volunteer/RegisterComplaint/*.tsx",
+      "frontend/src/components/upload/*.tsx",
+      "frontend/src/hooks/useComplaints.ts"
+    ],
+    "keywords": ["complaint", "register", "upload", "grievance", "evidence", "create"]
+  },
+  "complaint-tracking": {
+    "name": "Complaint Tracking & Status History",
+    "status": "active",
+    "description": "Status workflow (Submitted → In Review → Resolved...), timeline, department and citizen views of complaints.",
+    "globs": [
+      "backend/src/models/statusHistory.model.ts",
+      "backend/src/repositories/statusHistory.repository.ts",
+      "backend/src/services/complaint.service.ts",
+      "frontend/src/pages/User/Complaints/*.tsx",
+      "frontend/src/pages/User/ComplaintDetails/*.tsx",
+      "frontend/src/pages/Department/Complaints/*.tsx",
+      "frontend/src/pages/Department/ComplaintDetails/*.tsx",
+      "frontend/src/pages/Volunteer/Complaints/*.tsx",
+      "frontend/src/pages/Volunteer/ComplaintDetails/*.tsx",
+      "frontend/src/components/timeline/*.tsx"
+    ],
+    "keywords": ["status", "tracking", "timeline", "history", "resolve"]
+  },
+  "ai-ocr": {
+    "name": "AI OCR Extraction",
+    "status": "active",
+    "description": "OCR of uploaded images/scans/PDFs (pytesseract, OpenCV preprocessing, PyMuPDF/pdfplumber) before NLP analysis.",
+    "globs": [
+      "ai-service/app/ocr/*.py",
+      "ai-service/app/services/ocr_service.py",
+      "ai-service/app/controllers/ocr_controller.py",
+      "ai-service/tests/test_ocr_text_cleaner.py"
+    ],
+    "keywords": ["ocr", "tesseract", "scan", "image", "pdf", "extract"]
+  },
+  "ai-nlp-analysis": {
+    "name": "AI NLP Complaint Analysis",
+    "status": "active",
+    "description": "Text normalization, problem extraction, keyword extraction, location extraction, department detection, priority prediction, summary generation.",
+    "globs": [
+      "ai-service/app/nlp/*.py",
+      "ai-service/app/location/*.py",
+      "ai-service/app/priority/*.py",
+      "ai-service/app/department/*.py",
+      "ai-service/app/summary/*.py",
+      "ai-service/app/services/nlp_service.py",
+      "ai-service/app/services/analysis_service.py",
+      "ai-service/app/services/intelligence_service.py",
+      "ai-service/app/services/enrichment_service.py",
+      "ai-service/app/controllers/nlp_controller.py",
+      "ai-service/app/controllers/analysis_controller.py",
+      "ai-service/app/controllers/intelligence_controller.py",
+      "ai-service/app/controllers/enrichment_controller.py",
+      "backend/src/controllers/ai.controller.ts",
+      "backend/src/services/ai.service.ts",
+      "backend/src/routes/ai.routes.ts",
+      "backend/src/interfaces/aiService.interface.ts"
+    ],
+    "keywords": ["nlp", "analysis", "priority", "department", "location", "summary", "keyword", "extract", "enrichment", "intelligence"]
+  },
+  "duplicate-clustering": {
+    "name": "Duplicate Detection & Problem Clustering",
+    "status": "active",
+    "description": "Semantic similarity clustering of complaints to detect duplicates and surface problem clusters for admins.",
+    "globs": [
+      "ai-service/app/clustering/*.py",
+      "ai-service/app/services/clustering_service.py",
+      "ai-service/app/controllers/clustering_controller.py",
+      "ai-service/tests/test_clustering_rules.py",
+      "backend/src/models/complaintCluster.model.ts",
+      "backend/src/repositories/complaintCluster.repository.ts",
+      "frontend/src/hooks/useClusters.ts",
+      "frontend/src/pages/Admin/ProblemClusters/*.tsx"
+    ],
+    "keywords": ["cluster", "duplicate", "similarity", "clustering"]
+  },
+  "analytics-reporting": {
+    "name": "Analytics & Reports",
+    "status": "active",
+    "description": "Admin analytics dashboards, SLA monitoring, report generation and export.",
+    "globs": [
+      "backend/src/controllers/analytics.controller.ts",
+      "backend/src/services/analytics.service.ts",
+      "backend/src/routes/analytics.routes.ts",
+      "backend/src/controllers/report.controller.ts",
+      "backend/src/services/report.service.ts",
+      "backend/src/routes/report.routes.ts",
+      "backend/src/models/report.model.ts",
+      "backend/src/repositories/report.repository.ts",
+      "frontend/src/pages/Admin/Analytics/*.tsx",
+      "frontend/src/pages/Admin/Reports/*.tsx",
+      "frontend/src/components/charts/*.tsx"
+    ],
+    "keywords": ["analytics", "report", "sla", "chart", "export", "statistics"]
+  },
+  "admin-user-management": {
+    "name": "Admin User & Department Management",
+    "status": "active",
+    "description": "Super-admin management of users, volunteers, departments and settings.",
+    "globs": [
+      "frontend/src/pages/Admin/Users/*.tsx",
+      "frontend/src/pages/Admin/Volunteers/*.tsx",
+      "frontend/src/pages/Admin/Departments/*.tsx",
+      "frontend/src/pages/Admin/Settings/*.tsx",
+      "frontend/src/pages/Admin/Complaints/*.tsx",
+      "backend/src/models/department.model.ts",
+      "backend/src/repositories/department.repository.ts"
+    ],
+    "keywords": ["admin", "user", "department", "volunteer", "management"]
+  },
+  "notifications": {
+    "name": "Notifications",
+    "status": "active",
+    "description": "In-app notifications for status changes and escalations.",
+    "globs": [
+      "backend/src/controllers/notification.controller.ts",
+      "backend/src/services/notification.service.ts",
+      "backend/src/routes/notification.routes.ts",
+      "backend/src/models/notification.model.ts",
+      "backend/src/repositories/notification.repository.ts"
+    ],
+    "keywords": ["notification", "notify", "alert"]
+  },
+  "audit-logging": {
+    "name": "Audit Logging",
+    "status": "active",
+    "description": "Audit trail of sensitive actions via middleware and audit-log endpoints.",
+    "globs": [
+      "backend/src/controllers/audit.controller.ts",
+      "backend/src/services/audit.service.ts",
+      "backend/src/routes/audit.routes.ts",
+      "backend/src/models/auditLog.model.ts",
+      "backend/src/repositories/auditLog.repository.ts",
+      "backend/src/middlewares/audit.middleware.ts"
+    ],
+    "keywords": ["audit", "log", "trail"]
+  },
+  "frontend-shell": {
+    "name": "Frontend App Shell & Routing",
+    "status": "active",
+    "description": "Layout, sidebar, navbar, protected routes, landing page, shared UI components, API client.",
+    "globs": [
+      "frontend/src/App.tsx",
+      "frontend/src/main.tsx",
+      "frontend/src/routes/*.tsx",
+      "frontend/src/components/layout/*.tsx",
+      "frontend/src/components/ui/*.tsx",
+      "frontend/src/components/common/*.tsx",
+      "frontend/src/services/api/*.ts",
+      "frontend/src/pages/Landing/*.tsx",
+      "frontend/src/pages/Shared/*.tsx"
+    ],
+    "keywords": ["layout", "routing", "sidebar", "navbar", "shell", "client", "axios"]
+  }
+}

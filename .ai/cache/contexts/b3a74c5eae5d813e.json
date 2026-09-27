@@ -1,0 +1,31 @@
+{
+  "task": "Phase 9 RAG Knowledge System",
+  "mode": "compact",
+  "graph_version": 25,
+  "generated": "2026-09-13T07:57:27+0530",
+  "features": [],
+  "apis": [],
+  "services": [],
+  "database": [],
+  "tests": [],
+  "docs": [],
+  "decisions": [],
+  "changes": [
+    "change-2026-09-13-025",
+    "change-2026-09-13-024",
+    "change-2026-09-13-023",
+    "change-2026-09-13-022",
+    "change-2026-09-13-021"
+  ],
+  "confidence": 0.32,
+  "files": [
+    {
+      "path": "PROJECT_PHASES_AND_AUTH_GUIDE.md",
+      "reason": "direct name/concept match",
+      "priority": 1,
+      "type": "file",
+      "hash": "1a92373e85df2dc07891bd1def2a6d3615a2c4fb42cc55043ea9600522ef39ab"
+    }
+  ],
+  "text": "TASK\nPhase 9 RAG Knowledge System\n\nFEATURE\n  (no strong feature match)\n\nSERVICES\n  (undetermined)\n\nRELEVANT OTHER\n  PROJECT_PHASES_AND_AUTH_GUIDE.md\n\nRECENT RELATED CHANGES\n  [change-2026-09-13-025] Phase 8 Generative AI Decision Support (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-024] Phase 7 AI Intelligence Microservice (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-023] Phase 7 AI Intelligence Microservice (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-022] Phase 6: SLA Monitoring and Multi-Tier Escalation Engine (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-021] Phase 6: SLA Monitoring and Multi-Tier Escalation Engine (unknown, 2026-09-13, confirmed)\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: architecture.jpeg\n  Relevant relationships:\n    Citizen --SUBMITS_TO--> Web App / Frontend (confidence 0.96)\n    Village Volunteer --REGISTERS_THROUGH--> Web App / Frontend (confidence 0.96)\n    Department Official --UPDATES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Administrator --MANAGES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Web App / Frontend --CALLS--> Application Backend (confidence 0.98)\n    Application Backend --CALLS--> AI Intelligence Service (confidence 0.98)\n    AI Intelligence Service --RETURNS_RESULTS_TO--> Application Backend (confidence 0.98)\n    Application Backend --READS_WRITES--> Data & Storage / MongoDB (confidence 0.97)\n\nRECOMMENDED FILES TO READ\n  1. PROJECT_PHASES_AND_AUTH_GUIDE.md  (direct name/concept match)\n\nPOTENTIAL IMPACT\n  local\n\nCONFIDENCE\n  0.32\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

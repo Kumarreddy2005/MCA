@@ -1,0 +1,64 @@
+{
+  "id": "plan-20260912-123910",
+  "task": "add a new complaint AI feature",
+  "status": "APPROVED",
+  "created": "2026-09-12T12:39:10+0530",
+  "updated": "2026-09-12T12:45:50+0530",
+  "feature": "AI NLP Complaint Analysis",
+  "files": [
+    "backend/src/routes/complaint.routes.ts",
+    "frontend/src/components/complaints/ComplaintInfoCards.tsx",
+    "frontend/src/components/complaints/ComplaintSummaryTable.tsx",
+    "frontend/src/pages/Admin/Complaints/AdminComplaints.tsx",
+    "frontend/src/pages/Department/ComplaintDetails/DepartmentComplaintDetails.tsx",
+    "frontend/src/pages/Department/Complaints/DepartmentComplaints.tsx",
+    "frontend/src/pages/User/ComplaintDetails/ComplaintDetails.tsx"
+  ],
+  "steps": [
+    "Confirm the affected feature and architecture flow.",
+    "Update the smallest owning frontend/backend/AI components.",
+    "Preserve existing API, repository, and service boundaries.",
+    "Update focused tests and documentation where behavior changes.",
+    "Run sync and plan-check after implementation."
+  ],
+  "architecture": [
+    {
+      "id": "complaint-registration-flow",
+      "name": "Complaint Registration",
+      "verified": true,
+      "steps": [
+        "Citizen or Village Volunteer",
+        "Web App / Frontend",
+        "Application Backend",
+        "MongoDB"
+      ],
+      "evidence": [
+        {
+          "source": "architecture.jpeg",
+          "source_type": "architecture_image",
+          "confidence": 0.88
+        }
+      ]
+    },
+    {
+      "id": "ai-processing-flow",
+      "name": "AI Complaint Processing",
+      "verified": true,
+      "steps": [
+        "Application Backend",
+        "FastAPI AI Service",
+        "OCR/NLP/Priority/Similarity",
+        "Application Backend",
+        "MongoDB"
+      ],
+      "evidence": [
+        {
+          "source": "architecture.jpeg",
+          "source_type": "architecture_image",
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "source_authority": "source code for implementation; architecture documents for design intent"
+}

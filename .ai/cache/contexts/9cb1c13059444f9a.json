@@ -1,0 +1,331 @@
+{
+  "task": "implement citizen signup and login plus admin account creation",
+  "mode": "normal",
+  "graph_version": 5,
+  "generated": "2026-09-12T14:47:07+0530",
+  "features": [
+    "auth-otp",
+    "complaint-registration",
+    "complaint-tracking"
+  ],
+  "apis": [
+    "DELETE /api/v1/complaints/:id",
+    "GET /api/v1/auth/admin/me",
+    "GET /api/v1/auth/me",
+    "GET /api/v1/complaints",
+    "GET /api/v1/complaints/:id",
+    "GET /api/v1/complaints/:id/timeline",
+    "GET /api/v1/complaints/citizen/:id",
+    "GET /api/v1/complaints/citizen/me",
+    "GET /api/v1/complaints/department",
+    "GET /api/v1/complaints/volunteer/me",
+    "PATCH /api/v1/complaints/:id",
+    "PATCH /api/v1/complaints/:id/status",
+    "POST /api/v1/auth/admin/login",
+    "POST /api/v1/auth/citizen/request-otp",
+    "POST /api/v1/auth/citizen/verify-otp",
+    "POST /api/v1/auth/logout",
+    "POST /api/v1/auth/refresh-token",
+    "POST /api/v1/complaints"
+  ],
+  "services": [
+    "backend",
+    "frontend",
+    "mongodb"
+  ],
+  "database": [
+    "complaint_cluster_model",
+    "complaint_model",
+    "otp_verification_model",
+    "status_history_model",
+    "user_model"
+  ],
+  "tests": [],
+  "docs": [
+    ".ai/docs/features/complaint-lifecycle.md",
+    ".ai/docs/decisions/0002-volunteer-human-in-loop.md"
+  ],
+  "decisions": [
+    "decision:0002-volunteer-human-in-loop"
+  ],
+  "changes": [
+    "change-2026-09-12-002"
+  ],
+  "confidence": 0.95,
+  "files": [
+    {
+      "path": "backend/src/controllers/auth.controller.ts",
+      "reason": "direct name/concept match; implements feature auth-otp",
+      "priority": 1,
+      "type": "backend-controller",
+      "hash": "d720ee5bdfcabff269a81b78a6672aa81dc5a561d7eb44c157f1b2bf967969ad"
+    },
+    {
+      "path": "backend/src/services/complaint.service.ts",
+      "reason": "implements feature complaint-registration; implements feature complaint-tracking",
+      "priority": 2,
+      "type": "backend-service",
+      "hash": "9e01863caa96895f30554ceadcd210cbd148f651048246ce53022d8961147c6d"
+    },
+    {
+      "path": "backend/src/controllers/complaint.controller.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 3,
+      "type": "backend-controller",
+      "hash": "753a4acf7b3fe21a94e8754da4d73996de66476e2619fa6328a30782892d0644"
+    },
+    {
+      "path": "backend/src/middlewares/upload.middleware.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 4,
+      "type": "file",
+      "hash": "3e2a9ee14a491ff2389a8f35e168e38cc2973209539e27b4b4450d31db95d8b9"
+    },
+    {
+      "path": "backend/src/models/complaint.model.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 5,
+      "type": "model",
+      "hash": "52862e260f97e731338d434c16d08e9a0314f8fb968b8757c0ead30a8b209216"
+    },
+    {
+      "path": "backend/src/models/otpVerification.model.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 6,
+      "type": "model",
+      "hash": "c419c1622db355d697e4e5c23c5856cfd85411ce3f52fc9e7551d89c71c188f7"
+    },
+    {
+      "path": "backend/src/models/statusHistory.model.ts",
+      "reason": "implements feature complaint-tracking",
+      "priority": 7,
+      "type": "model",
+      "hash": "b47acedc8d269e6f5124b1a98855ad801c39d8256238152d01c734ee9876579a"
+    },
+    {
+      "path": "backend/src/models/user.model.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 8,
+      "type": "model",
+      "hash": "ef9184cbcc6cfafd8e4fdd8baf8a1b85929b6694f5a5aafdabdbb72683597204"
+    },
+    {
+      "path": "backend/src/repositories/complaint.repository.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 9,
+      "type": "backend-repository",
+      "hash": "2a5e5cc135674469230d5a1fff945fe90add01bf06e5e3e739c072264d39e924"
+    },
+    {
+      "path": "backend/src/repositories/otpVerification.repository.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 10,
+      "type": "backend-repository",
+      "hash": "09b073895f4d57e7c47bdd5bfb3b694d42d17d3643f27b2601598959989ad577"
+    },
+    {
+      "path": "backend/src/repositories/statusHistory.repository.ts",
+      "reason": "implements feature complaint-tracking",
+      "priority": 11,
+      "type": "backend-repository",
+      "hash": "c255205e7fa9d90fcda3955189b0e3b809b88ff3efdaea4e7f9c13f875579e70"
+    },
+    {
+      "path": "backend/src/repositories/user.repository.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 12,
+      "type": "backend-repository",
+      "hash": "1ed8390c05662f3bc4aba2aff6a97734b64d7b5147943186da247f6357c47554"
+    },
+    {
+      "path": "backend/src/routes/auth.routes.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 13,
+      "type": "module",
+      "hash": "b63eda12c24d744c144ceaf995795a70cb2abd8ea25e0a121e5c355c7b42e364"
+    },
+    {
+      "path": "backend/src/routes/complaint.routes.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 14,
+      "type": "module",
+      "hash": "76a8bfc19c1f33fd45edbe25c4a11daf1a76d158be82b6be5fa441a5c931c553"
+    },
+    {
+      "path": "backend/src/services/auth.service.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 15,
+      "type": "backend-service",
+      "hash": "1a6ace53ef5905b342b301d5414c1a7353e104b9826d509035651ac5f2c7a803"
+    },
+    {
+      "path": "backend/src/services/otp.service.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 16,
+      "type": "backend-service",
+      "hash": "afed230fe70ff3b826fdb167908c4c78fd58f524a9969dc5a5cc3f93610af34a"
+    },
+    {
+      "path": "backend/src/services/otpProvider.service.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 17,
+      "type": "backend-service",
+      "hash": "d76238a6915e3dedac75dab54e478e20ed8967bfdbc6d3eaba1e1397521440ea"
+    },
+    {
+      "path": "backend/src/services/password.service.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 18,
+      "type": "backend-service",
+      "hash": "e32302d35361593ccac7084233467c7822581cee1db077cd8fd315243b320e4e"
+    },
+    {
+      "path": "backend/src/services/token.service.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 19,
+      "type": "backend-service",
+      "hash": "0ae074472a43a15ec2921b17eee0d7211a2089f1dcd516facb357c89cdc39c24"
+    },
+    {
+      "path": "frontend/src/components/timeline/Timeline.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 20,
+      "type": "frontend-component",
+      "hash": "495c71c914052db19ab97eef50566488415803d45a031fafbd8e01bfc7f480ca"
+    },
+    {
+      "path": "frontend/src/components/upload/UploadBox.tsx",
+      "reason": "implements feature complaint-registration",
+      "priority": 21,
+      "type": "frontend-component",
+      "hash": "d1e306a39aa0d44eefb8ebd0e7ee603dd8871e8394a0fb1bd928483a10a89857"
+    },
+    {
+      "path": "frontend/src/contexts/AuthContext.tsx",
+      "reason": "implements feature auth-otp",
+      "priority": 22,
+      "type": "file",
+      "hash": "86f292bedc46d97886be753411c606db373e1a25d1288a7ef4204e0855436d98"
+    },
+    {
+      "path": "frontend/src/hooks/useComplaints.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 23,
+      "type": "service",
+      "hash": "681f52ea7c344c247c3e0135862f0a134b571c56c3b8ee7a1818c0c957cf51a9"
+    },
+    {
+      "path": "frontend/src/pages/Auth/AuthPages.tsx",
+      "reason": "implements feature auth-otp",
+      "priority": 24,
+      "type": "frontend-page",
+      "hash": "c60aea847c7fccab6b7b2499c7725d32e53f828f1b93d919a14cb5eb2a6de8fc"
+    },
+    {
+      "path": "frontend/src/pages/Department/ComplaintDetails/DepartmentComplaintDetails.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 25,
+      "type": "frontend-page",
+      "hash": "c4aa9001d3af0f76ec29b2d1130574ed738f2e384ec99c7eb97780a8d93fc637"
+    },
+    {
+      "path": "frontend/src/pages/Department/Complaints/DepartmentComplaints.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 26,
+      "type": "frontend-page",
+      "hash": "783ac7c64de2704acb8ec0b29f74e130c1ec1d555ce95df6d47eb575e25b25f6"
+    },
+    {
+      "path": "frontend/src/pages/User/ComplaintDetails/ComplaintDetails.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 27,
+      "type": "frontend-page",
+      "hash": "9af1dbe258e986cfa1e4cf99a7fd898426c9d947c37971552a43de36592e3d07"
+    },
+    {
+      "path": "frontend/src/pages/User/Complaints/MyComplaints.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 28,
+      "type": "frontend-page",
+      "hash": "62d11b2299c27be8ff814b1df10c24cb124b427610277c29a9dd14e0ae2c0644"
+    },
+    {
+      "path": "frontend/src/pages/Volunteer/ComplaintDetails/VolunteerComplaintDetails.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 29,
+      "type": "frontend-page",
+      "hash": "7801eef167b75f3e135ada4d52cfd6fdfc5210c7b42f885589af647b09ce3db7"
+    },
+    {
+      "path": "frontend/src/pages/Volunteer/Complaints/VolunteerComplaints.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 30,
+      "type": "frontend-page",
+      "hash": "f5c5fa0de9ed18dd31ff59f03cbf15db188cf231e46bbedc1b0793d95541a58c"
+    },
+    {
+      "path": "frontend/src/pages/Volunteer/RegisterComplaint/RegisterComplaint.tsx",
+      "reason": "implements feature complaint-registration",
+      "priority": 31,
+      "type": "frontend-page",
+      "hash": "167c7224454b195dd69743784f9b67acdbb9d99a41e38c50b54850fbee1c4180"
+    },
+    {
+      "path": "backend/src/constants/domain.ts",
+      "reason": "direct name/concept match",
+      "priority": 32,
+      "type": "file",
+      "hash": "2e67ba736e7a8178f84117d45e3a7cd677a1ba1b814ecb5a030c1e6392629d67"
+    },
+    {
+      "path": "backend/src/validators/auth.validator.ts",
+      "reason": "direct name/concept match",
+      "priority": 33,
+      "type": "file",
+      "hash": "8e12285dcbebefa063f3bc0080f579b54b14ce46cd506773bb133e7e9b1c4c78"
+    },
+    {
+      "path": "frontend/src/pages/Admin/Analytics/Analytics.tsx",
+      "reason": "direct name/concept match",
+      "priority": 34,
+      "type": "frontend-page",
+      "hash": "5ec2b05020d6b6b797678554a265512169a53bbd6293946c13dd4b0c4aefcb90"
+    },
+    {
+      "path": "frontend/src/pages/Admin/Complaints/AdminComplaints.tsx",
+      "reason": "direct name/concept match",
+      "priority": 35,
+      "type": "frontend-page",
+      "hash": "20bc4eecb844742366a419482ec52ed945c2ea3d67aae08f2b286c24ad5f5b4b"
+    },
+    {
+      "path": "frontend/src/pages/Admin/Dashboard/AdminDashboard.tsx",
+      "reason": "direct name/concept match",
+      "priority": 36,
+      "type": "frontend-page",
+      "hash": "2571a6d645998f1afc9b2e4d4d3198e78343d381a123aeef8bff8b60592ceaaf"
+    },
+    {
+      "path": "frontend/src/pages/Admin/Departments/Departments.tsx",
+      "reason": "direct name/concept match",
+      "priority": 37,
+      "type": "frontend-page",
+      "hash": "17c571939a6bec83695fa1cd7349fea71fbeadbc1fcbb3e267b694da5075ec64"
+    },
+    {
+      "path": "frontend/src/pages/Admin/ProblemClusters/ClusterDetails.tsx",
+      "reason": "direct name/concept match",
+      "priority": 38,
+      "type": "frontend-page",
+      "hash": "238867039c033800c1fe8fac0fb6eba5adfaaf62eb077dceaf2beb89f258c2af"
+    },
+    {
+      "path": "frontend/src/pages/Admin/Settings/AdminSettings.tsx",
+      "reason": "direct name/concept match",
+      "priority": 39,
+      "type": "frontend-page",
+      "hash": "3baf1c3cd01a3fa4c324cc555694f7cdbebe4ea9e2aa31941d0a5553b0b849c0"
+    }
+  ],
+  "text": "TASK\nimplement citizen signup and login plus admin account creation\n\nFEATURE\n  auth-otp \u2014 Citizen OTP Authentication\n  complaint-registration \u2014 Complaint Registration (Volunteer)\n  complaint-tracking \u2014 Complaint Tracking & Status History\n\nSERVICES\n  Express Backend\n  Frontend (React)\n  MongoDB\n\nRELEVANT FRONTEND\n  frontend/src/components/timeline/Timeline.tsx\n  frontend/src/components/upload/UploadBox.tsx\n  frontend/src/contexts/AuthContext.tsx\n  frontend/src/hooks/useComplaints.ts\n  frontend/src/pages/Auth/AuthPages.tsx\n  frontend/src/pages/Department/ComplaintDetails/DepartmentComplaintDetails.tsx\n  frontend/src/pages/Department/Complaints/DepartmentComplaints.tsx\n  frontend/src/pages/User/ComplaintDetails/ComplaintDetails.tsx\n  frontend/src/pages/User/Complaints/MyComplaints.tsx\n  frontend/src/pages/Volunteer/ComplaintDetails/VolunteerComplaintDetails.tsx\n\nRELEVANT EXPRESS BACKEND\n  backend/src/controllers/auth.controller.ts\n  backend/src/services/complaint.service.ts\n  backend/src/controllers/complaint.controller.ts\n  backend/src/middlewares/upload.middleware.ts\n  backend/src/models/complaint.model.ts\n  backend/src/models/otpVerification.model.ts\n  backend/src/models/statusHistory.model.ts\n  backend/src/models/user.model.ts\n  backend/src/repositories/complaint.repository.ts\n  backend/src/repositories/otpVerification.repository.ts\n\nRELEVANT DATABASE\n  complaint_cluster_model\n  complaint_model\n  otp_verification_model\n  status_history_model\n  user_model\n\nRELEVANT APIs\n  DELETE /api/v1/complaints/:id  \u2190 backend/src/routes/complaint.routes.ts\n  GET /api/v1/auth/admin/me  \u2190 backend/src/routes/auth.routes.ts\n  GET /api/v1/auth/me  \u2190 backend/src/routes/auth.routes.ts\n  GET /api/v1/complaints  \u2190 backend/src/routes/complaint.routes.ts\n  GET /api/v1/complaints/:id  \u2190 backend/src/routes/complaint.routes.ts\n  GET /api/v1/complaints/:id/timeline  \u2190 backend/src/routes/complaint.routes.ts\n  GET /api/v1/complaints/citizen/:id  \u2190 backend/src/routes/complaint.routes.ts\n  GET /api/v1/complaints/citizen/me  \u2190 backend/src/routes/complaint.routes.ts\n  GET /api/v1/complaints/department  \u2190 backend/src/routes/complaint.routes.ts\n  GET /api/v1/complaints/volunteer/me  \u2190 backend/src/routes/complaint.routes.ts\n  PATCH /api/v1/complaints/:id  \u2190 backend/src/routes/complaint.routes.ts\n  PATCH /api/v1/complaints/:id/status  \u2190 backend/src/routes/complaint.routes.ts\n  POST /api/v1/auth/admin/login  \u2190 backend/src/routes/auth.routes.ts, task keyword match\n  POST /api/v1/auth/citizen/request-otp  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/v1/auth/citizen/verify-otp  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/v1/auth/logout  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/v1/auth/refresh-token  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/v1/complaints  \u2190 backend/src/routes/complaint.routes.ts\n\nRECENT RELATED CHANGES\n  [change-2026-09-12-002] Implement volunteer complaint registration with AI analysis (github_copilot_vscode_agent, 2026-09-12, confirmed)\n\nARCHITECTURAL DECISIONS\n  0002-volunteer-human-in-loop \u2014 0002 Volunteer Human In Loop (.ai/docs/decisions/0002-volunteer-human-in-loop.md)\n\nDOCUMENTATION\n  .ai/docs/features/complaint-lifecycle.md \u2014 Complaint Lifecycle\n  .ai/docs/decisions/0002-volunteer-human-in-loop.md \u2014 ADR 0002 \u2014 Volunteer as Human-in-the-Loop Access Layer\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: architecture.jpeg\n  Relevant relationships:\n    Citizen --SUBMITS_TO--> Web App / Frontend (confidence 0.96)\n    Administrator --MANAGES_THROUGH--> Web App / Frontend (confidence 0.94)\n\nRECOMMENDED FILES TO READ\n  1. backend/src/controllers/auth.controller.ts  (direct name/concept match; implements feature auth-otp)\n  2. backend/src/services/complaint.service.ts  (implements feature complaint-registration; implements feature complaint-tracking)\n  3. backend/src/controllers/complaint.controller.ts  (implements feature complaint-registration)\n  4. backend/src/middlewares/upload.middleware.ts  (implements feature complaint-registration)\n  5. backend/src/models/complaint.model.ts  (implements feature complaint-registration)\n  6. backend/src/models/otpVerification.model.ts  (implements feature auth-otp)\n\nPOTENTIAL IMPACT\n  Express Backend \u2192 Frontend (React) \u2192 MongoDB\n\nCONFIDENCE\n  0.95\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

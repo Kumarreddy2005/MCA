@@ -1,0 +1,15 @@
+{
+  "generated": "2026-09-12",
+  "note": "Use `ai-project docs <query>` to search; this index maps documents to features.",
+  "documents": [
+    {"path": ".ai/docs/features/complaint-lifecycle.md", "feature": "complaint-registration, complaint-tracking"},
+    {"path": ".ai/docs/features/ai-pipeline.md", "feature": "ai-ocr, ai-nlp-analysis, duplicate-clustering"},
+    {"path": ".ai/docs/decisions/0001-three-service-architecture.md", "feature": null},
+    {"path": ".ai/docs/decisions/0002-volunteer-human-in-loop.md", "feature": "complaint-registration"},
+    {"path": ".ai/docs/decisions/0003-backend-calls-ai-service.md", "feature": "ai-nlp-analysis"},
+    {"path": "README (2).md", "feature": null, "note": "top-level project overview"},
+    {"path": "backend/docs", "feature": null, "note": "backend docs directory"},
+    {"path": "backend/README.md", "feature": null},
+    {"path": "ai-service/README.md", "feature": "ai-ocr, ai-nlp-analysis"}
+  ]
+}

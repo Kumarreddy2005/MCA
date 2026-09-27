@@ -1,0 +1,35 @@
+{
+  "task": "Phase 4 Complaint Management Engine",
+  "mode": "compact",
+  "graph_version": 17,
+  "generated": "2026-09-12T21:03:46+0530",
+  "features": [
+    "admin-user-management"
+  ],
+  "apis": [],
+  "services": [],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/features/auth-otp.md"
+  ],
+  "decisions": [],
+  "changes": [
+    "change-2026-09-12-018",
+    "change-2026-09-12-017",
+    "change-2026-09-12-016",
+    "change-2026-09-12-015",
+    "change-2026-09-12-014"
+  ],
+  "confidence": 0.52,
+  "files": [
+    {
+      "path": "PROJECT_PHASES_AND_AUTH_GUIDE.md",
+      "reason": "direct name/concept match",
+      "priority": 1,
+      "type": "file",
+      "hash": "9eeedee1d5a73ce4392e225cc66858ecc8c54bbcb4490c05db9c5718b4ba0fe3"
+    }
+  ],
+  "text": "TASK\nPhase 4 Complaint Management Engine\n\nFEATURE\n  admin-user-management \u2014 Admin User & Department Management\n\nSERVICES\n  (undetermined)\n\nRELEVANT OTHER\n  PROJECT_PHASES_AND_AUTH_GUIDE.md\n\nRECENT RELATED CHANGES\n  [change-2026-09-12-018] Update government branding and administrative geography to Government of Karnataka (unknown, 2026-09-12, confirmed)\n  [change-2026-09-12-017] Phase 3: Village Volunteer Portal (Assisted citizen registration, on-behalf complaint filing, field verification checklists & photos, cluster work queue, and volunteer AI assistant) (unknown, 2026-09-12, confirmed)\n  [change-2026-09-12-016] Phase 3: Village Volunteer Portal (Assisted citizen registration, on-behalf complaint filing, field verification checklists & photos, cluster work queue, and volunteer AI assistant) (unknown, 2026-09-12, confirmed)\n  [change-2026-09-12-015] Phase 2: Citizen Portal (Grievance submission, evidence uploads, location GPS, complaint tracking timeline, feedback, reopen, and dashboard UI) (unknown, 2026-09-12, confirmed)\n  [change-2026-09-12-014] Phase 1: Authentication & RBAC (Citizen OTP, Staff bcrypt auth, JWT tokens, RBAC middleware, User models, seed script, frontend auth state & protected portals) (unknown, 2026-09-12, confirmed)\n\nDOCUMENTATION\n  .ai/docs/features/auth-otp.md \u2014 Citizen OTP & Staff Authentication\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: Volunteer_CGIS_Final_Architecture.pdf\n  Relevant relationships:\n    Application Backend --SENDS_COMPLAINT_DATA--> FastAPI AI Service (confidence 0.9)\n\nRECOMMENDED FILES TO READ\n  1. PROJECT_PHASES_AND_AUTH_GUIDE.md  (direct name/concept match)\n\nPOTENTIAL IMPACT\n  local\n\nCONFIDENCE\n  0.52\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

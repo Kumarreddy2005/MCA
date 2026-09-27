@@ -1,0 +1,37 @@
+{
+  "task": "Phase 7 AI Intelligence Microservice",
+  "mode": "compact",
+  "graph_version": 22,
+  "generated": "2026-09-13T07:20:41+0530",
+  "features": [
+    "ai-nlp-analysis"
+  ],
+  "apis": [],
+  "services": [],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/decisions/0001-three-service-architecture.md"
+  ],
+  "decisions": [
+    "decision:0001-three-service-architecture"
+  ],
+  "changes": [
+    "change-2026-09-13-023",
+    "change-2026-09-13-022",
+    "change-2026-09-13-021",
+    "change-2026-09-13-020",
+    "change-2026-09-12-019"
+  ],
+  "confidence": 0.52,
+  "files": [
+    {
+      "path": "PROJECT_PHASES_AND_AUTH_GUIDE.md",
+      "reason": "direct name/concept match",
+      "priority": 1,
+      "type": "file",
+      "hash": "cdc5f9bd7fc3517b34cf785623d47759e0fef01a65ceaf02fd3de8f8e374f047"
+    }
+  ],
+  "text": "TASK\nPhase 7 AI Intelligence Microservice\n\nFEATURE\n  ai-nlp-analysis \u2014 AI NLP Complaint Analysis\n\nSERVICES\n  (undetermined)\n\nRELEVANT OTHER\n  PROJECT_PHASES_AND_AUTH_GUIDE.md\n\nRECENT RELATED CHANGES\n  [change-2026-09-13-023] PROJECT_PHASES_AND_AUTH_GUIDE.md (unknown, 2026-09-13, PENDING_AGENT_CONFIRMATION)\n  [change-2026-09-13-022] Phase 6: SLA Monitoring and Multi-Tier Escalation Engine (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-021] Phase 6: SLA Monitoring and Multi-Tier Escalation Engine (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-020] Phase 5: Department Official Portal (unknown, 2026-09-13, confirmed)\n  [change-2026-09-12-019] Phase 4: Complaint Management Engine (State Machine, Auto-Routing, Immutable Audit Logging, In-App Notifications, Staff Action Logs, and Frontend Navbar Bell) (unknown, 2026-09-12, confirmed)\n\nARCHITECTURAL DECISIONS\n  0001-three-service-architecture \u2014 0001 Three Service Architecture (.ai/docs/decisions/0001-three-service-architecture.md)\n\nDOCUMENTATION\n  .ai/docs/decisions/0001-three-service-architecture.md \u2014 ADR 0001 \u2014 Three-Service Architecture\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: architecture.jpeg\n  Relevant relationships:\n    Application Backend --CALLS--> AI Intelligence Service (confidence 0.98)\n    AI Intelligence Service --RETURNS_RESULTS_TO--> Application Backend (confidence 0.98)\n    AI Intelligence Service --PROVIDES--> OCR (confidence 0.93)\n    AI Intelligence Service --PROVIDES--> NLP (confidence 0.93)\n    AI Intelligence Service --PROVIDES--> Priority Prediction (confidence 0.92)\n    AI Intelligence Service --PROVIDES--> Duplicate / Similarity Detection (confidence 0.92)\n\nRECOMMENDED FILES TO READ\n  1. PROJECT_PHASES_AND_AUTH_GUIDE.md  (direct name/concept match)\n\nPOTENTIAL IMPACT\n  local\n\nCONFIDENCE\n  0.52\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

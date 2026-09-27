@@ -1,0 +1,102 @@
+{
+  "task": "Phase 11 Analytics & Geographic Intelligence",
+  "mode": "compact",
+  "graph_version": 28,
+  "generated": "2026-09-13T08:29:47+0530",
+  "features": [
+    "ai-nlp-analysis",
+    "analytics-reporting"
+  ],
+  "apis": [
+    "GET /api/ai/health",
+    "GET /api/sla/analytics",
+    "GET /api/sla/queue",
+    "GET /api/v1/analytics/departments",
+    "GET /api/v1/analytics/problem-clusters",
+    "GET /api/v1/sla/analytics?${params.toString()}",
+    "POST /api/ai/analyze",
+    "POST /api/ai/classify",
+    "POST /api/ai/duplicates",
+    "POST /api/ai/ocr",
+    "POST /api/ai/priority",
+    "POST /api/sla/complaints/:id/escalate",
+    "POST /api/sla/sweep"
+  ],
+  "services": [
+    "ai-service",
+    "backend"
+  ],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/features/ai-pipeline.md"
+  ],
+  "decisions": [],
+  "changes": [
+    "change-2026-09-13-028",
+    "change-2026-09-13-027",
+    "change-2026-09-13-026",
+    "change-2026-09-13-025",
+    "change-2026-09-13-024"
+  ],
+  "confidence": 0.95,
+  "files": [
+    {
+      "path": "ai-service/app/services/nlp_service.py",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 1,
+      "type": "backend-service",
+      "hash": "42ebd21800a66fa86a20934a9ef54dc966bc8793a9a3105ee384ebccead58cf5"
+    },
+    {
+      "path": "backend/src/controllers/ai.controller.ts",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 2,
+      "type": "backend-controller",
+      "hash": "c2ed4c1f26d59b0bd82263e4f645c1d565da524a46dab8ebddbefa89af88d499"
+    },
+    {
+      "path": "backend/src/routes/ai.routes.ts",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 3,
+      "type": "endpoint",
+      "hash": "308c091bead31d4357d7bdff8de70388c99703612e46b8bec411e574154413b9"
+    },
+    {
+      "path": "backend/src/services/ai.service.ts",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 4,
+      "type": "backend-service",
+      "hash": "eda008468d74a7d840650c4c5314481d75346646d4901d70bb2b4816face23b0"
+    },
+    {
+      "path": "PROJECT_PHASES_AND_AUTH_GUIDE.md",
+      "reason": "direct name/concept match",
+      "priority": 5,
+      "type": "file",
+      "hash": "22af54d20aa102681cd94503921a76128c379450547a6087f778c042d99512e1"
+    },
+    {
+      "path": "backend/src/controllers/sla.controller.ts",
+      "reason": "direct name/concept match",
+      "priority": 6,
+      "type": "backend-controller",
+      "hash": "67921a1b4670a684fc53ad42ff0b27939a5cec02f8d015378475230fdb7178db"
+    },
+    {
+      "path": "backend/src/routes/sla.routes.ts",
+      "reason": "direct name/concept match",
+      "priority": 7,
+      "type": "module",
+      "hash": "eb1300659aeaef8fdeb5a371dde4f4ae61da3ca9db43b26b487394af12c459a9"
+    },
+    {
+      "path": "backend/src/services/sla.service.ts",
+      "reason": "direct name/concept match",
+      "priority": 8,
+      "type": "backend-service",
+      "hash": "6a75f8c90fb0613966c7988fe14e4cc98a9465d12eb47cd510df87ae32119132"
+    }
+  ],
+  "text": "TASK\nPhase 11 Analytics & Geographic Intelligence\n\nFEATURE\n  ai-nlp-analysis \u2014 AI NLP Complaint Analysis\n  analytics-reporting \u2014 Analytics & Reports\n\nSERVICES\n  FastAPI AI Service\n  Express Backend\n\nRELEVANT EXPRESS BACKEND\n  backend/src/controllers/ai.controller.ts\n  backend/src/routes/ai.routes.ts\n  backend/src/services/ai.service.ts\n  backend/src/controllers/sla.controller.ts\n  backend/src/routes/sla.routes.ts\n  backend/src/services/sla.service.ts\n\nRELEVANT FASTAPI AI SERVICE\n  ai-service/app/services/nlp_service.py\n\nRELEVANT OTHER\n  PROJECT_PHASES_AND_AUTH_GUIDE.md\n\nRELEVANT APIs\n  GET /api/ai/health  \u2190 backend/src/routes/ai.routes.ts\n  GET /api/sla/analytics  \u2190 backend/src/routes/sla.routes.ts, task keyword match\n  GET /api/sla/queue  \u2190 backend/src/routes/sla.routes.ts\n  GET /api/v1/analytics/departments  \u2190 task keyword match\n  GET /api/v1/analytics/problem-clusters  \u2190 task keyword match\n  GET /api/v1/sla/analytics?${params.toString()}  \u2190 task keyword match\n  POST /api/ai/analyze  \u2190 backend/src/routes/ai.routes.ts\n  POST /api/ai/classify  \u2190 backend/src/routes/ai.routes.ts\n  POST /api/ai/duplicates  \u2190 backend/src/routes/ai.routes.ts\n  POST /api/ai/ocr  \u2190 backend/src/routes/ai.routes.ts\n  POST /api/ai/priority  \u2190 backend/src/routes/ai.routes.ts\n  POST /api/sla/complaints/:id/escalate  \u2190 backend/src/routes/sla.routes.ts\n  POST /api/sla/sweep  \u2190 backend/src/routes/sla.routes.ts\n\nRECENT RELATED CHANGES\n  [change-2026-09-13-028] Phase 10 Administrator Portal (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-027] Phase 10 Administrator Portal (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-026] Phase 9 RAG Knowledge System (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-025] Phase 8 Generative AI Decision Support (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-024] Phase 7 AI Intelligence Microservice (unknown, 2026-09-13, confirmed)\n\nDOCUMENTATION\n  .ai/docs/features/ai-pipeline.md \u2014 AI Analysis Pipeline\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: architecture.jpeg\n  Relevant relationships:\n    Application Backend --CALLS--> AI Intelligence Service (confidence 0.98)\n    AI Intelligence Service --RETURNS_RESULTS_TO--> Application Backend (confidence 0.98)\n    AI Intelligence Service --PROVIDES--> OCR (confidence 0.93)\n    AI Intelligence Service --PROVIDES--> NLP (confidence 0.93)\n    AI Intelligence Service --PROVIDES--> Priority Prediction (confidence 0.92)\n    AI Intelligence Service --PROVIDES--> Duplicate / Similarity Detection (confidence 0.92)\n\nRECOMMENDED FILES TO READ\n  1. ai-service/app/services/nlp_service.py  (implements feature ai-nlp-analysis)\n  2. backend/src/controllers/ai.controller.ts  (implements feature ai-nlp-analysis)\n  3. backend/src/routes/ai.routes.ts  (implements feature ai-nlp-analysis)\n  4. backend/src/services/ai.service.ts  (implements feature ai-nlp-analysis)\n  5. PROJECT_PHASES_AND_AUTH_GUIDE.md  (direct name/concept match)\n  6. backend/src/controllers/sla.controller.ts  (direct name/concept match)\n\nPOTENTIAL IMPACT\n  FastAPI AI Service \u2192 Express Backend\n\nCONFIDENCE\n  0.95\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

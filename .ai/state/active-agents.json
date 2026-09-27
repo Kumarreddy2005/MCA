@@ -1,0 +1,12 @@
+{
+  "agents": [
+    {
+      "name": "Antigravity",
+      "role": "Orchestrator + Full-Stack",
+      "sessionStart": "2026-09-12T19:22:00+05:30",
+      "currentTask": "VCGIS-PHASE0-001",
+      "filesOwned": ["*"],
+      "status": "ACTIVE"
+    }
+  ]
+}

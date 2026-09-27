@@ -1,0 +1,164 @@
+{
+  "task": "clean authentication reset",
+  "mode": "normal",
+  "graph_version": 10,
+  "generated": "2026-09-12T15:33:44+0530",
+  "features": [
+    "auth-otp"
+  ],
+  "apis": [
+    "GET /api/v1/auth/admin/me",
+    "GET /api/v1/auth/admin/users",
+    "GET /api/v1/auth/me",
+    "PATCH /api/v1/auth/admin/users/:id/status",
+    "POST /api/ai/nlp/analyze",
+    "POST /api/ai/nlp/clean",
+    "POST /api/v1/auth/admin/login",
+    "POST /api/v1/auth/admin/staff",
+    "POST /api/v1/auth/citizen/request-otp",
+    "POST /api/v1/auth/citizen/signup",
+    "POST /api/v1/auth/citizen/verify-otp",
+    "POST /api/v1/auth/logout",
+    "POST /api/v1/auth/refresh-token"
+  ],
+  "services": [
+    "ai-service",
+    "backend",
+    "frontend",
+    "mongodb"
+  ],
+  "database": [
+    "otp_verification_model",
+    "user_model"
+  ],
+  "tests": [],
+  "docs": [
+    ".ai/docs/decisions/0003-backend-calls-ai-service.md",
+    ".ai/docs/features/ai-pipeline.md"
+  ],
+  "decisions": [
+    "decision:0003-backend-calls-ai-service"
+  ],
+  "changes": [
+    "change-2026-09-12-010",
+    "change-2026-09-12-009",
+    "change-2026-09-12-008",
+    "change-2026-09-12-007"
+  ],
+  "confidence": 0.95,
+  "files": [
+    {
+      "path": "backend/src/controllers/auth.controller.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 1,
+      "type": "backend-controller",
+      "hash": "ebea6edd9e2056824decab2e3e497d0bef0fbc205e711261c1ac6ccfd71889bc"
+    },
+    {
+      "path": "backend/src/models/otpVerification.model.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 2,
+      "type": "model",
+      "hash": "c419c1622db355d697e4e5c23c5856cfd85411ce3f52fc9e7551d89c71c188f7"
+    },
+    {
+      "path": "backend/src/models/user.model.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 3,
+      "type": "model",
+      "hash": "d11d852e3bc6fbf17752cede688969cc691d96f87cc9b0370eb70cf1bc45c0df"
+    },
+    {
+      "path": "backend/src/repositories/otpVerification.repository.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 4,
+      "type": "backend-repository",
+      "hash": "09b073895f4d57e7c47bdd5bfb3b694d42d17d3643f27b2601598959989ad577"
+    },
+    {
+      "path": "backend/src/repositories/user.repository.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 5,
+      "type": "backend-repository",
+      "hash": "5ad42e75276c8dfdccf88e60be91cdbd8227da7c2d2e907760e30c80cb999326"
+    },
+    {
+      "path": "backend/src/routes/auth.routes.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 6,
+      "type": "module",
+      "hash": "732711fc19b0b92785ae0137f7077362d703aeb7c3bde7994a5bd5f3eaff8acf"
+    },
+    {
+      "path": "backend/src/services/auth.service.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 7,
+      "type": "backend-service",
+      "hash": "131cf2f8e7b97fea57fc52a84cfa7612d5dac537e7a834848048638e59f179df"
+    },
+    {
+      "path": "backend/src/services/otp.service.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 8,
+      "type": "backend-service",
+      "hash": "afed230fe70ff3b826fdb167908c4c78fd58f524a9969dc5a5cc3f93610af34a"
+    },
+    {
+      "path": "backend/src/services/otpProvider.service.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 9,
+      "type": "backend-service",
+      "hash": "d76238a6915e3dedac75dab54e478e20ed8967bfdbc6d3eaba1e1397521440ea"
+    },
+    {
+      "path": "backend/src/services/password.service.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 10,
+      "type": "backend-service",
+      "hash": "e32302d35361593ccac7084233467c7822581cee1db077cd8fd315243b320e4e"
+    },
+    {
+      "path": "backend/src/services/token.service.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 11,
+      "type": "backend-service",
+      "hash": "0ae074472a43a15ec2921b17eee0d7211a2089f1dcd516facb357c89cdc39c24"
+    },
+    {
+      "path": "frontend/src/contexts/AuthContext.tsx",
+      "reason": "implements feature auth-otp",
+      "priority": 12,
+      "type": "file",
+      "hash": "ae5491cf8b261b74c98ee4afb4c694d695e93bba695cfd345ee3b5de384db6cb"
+    },
+    {
+      "path": "frontend/src/pages/Auth/AuthPages.tsx",
+      "reason": "implements feature auth-otp",
+      "priority": 13,
+      "type": "frontend-page",
+      "hash": "2801b8e952879817b6cc01cb00a4ce26234aed6a400b7132ec867907a03b73e7"
+    },
+    {
+      "path": "ai-service/app/controllers/nlp_controller.py",
+      "reason": "direct name/concept match",
+      "priority": 14,
+      "type": "backend-controller",
+      "hash": "9e4a81ef1ae1cea695e057eae537f154964bd76fceb9b08da219921cbd4bda37"
+    },
+    {
+      "path": "ai-service/app/ocr/text_cleaner.py",
+      "reason": "direct name/concept match",
+      "priority": 15,
+      "type": "file",
+      "hash": "989a58eff07771e2ce1382c29910b7f9242fb22562a9476406aa59516b050764"
+    },
+    {
+      "path": "ai-service/tests/test_ocr_text_cleaner.py",
+      "reason": "direct name/concept match",
+      "priority": 16,
+      "type": "file",
+      "hash": "e6371581a3566765ad581af8555a58c501ff2b7ba9c75b66eb99fcc1909d6eb9"
+    }
+  ],
+  "text": "TASK\nclean authentication reset\n\nFEATURE\n  auth-otp \u2014 Citizen OTP Authentication\n\nSERVICES\n  FastAPI AI Service\n  Express Backend\n  Frontend (React)\n  MongoDB\n\nRELEVANT FRONTEND\n  frontend/src/contexts/AuthContext.tsx\n  frontend/src/pages/Auth/AuthPages.tsx\n\nRELEVANT EXPRESS BACKEND\n  backend/src/controllers/auth.controller.ts\n  backend/src/models/otpVerification.model.ts\n  backend/src/models/user.model.ts\n  backend/src/repositories/otpVerification.repository.ts\n  backend/src/repositories/user.repository.ts\n  backend/src/routes/auth.routes.ts\n  backend/src/services/auth.service.ts\n  backend/src/services/otp.service.ts\n  backend/src/services/otpProvider.service.ts\n  backend/src/services/password.service.ts\n\nRELEVANT FASTAPI AI SERVICE\n  ai-service/app/controllers/nlp_controller.py\n  ai-service/app/ocr/text_cleaner.py\n  ai-service/tests/test_ocr_text_cleaner.py\n\nRELEVANT DATABASE\n  otp_verification_model\n  user_model\n\nRELEVANT APIs\n  GET /api/v1/auth/admin/me  \u2190 backend/src/routes/auth.routes.ts\n  GET /api/v1/auth/admin/users  \u2190 backend/src/routes/auth.routes.ts\n  GET /api/v1/auth/me  \u2190 backend/src/routes/auth.routes.ts\n  PATCH /api/v1/auth/admin/users/:id/status  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/ai/nlp/analyze  \u2190 ai-service/app/controllers/nlp_controller.py\n  POST /api/ai/nlp/clean  \u2190 ai-service/app/controllers/nlp_controller.py, task keyword match\n  POST /api/v1/auth/admin/login  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/v1/auth/admin/staff  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/v1/auth/citizen/request-otp  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/v1/auth/citizen/signup  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/v1/auth/citizen/verify-otp  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/v1/auth/logout  \u2190 backend/src/routes/auth.routes.ts\n  POST /api/v1/auth/refresh-token  \u2190 backend/src/routes/auth.routes.ts\n\nRECENT RELATED CHANGES\n  [change-2026-09-12-010] Complete environment-driven authentication seed configuration (github_copilot_vscode_agent, 2026-09-12, confirmed)\n  [change-2026-09-12-009] Complete authentication admin department assignment form (github_copilot_vscode_agent, 2026-09-12, confirmed)\n  [change-2026-09-12-008] Implement citizen signup, authentication, admin staff creation, RBAC, account status, and frontend auth integration (github_copilot_vscode_agent, 2026-09-12, confirmed)\n  [change-2026-09-12-007] Fix frontend auth API port, seed development accounts, and clean browser console warnings (github_copilot_vscode_agent, 2026-09-12, confirmed)\n\nARCHITECTURAL DECISIONS\n  0003-backend-calls-ai-service \u2014 0003 Backend Calls Ai Service (.ai/docs/decisions/0003-backend-calls-ai-service.md)\n\nDOCUMENTATION\n  .ai/docs/decisions/0003-backend-calls-ai-service.md \u2014 ADR 0003 \u2014 Backend Proxies All AI Calls\n  .ai/docs/features/ai-pipeline.md \u2014 AI Analysis Pipeline\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: architecture.jpeg\n  Relevant relationships:\n    Citizen --SUBMITS_TO--> Web App / Frontend (confidence 0.96)\n    Village Volunteer --REGISTERS_THROUGH--> Web App / Frontend (confidence 0.96)\n    Department Official --UPDATES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Administrator --MANAGES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Web App / Frontend --CALLS--> Application Backend (confidence 0.98)\n    Application Backend --CALLS--> AI Intelligence Service (confidence 0.98)\n    AI Intelligence Service --RETURNS_RESULTS_TO--> Application Backend (confidence 0.98)\n    Application Backend --READS_WRITES--> Data & Storage / MongoDB (confidence 0.97)\n\nRECOMMENDED FILES TO READ\n  1. backend/src/controllers/auth.controller.ts  (implements feature auth-otp)\n  2. backend/src/models/otpVerification.model.ts  (implements feature auth-otp)\n  3. backend/src/models/user.model.ts  (implements feature auth-otp)\n  4. backend/src/repositories/otpVerification.repository.ts  (implements feature auth-otp)\n  5. backend/src/repositories/user.repository.ts  (implements feature auth-otp)\n  6. backend/src/routes/auth.routes.ts  (implements feature auth-otp)\n\nPOTENTIAL IMPACT\n  FastAPI AI Service \u2192 Express Backend \u2192 Frontend (React) \u2192 MongoDB\n\nCONFIDENCE\n  0.95\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

@@ -1,0 +1,56 @@
+{
+  "task": "Phase 8 Generative AI Decision Support",
+  "mode": "compact",
+  "graph_version": 24,
+  "generated": "2026-09-13T07:40:26+0530",
+  "features": [],
+  "apis": [],
+  "services": [],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/decisions/0001-three-service-architecture.md"
+  ],
+  "decisions": [
+    "decision:0001-three-service-architecture"
+  ],
+  "changes": [
+    "change-2026-09-13-024",
+    "change-2026-09-13-023",
+    "change-2026-09-13-022",
+    "change-2026-09-13-021",
+    "change-2026-09-13-020"
+  ],
+  "confidence": 0.38,
+  "files": [
+    {
+      "path": ".ai/docs/decisions/0001-three-service-architecture.md",
+      "reason": "direct name/concept match",
+      "priority": 1,
+      "type": "documentation",
+      "hash": "61e7f22ce20bdaf284c8b9d7cafeb9d1d4f020712f8892cbcec394de669728fb"
+    },
+    {
+      "path": ".ai/docs/decisions/0002-volunteer-human-in-loop.md",
+      "reason": "direct name/concept match",
+      "priority": 2,
+      "type": "documentation",
+      "hash": "45974597187c03d8dace3f878057866d2f6f17e0a307041c5a1dd2577e3cdf5d"
+    },
+    {
+      "path": ".ai/docs/decisions/0003-backend-calls-ai-service.md",
+      "reason": "direct name/concept match",
+      "priority": 3,
+      "type": "documentation",
+      "hash": "4ba4c93ef2099dd14dcd59a642d9e0941410d06b9cda31c2cb17aef61066eb83"
+    },
+    {
+      "path": "PROJECT_PHASES_AND_AUTH_GUIDE.md",
+      "reason": "direct name/concept match",
+      "priority": 4,
+      "type": "file",
+      "hash": "8e693b476d8382f00973fc677486e846a62ca68bd844888968223fba5715d524"
+    }
+  ],
+  "text": "TASK\nPhase 8 Generative AI Decision Support\n\nFEATURE\n  (no strong feature match)\n\nSERVICES\n  (undetermined)\n\nRELEVANT OTHER\n  .ai/docs/decisions/0001-three-service-architecture.md\n  .ai/docs/decisions/0002-volunteer-human-in-loop.md\n  .ai/docs/decisions/0003-backend-calls-ai-service.md\n  PROJECT_PHASES_AND_AUTH_GUIDE.md\n\nRECENT RELATED CHANGES\n  [change-2026-09-13-024] Phase 7 AI Intelligence Microservice (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-023] Phase 7 AI Intelligence Microservice (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-022] Phase 6: SLA Monitoring and Multi-Tier Escalation Engine (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-021] Phase 6: SLA Monitoring and Multi-Tier Escalation Engine (unknown, 2026-09-13, confirmed)\n  [change-2026-09-13-020] Phase 5: Department Official Portal (unknown, 2026-09-13, confirmed)\n\nARCHITECTURAL DECISIONS\n  0001-three-service-architecture \u2014 0001 Three Service Architecture (.ai/docs/decisions/0001-three-service-architecture.md)\n\nDOCUMENTATION\n  .ai/docs/decisions/0001-three-service-architecture.md \u2014 ADR 0001 \u2014 Three-Service Architecture\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: architecture.jpeg\n  Relevant relationships:\n    Citizen --SUBMITS_TO--> Web App / Frontend (confidence 0.96)\n    Village Volunteer --REGISTERS_THROUGH--> Web App / Frontend (confidence 0.96)\n    Department Official --UPDATES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Administrator --MANAGES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Web App / Frontend --CALLS--> Application Backend (confidence 0.98)\n    Application Backend --CALLS--> AI Intelligence Service (confidence 0.98)\n    AI Intelligence Service --RETURNS_RESULTS_TO--> Application Backend (confidence 0.98)\n    Application Backend --READS_WRITES--> Data & Storage / MongoDB (confidence 0.97)\n\nRECOMMENDED FILES TO READ\n  1. .ai/docs/decisions/0001-three-service-architecture.md  (direct name/concept match)\n  2. .ai/docs/decisions/0002-volunteer-human-in-loop.md  (direct name/concept match)\n  3. .ai/docs/decisions/0003-backend-calls-ai-service.md  (direct name/concept match)\n  4. PROJECT_PHASES_AND_AUTH_GUIDE.md  (direct name/concept match)\n\nPOTENTIAL IMPACT\n  local\n\nCONFIDENCE\n  0.38\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

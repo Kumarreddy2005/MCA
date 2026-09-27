@@ -1,0 +1,27 @@
+{
+  "task": "Authentication + RBAC",
+  "mode": "compact",
+  "graph_version": 12,
+  "generated": "2026-09-12T19:55:59+0530",
+  "features": [
+    "auth-otp"
+  ],
+  "apis": [],
+  "services": [],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/decisions/0003-backend-calls-ai-service.md"
+  ],
+  "decisions": [
+    "decision:0003-backend-calls-ai-service"
+  ],
+  "changes": [
+    "change-2026-09-12-010",
+    "change-2026-09-12-009",
+    "change-2026-09-12-008"
+  ],
+  "confidence": 0.5,
+  "files": [],
+  "text": "TASK\nAuthentication + RBAC\n\nFEATURE\n  auth-otp \u2014 Citizen OTP Authentication\n\nSERVICES\n  (undetermined)\n\nRECENT RELATED CHANGES\n  [change-2026-09-12-010] Complete environment-driven authentication seed configuration (github_copilot_vscode_agent, 2026-09-12, confirmed)\n  [change-2026-09-12-009] Complete authentication admin department assignment form (github_copilot_vscode_agent, 2026-09-12, confirmed)\n  [change-2026-09-12-008] Implement citizen signup, authentication, admin staff creation, RBAC, account status, and frontend auth integration (github_copilot_vscode_agent, 2026-09-12, confirmed)\n\nARCHITECTURAL DECISIONS\n  0003-backend-calls-ai-service \u2014 0003 Backend Calls Ai Service (.ai/docs/decisions/0003-backend-calls-ai-service.md)\n\nDOCUMENTATION\n  .ai/docs/decisions/0003-backend-calls-ai-service.md \u2014 ADR 0003 \u2014 Backend Proxies All AI Calls\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: architecture.jpeg\n  Relevant relationships:\n    Citizen --SUBMITS_TO--> Web App / Frontend (confidence 0.96)\n    Village Volunteer --REGISTERS_THROUGH--> Web App / Frontend (confidence 0.96)\n    Department Official --UPDATES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Administrator --MANAGES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Web App / Frontend --CALLS--> Application Backend (confidence 0.98)\n    Application Backend --CALLS--> AI Intelligence Service (confidence 0.98)\n    AI Intelligence Service --RETURNS_RESULTS_TO--> Application Backend (confidence 0.98)\n    Application Backend --READS_WRITES--> Data & Storage / MongoDB (confidence 0.97)\n\nRECOMMENDED FILES TO READ\n\nPOTENTIAL IMPACT\n  local\n\nCONFIDENCE\n  0.50\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

@@ -1,0 +1,188 @@
+{
+  "task": "implement the highest priority complete product capability",
+  "mode": "normal",
+  "graph_version": 2,
+  "generated": "2026-09-12T13:48:30+0530",
+  "features": [
+    "ai-nlp-analysis"
+  ],
+  "apis": [
+    "POST /api/ai/analyze",
+    "POST /api/ai/department",
+    "POST /api/ai/keywords",
+    "POST /api/ai/location",
+    "POST /api/ai/nlp/analyze",
+    "POST /api/ai/nlp/clean",
+    "POST /api/ai/priority",
+    "POST /api/ai/summary",
+    "POST /api/v1/ai/analyze",
+    "POST /api/v1/ai/cluster",
+    "POST /api/v1/ai/department",
+    "POST /api/v1/ai/location",
+    "POST /api/v1/ai/priority",
+    "POST /api/v1/ai/problem",
+    "POST /api/v1/ai/summary"
+  ],
+  "services": [
+    "ai-service",
+    "backend"
+  ],
+  "database": [],
+  "tests": [
+    "ai-service/tests/test_analysis_service.py",
+    "ai-service/tests/test_text_normalizer.py"
+  ],
+  "docs": [
+    ".ai/docs/decisions/0003-backend-calls-ai-service.md",
+    ".ai/docs/features/ai-pipeline.md",
+    ".ai/docs/features/complaint-lifecycle.md"
+  ],
+  "decisions": [
+    "decision:0003-backend-calls-ai-service"
+  ],
+  "changes": [],
+  "confidence": 0.95,
+  "files": [
+    {
+      "path": "ai-service/app/controllers/intelligence_controller.py",
+      "reason": "direct name/concept match; implements feature ai-nlp-analysis",
+      "priority": 1,
+      "type": "backend-controller",
+      "hash": "a769cfdad202042495c9be7ea97be586cc3046b48c2359048cdc6e97ff9550ea"
+    },
+    {
+      "path": "ai-service/app/priority/__init__.py",
+      "reason": "direct name/concept match; implements feature ai-nlp-analysis",
+      "priority": 2,
+      "type": "file",
+      "hash": "386424d102175e1991e4b8ac010b16f8211e64eb9d9d2ffeda0874b00c7c750e"
+    },
+    {
+      "path": "ai-service/app/priority/predictor.py",
+      "reason": "direct name/concept match; implements feature ai-nlp-analysis",
+      "priority": 3,
+      "type": "file",
+      "hash": "5c0fda95b5fb6662ca120a08fcf70f39e636a491a4d8a4e834a39cb292e5f5de"
+    },
+    {
+      "path": "backend/src/controllers/ai.controller.ts",
+      "reason": "direct name/concept match",
+      "priority": 4,
+      "type": "backend-controller",
+      "hash": "e12b49e97b6dc71ee16d8dfa59bffab58f2e32440f315c110df899b80d51f6c7"
+    },
+    {
+      "path": "backend/src/routes/ai.routes.ts",
+      "reason": "direct name/concept match",
+      "priority": 5,
+      "type": "module",
+      "hash": "f7093935850dd73ed1cd446ca2b2cab29168d48c05203af9d7c3b86810472935"
+    },
+    {
+      "path": "ai-service/app/controllers/analysis_controller.py",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 6,
+      "type": "backend-controller",
+      "hash": "8c3b5a657575b21735d3daeb8f41e08cc618f9503e4cceb76ac862f3f2955d8c"
+    },
+    {
+      "path": "ai-service/app/controllers/enrichment_controller.py",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 7,
+      "type": "backend-controller",
+      "hash": "1ee24bb291c0ca5e774fe2637f4f5a245db191017df26e33da107706277402bd"
+    },
+    {
+      "path": "ai-service/app/controllers/nlp_controller.py",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 8,
+      "type": "backend-controller",
+      "hash": "9e4a81ef1ae1cea695e057eae537f154964bd76fceb9b08da219921cbd4bda37"
+    },
+    {
+      "path": "ai-service/app/department/__init__.py",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 9,
+      "type": "file",
+      "hash": "5d2a7cb6f8a86aaba6fbf2d06b4e73f6d9890ef200d939d61e64cca63a1fd245"
+    },
+    {
+      "path": "ai-service/app/department/detector.py",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 10,
+      "type": "file",
+      "hash": "eab6488c6eda405c8cb3a5ad94469f34d7815dc677b56da976f083b30973d822"
+    },
+    {
+      "path": "ai-service/app/location/__init__.py",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 11,
+      "type": "file",
+      "hash": "70f81c5c8787eb1a7c09c460da788a9264fbed20526bd2dffd908d4cac05934e"
+    },
+    {
+      "path": "ai-service/app/location/extractor.py",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 12,
+      "type": "file",
+      "hash": "79152d30190eaed30b0afd517d8a3ed03280c66ac26521b07e17c5aa32f8ed12"
+    },
+    {
+      "path": "ai-service/app/nlp/__init__.py",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 13,
+      "type": "file",
+      "hash": "3ab88e5f93d551c733c8009e990f6f0120be0496aa63c3b3a6d4aaaa0b706b3a"
+    },
+    {
+      "path": "ai-service/app/nlp/analyzer.py",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 14,
+      "type": "file",
+      "hash": "56d4840c3999cc17216b42a40f35cfdb97251f166ea0227713efa5464c14cdc6"
+    },
+    {
+      "path": "ai-service/app/nlp/keyword_extractor.py",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 15,
+      "type": "file",
+      "hash": "693b80d6172a53dd8d8d981bc27b1ecdba7d93654e0a652616bfc5e92ea5fa72"
+    },
+    {
+      "path": "ai-service/app/nlp/text_normalizer.py",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 16,
+      "type": "file",
+      "hash": "d1920157e20ece0583bc8f1652fe13b5ecfb656fb49038904cda76170716bec8"
+    },
+    {
+      "path": "ai-service/app/services/analysis_service.py",
+      "reason": "implements feature ai-nlp-analysis",
+      "priority": 17,
+      "type": "backend-service",
+      "hash": "3511ce47d1b50bb65b58f1da7c927386911ed1521decfb54dc194ea962fc2275"
+    },
+    {
+      "path": "ai-service/app/schemas/intelligence.py",
+      "reason": "direct name/concept match",
+      "priority": 18,
+      "type": "file",
+      "hash": "6a42c3f30bf2a99f240d2432725dd0e98594fb561f6142ad4fc464ffa1572fa2"
+    },
+    {
+      "path": "ai-service/tests/test_intelligence_rules.py",
+      "reason": "direct name/concept match",
+      "priority": 19,
+      "type": "file",
+      "hash": "7e3f1b5cbbd9609de9bf2cec94338e18776b58ff0aa2fadb61f3ca654fcafde4"
+    },
+    {
+      "path": "backend/src/controllers/analytics.controller.ts",
+      "reason": "direct name/concept match",
+      "priority": 20,
+      "type": "backend-controller",
+      "hash": "04a990d99cf32cb8f37bae8c57c2b91e7b3b5b180138fe4273868b049306f2a7"
+    }
+  ],
+  "text": "TASK\nimplement the highest priority complete product capability\n\nFEATURE\n  ai-nlp-analysis \u2014 AI NLP Complaint Analysis\n\nSERVICES\n  FastAPI AI Service\n  Express Backend\n\nRELEVANT EXPRESS BACKEND\n  backend/src/controllers/ai.controller.ts\n  backend/src/routes/ai.routes.ts\n  backend/src/controllers/analytics.controller.ts\n\nRELEVANT FASTAPI AI SERVICE\n  ai-service/app/controllers/intelligence_controller.py\n  ai-service/app/priority/__init__.py\n  ai-service/app/priority/predictor.py\n  ai-service/app/controllers/analysis_controller.py\n  ai-service/app/controllers/enrichment_controller.py\n  ai-service/app/controllers/nlp_controller.py\n  ai-service/app/department/__init__.py\n  ai-service/app/department/detector.py\n  ai-service/app/location/__init__.py\n  ai-service/app/location/extractor.py\n\nRELEVANT APIs\n  POST /api/ai/analyze  \u2190 ai-service/app/controllers/analysis_controller.py\n  POST /api/ai/department  \u2190 ai-service/app/controllers/intelligence_controller.py\n  POST /api/ai/keywords  \u2190 ai-service/app/controllers/enrichment_controller.py\n  POST /api/ai/location  \u2190 ai-service/app/controllers/intelligence_controller.py\n  POST /api/ai/nlp/analyze  \u2190 ai-service/app/controllers/nlp_controller.py\n  POST /api/ai/nlp/clean  \u2190 ai-service/app/controllers/nlp_controller.py\n  POST /api/ai/priority  \u2190 ai-service/app/controllers/intelligence_controller.py, task keyword match\n  POST /api/ai/summary  \u2190 ai-service/app/controllers/enrichment_controller.py\n  POST /api/v1/ai/analyze  \u2190 backend/src/routes/ai.routes.ts\n  POST /api/v1/ai/cluster  \u2190 backend/src/routes/ai.routes.ts\n  POST /api/v1/ai/department  \u2190 backend/src/routes/ai.routes.ts\n  POST /api/v1/ai/location  \u2190 backend/src/routes/ai.routes.ts\n  POST /api/v1/ai/priority  \u2190 backend/src/routes/ai.routes.ts, task keyword match\n  POST /api/v1/ai/problem  \u2190 backend/src/routes/ai.routes.ts\n  POST /api/v1/ai/summary  \u2190 backend/src/routes/ai.routes.ts\n\nARCHITECTURAL DECISIONS\n  0003-backend-calls-ai-service \u2014 0003 Backend Calls Ai Service (.ai/docs/decisions/0003-backend-calls-ai-service.md)\n\nDOCUMENTATION\n  .ai/docs/decisions/0003-backend-calls-ai-service.md \u2014 ADR 0003 \u2014 Backend Proxies All AI Calls\n  .ai/docs/features/ai-pipeline.md \u2014 AI Analysis Pipeline\n  .ai/docs/features/complaint-lifecycle.md \u2014 Complaint Lifecycle\n\nTESTS\n  ai-service/tests/test_analysis_service.py\n  ai-service/tests/test_text_normalizer.py\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: architecture.jpeg\n  Relevant relationships:\n    AI Intelligence Service --PROVIDES--> Priority Prediction (confidence 0.92)\n\nRECOMMENDED FILES TO READ\n  1. ai-service/app/controllers/intelligence_controller.py  (direct name/concept match; implements feature ai-nlp-analysis)\n  2. ai-service/app/priority/__init__.py  (direct name/concept match; implements feature ai-nlp-analysis)\n  3. ai-service/app/priority/predictor.py  (direct name/concept match; implements feature ai-nlp-analysis)\n  4. backend/src/controllers/ai.controller.ts  (direct name/concept match)\n  5. backend/src/routes/ai.routes.ts  (direct name/concept match)\n  6. ai-service/app/controllers/analysis_controller.py  (implements feature ai-nlp-analysis)\n\nPOTENTIAL IMPACT\n  FastAPI AI Service \u2192 Express Backend\n\nCONFIDENCE\n  0.95\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

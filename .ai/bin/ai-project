@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# ai-project — agent-agnostic project intelligence CLI.
+# Usage from anywhere: .ai/bin/ai-project <command> [args]
+# Optionally symlink into PATH: ln -s .ai/bin/ai-project ~/.local/bin/ai-project
+exec python3 "$(dirname "$(readlink -f "$0")")/../tool/ai_project.py" "$@"

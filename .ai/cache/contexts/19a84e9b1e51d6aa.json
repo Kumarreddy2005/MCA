@@ -1,0 +1,29 @@
+{
+  "task": "architecture-aware project planning and reconciliation",
+  "mode": "normal",
+  "graph_version": 1,
+  "generated": "2026-09-12T08:27:00+0530",
+  "features": [],
+  "apis": [],
+  "services": [],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/decisions/0001-three-service-architecture.md"
+  ],
+  "decisions": [
+    "decision:0001-three-service-architecture"
+  ],
+  "changes": [],
+  "confidence": 0.27,
+  "files": [
+    {
+      "path": ".ai/docs/decisions/0001-three-service-architecture.md",
+      "reason": "direct name/concept match",
+      "priority": 1,
+      "type": "documentation",
+      "hash": "61e7f22ce20bdaf284c8b9d7cafeb9d1d4f020712f8892cbcec394de669728fb"
+    }
+  ],
+  "text": "TASK\narchitecture-aware project planning and reconciliation\n\nFEATURE\n  (no strong feature match)\n\nSERVICES\n  (undetermined)\n\nRELEVANT OTHER\n  .ai/docs/decisions/0001-three-service-architecture.md\n\nARCHITECTURAL DECISIONS\n  0001-three-service-architecture \u2014 0001 Three Service Architecture (.ai/docs/decisions/0001-three-service-architecture.md)\n\nDOCUMENTATION\n  .ai/docs/decisions/0001-three-service-architecture.md \u2014 ADR 0001 \u2014 Three-Service Architecture\n\nRECOMMENDED FILES TO READ\n  1. .ai/docs/decisions/0001-three-service-architecture.md  (direct name/concept match)\n\nPOTENTIAL IMPACT\n  local\n\nCONFIDENCE\n  0.27\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

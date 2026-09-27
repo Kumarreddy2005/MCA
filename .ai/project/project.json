@@ -1,0 +1,25 @@
+{
+  "name": "Volunteer-CGIS",
+  "full_name": "Village Volunteer-Assisted Citizen Grievance Intelligence System",
+  "description": "AI-driven rural grievance management platform: volunteers register complaints on behalf of citizens; AI extracts problems, locations, priority, detects duplicates, and routes to departments.",
+  "subsystems": {
+    "backend": {
+      "stack": ["Node.js 22", "Express", "TypeScript", "MongoDB (Mongoose)"],
+      "entry": "backend/src/server.ts",
+      "api_prefix": "/api/v1",
+      "tests": "none present"
+    },
+    "frontend": {
+      "stack": ["React 19", "Vite", "TanStack Query", "Tailwind 4", "react-router-dom"],
+      "entry": "frontend/src/main.tsx",
+      "roles": ["Citizen", "Volunteer", "Department Admin", "Super Admin"]
+    },
+    "ai-service": {
+      "stack": ["Python", "FastAPI", "spaCy", "sentence-transformers", "pytesseract/OCR"],
+      "entry": "ai-service/app/main.py",
+      "tests": "ai-service/tests (pytest)"
+    }
+  },
+  "package_managers": { "backend": "npm", "frontend": "npm", "ai-service": "pip (requirements.txt)" },
+  "orchestration": "docker-compose per subsystem"
+}

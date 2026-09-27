@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "last_analyzed": "2026-09-13T09:23:48+0530",
+  "assets": [],
+  "intended": {
+    "nodes": [
+      {
+        "id": "frontend",
+        "label": "Web App / Frontend",
+        "kind": "frontend"
+      },
+      {
+        "id": "backend",
+        "label": "Application Backend",
+        "kind": "backend"
+      },
+      {
+        "id": "ai-service",
+        "label": "AI Intelligence Service",
+        "kind": "ai-service"
+      },
+      {
+        "id": "mongodb",
+        "label": "Data & Storage / MongoDB",
+        "kind": "database"
+      },
+      {
+        "id": "external-services",
+        "label": "External Services",
+        "kind": "external"
+      },
+      {
+        "id": "citizen",
+        "label": "Citizen",
+        "kind": "actor"
+      },
+      {
+        "id": "volunteer",
+        "label": "Village Volunteer",
+        "kind": "actor"
+      },
+      {
+        "id": "official",
+        "label": "Department Official",
+        "kind": "actor"
+      },
+      {
+        "id": "administrator",
+        "label": "Administrator",
+        "kind": "actor"
+      }
+    ],
+    "edges": [
+      {
+        "source_node": "Citizen",
+        "target_node": "Web App / Frontend",
+        "relationship": "SUBMITS_TO",
+        "confidence": 0.96,
+        "source_path": "architecture.jpeg",
+        "source_type": "architecture_image"
+      },
+      {
+        "source_node": "Village Volunteer",
+        "target_node": "Web App / Frontend",
+        "relationship": "REGISTERS_THROUGH",
+        "confidence": 0.96,
+        "source_path": "architecture.jpeg",
+        "source_type": "architecture_image"
+      },
+      {
+        "source_node": "Department Official",
+        "target_node": "Web App / Frontend",
+        "relationship": "UPDATES_THROUGH",
+        "confidence": 0.94,
+        "source_path": "architecture.jpeg",
+        "source_type": "architecture_image"
+      },
+      {
+        "source_node": "Administrator",
+        "target_node": "Web App / Frontend",
+        "relationship": "MANAGES_THROUGH",
+        "confidence": 0.94,
+        "source_path": "architecture.jpeg",
+        "source_type": "architecture_image"
+      },
+      {
+        "source_node": "Web App / Frontend",
+        "target_node": "Application Backend",
+        "relationship": "CALLS",
+        "confidence": 0.98,
+        "source_path": "architecture.jpeg",
+        "source_type": "architecture_image"
+      },
+      {
+        "source_node": "Application Backend",
+        "target_node": "AI Intelligence Service",
+        "relationship": "CALLS",
+        "confidence": 0.98,
+        "source_path": "architecture.jpeg",
+        "source_type": "architecture_image"
+      },
+      {
+        "source_node": "AI Intelligence Service",
+        "target_node": "Application Backend",
+        "relationship": "RETURNS_RESULTS_TO",
+        "confidence": 0.98,
+        "source_path": "architecture.jpeg",
+        "source_type": "architecture_image"
+      },
+      {
+        "source_node": "Application Backend",
+        "target_node": "Data & Storage / MongoDB",
+        "relationship": "READS_WRITES",
+        "confidence": 0.97,
+        "source_path": "architecture.jpeg",
+        "source_type": "architecture_image"
+      },
+      {
+        "source_node": "Application Backend",
+        "target_node": "External Services",
+        "relationship": "INTEGRATES_WITH",
+        "confidence": 0.86,
+        "source_path": "architecture.jpeg",
+        "source_type": "architecture_image"
+      },
+      {
+        "source_node": "AI Intelligence Service",
+        "target_node": "OCR",
+        "relationship": "PROVIDES",
+        "confidence": 0.93,
+        "source_path": "architecture.jpeg",
+        "source_type": "architecture_image"
+      },
+      {
+        "source_node": "AI Intelligence Service",
+        "target_node": "NLP",
+        "relationship": "PROVIDES",
+        "confidence": 0.93,
+        "source_path": "architecture.jpeg",
+        "source_type": "architecture_image"
+      },
+      {
+        "source_node": "AI Intelligence Service",
+        "target_node": "Priority Prediction",
+        "relationship": "PROVIDES",
+        "confidence": 0.92,
+        "source_path": "architecture.jpeg",
+        "source_type": "architecture_image"
+      },
+      {
+        "source_node": "AI Intelligence Service",
+        "target_node": "Duplicate / Similarity Detection",
+        "relationship": "PROVIDES",
+        "confidence": 0.92,
+        "source_path": "architecture.jpeg",
+        "source_type": "architecture_image"
+      },
+      {
+        "source_node": "Application Backend",
+        "target_node": "FastAPI AI Service",
+        "relationship": "SENDS_COMPLAINT_DATA",
+        "confidence": 0.9,
+        "source_path": "Volunteer_CGIS_Final_Architecture.pdf",
+        "source_type": "architecture_pdf",
+        "page": 1
+      },
+      {
+        "source_node": "FastAPI AI Service",
+        "target_node": "Application Backend",
+        "relationship": "RETURNS_STRUCTURED_JSON",
+        "confidence": 0.9,
+        "source_path": "Volunteer_CGIS_Final_Architecture.pdf",
+        "source_type": "architecture_pdf",
+        "page": 1
+      }
+    ]
+  },
+  "flows": [
+    {
+      "id": "complaint-registration-flow",
+      "name": "Complaint Registration",
+      "verified": true,
+      "steps": [
+        "Citizen or Village Volunteer",
+        "Web App / Frontend",
+        "Application Backend",
+        "MongoDB"
+      ],
+      "evidence": [
+        {
+          "source": "architecture.jpeg",
+          "source_type": "architecture_image",
+          "confidence": 0.88
+        }
+      ]
+    },
+    {
+      "id": "ai-processing-flow",
+      "name": "AI Complaint Processing",
+      "verified": true,
+      "steps": [
+        "Application Backend",
+        "FastAPI AI Service",
+        "OCR/NLP/Priority/Similarity",
+        "Application Backend",
+        "MongoDB"
+      ],
+      "evidence": [
+        {
+          "source": "architecture.jpeg",
+          "source_type": "architecture_image",
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "feature_mapping": {
+    "AI Intelligence Service": [
+      "AI OCR",
+      "AI NLP",
+      "Priority Prediction",
+      "Duplicate Detection",
+      "Department Recommendation"
+    ],
+    "Application Backend": [
+      "Authentication",
+      "Complaint Management",
+      "AI Integration",
+      "Notifications",
+      "SLA Management"
+    ],
+    "Web App / Frontend": [
+      "Complaint Registration",
+      "Complaint Tracking",
+      "Analytics",
+      "Administration"
+    ]
+  }
+}

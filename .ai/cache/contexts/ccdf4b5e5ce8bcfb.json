@@ -1,0 +1,98 @@
+{
+  "task": "Phase 6 SLA Monitoring and Multi-Tier Escalation Engine",
+  "mode": "compact",
+  "graph_version": 20,
+  "generated": "2026-09-13T07:05:30+0530",
+  "features": [
+    "analytics-reporting",
+    "notifications"
+  ],
+  "apis": [
+    "GET /api/notifications",
+    "PATCH /api/notifications/:id/read",
+    "PATCH /api/notifications/read-all"
+  ],
+  "services": [
+    "backend"
+  ],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/features/complaint-tracking.md"
+  ],
+  "decisions": [],
+  "changes": [
+    "change-2026-09-13-021",
+    "change-2026-09-13-020",
+    "change-2026-09-12-019",
+    "change-2026-09-12-018",
+    "change-2026-09-12-017"
+  ],
+  "confidence": 0.95,
+  "files": [
+    {
+      "path": "backend/src/controllers/notification.controller.ts",
+      "reason": "implements feature notifications",
+      "priority": 1,
+      "type": "backend-controller",
+      "hash": "b97b83892cc6369bdf33fe8c76272d3362b85bdddfabe24cb26771b10b897585"
+    },
+    {
+      "path": "backend/src/models/notification.model.ts",
+      "reason": "implements feature notifications",
+      "priority": 2,
+      "type": "model",
+      "hash": "ee3c0aa407e41c74839175bd635d2939fe778349021fb526d60a4996f643e10d"
+    },
+    {
+      "path": "backend/src/routes/notification.routes.ts",
+      "reason": "implements feature notifications",
+      "priority": 3,
+      "type": "module",
+      "hash": "52990c0ee897eaaa7fcf2f75ca7e386718a495fa8ac2ce0141685d8be501250d"
+    },
+    {
+      "path": "backend/src/services/notification.service.ts",
+      "reason": "implements feature notifications",
+      "priority": 4,
+      "type": "backend-service",
+      "hash": "c09032af60bc5ff7ce9ce076f397c777cb881fa92055ea15032bc444a3804cab"
+    },
+    {
+      "path": "PROJECT_PHASES_AND_AUTH_GUIDE.md",
+      "reason": "direct name/concept match",
+      "priority": 5,
+      "type": "file",
+      "hash": "21d93943154140f5492a6a04f1f74271fa5b93eac9674e66d91df1be91bb867e"
+    },
+    {
+      "path": "backend/src/controllers/complaint.controller.ts",
+      "reason": "direct name/concept match",
+      "priority": 6,
+      "type": "backend-controller",
+      "hash": "496dd6c2584e996eef47481cdb51c5bf66ab456858a0f3afea4d7845600fbb76"
+    },
+    {
+      "path": "backend/src/scripts/verify-complaint-engine.ts",
+      "reason": "direct name/concept match",
+      "priority": 7,
+      "type": "file",
+      "hash": "70c63caabbc1b8d50f4d6645b4fd06cdcfd352b086d0e3394ea65cbd92a31596"
+    },
+    {
+      "path": "backend/src/types/domain.ts",
+      "reason": "direct name/concept match",
+      "priority": 8,
+      "type": "file",
+      "hash": "a2a0410ee3b48dde6302de0aefe7bb34384ed8b75ff2f32b86001e0fbaa58ec3"
+    },
+    {
+      "path": "shared/types/index.ts",
+      "reason": "direct name/concept match",
+      "priority": 9,
+      "type": "file",
+      "hash": "3c3380601032db79148dd76cf68b15a4830e5ce86998133b78060903ff4ce00d"
+    }
+  ],
+  "text": "TASK\nPhase 6 SLA Monitoring and Multi-Tier Escalation Engine\n\nFEATURE\n  analytics-reporting \u2014 Analytics & Reports\n  notifications \u2014 Notifications\n\nSERVICES\n  Express Backend\n\nRELEVANT EXPRESS BACKEND\n  backend/src/controllers/notification.controller.ts\n  backend/src/models/notification.model.ts\n  backend/src/routes/notification.routes.ts\n  backend/src/services/notification.service.ts\n  backend/src/controllers/complaint.controller.ts\n  backend/src/scripts/verify-complaint-engine.ts\n  backend/src/types/domain.ts\n\nRELEVANT OTHER\n  PROJECT_PHASES_AND_AUTH_GUIDE.md\n  shared/types/index.ts\n\nRELEVANT APIs\n  GET /api/notifications  \u2190 backend/src/routes/notification.routes.ts\n  PATCH /api/notifications/:id/read  \u2190 backend/src/routes/notification.routes.ts\n  PATCH /api/notifications/read-all  \u2190 backend/src/routes/notification.routes.ts\n\nRECENT RELATED CHANGES\n  [change-2026-09-13-021] PROJECT_PHASES_AND_AUTH_GUIDE.md (unknown, 2026-09-13, PENDING_AGENT_CONFIRMATION)\n  [change-2026-09-13-020] Phase 5: Department Official Portal (unknown, 2026-09-13, confirmed)\n  [change-2026-09-12-019] Phase 4: Complaint Management Engine (State Machine, Auto-Routing, Immutable Audit Logging, In-App Notifications, Staff Action Logs, and Frontend Navbar Bell) (unknown, 2026-09-12, confirmed)\n  [change-2026-09-12-018] Update government branding and administrative geography to Government of Karnataka (unknown, 2026-09-12, confirmed)\n  [change-2026-09-12-017] Phase 3: Village Volunteer Portal (Assisted citizen registration, on-behalf complaint filing, field verification checklists & photos, cluster work queue, and volunteer AI assistant) (unknown, 2026-09-12, confirmed)\n\nDOCUMENTATION\n  .ai/docs/features/complaint-tracking.md \u2014 Citizen Complaint Submission & Tracking\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: architecture.jpeg\n  Relevant relationships:\n    Citizen --SUBMITS_TO--> Web App / Frontend (confidence 0.96)\n    Village Volunteer --REGISTERS_THROUGH--> Web App / Frontend (confidence 0.96)\n    Department Official --UPDATES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Administrator --MANAGES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Web App / Frontend --CALLS--> Application Backend (confidence 0.98)\n    Application Backend --CALLS--> AI Intelligence Service (confidence 0.98)\n    AI Intelligence Service --RETURNS_RESULTS_TO--> Application Backend (confidence 0.98)\n    Application Backend --READS_WRITES--> Data & Storage / MongoDB (confidence 0.97)\n\nRECOMMENDED FILES TO READ\n  1. backend/src/controllers/notification.controller.ts  (implements feature notifications)\n  2. backend/src/models/notification.model.ts  (implements feature notifications)\n  3. backend/src/routes/notification.routes.ts  (implements feature notifications)\n  4. backend/src/services/notification.service.ts  (implements feature notifications)\n  5. PROJECT_PHASES_AND_AUTH_GUIDE.md  (direct name/concept match)\n  6. backend/src/controllers/complaint.controller.ts  (direct name/concept match)\n\nPOTENTIAL IMPACT\n  Express Backend\n\nCONFIDENCE\n  0.95\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

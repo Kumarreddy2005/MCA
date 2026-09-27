@@ -1,0 +1,40 @@
+{
+  "summary": "Three-service system: React SPA frontend -> Express REST backend (MongoDB) -> FastAPI AI microservice (Python NLP/OCR).",
+  "services": [
+    {
+      "name": "frontend",
+      "role": "React 19 SPA (Vite, Tailwind 4, TanStack Query). Role-based portals: Citizen, Volunteer, Department Admin, Super Admin.",
+      "port": 5173,
+      "entry": "frontend/src/main.tsx",
+      "layers": ["pages/<Role>/<Feature>", "components/{ui,layout,common,...}", "services/api (axios client, baseURL /api/v1)", "hooks (react-query)", "contexts/AuthContext"]
+    },
+    {
+      "name": "backend",
+      "role": "Express + TypeScript REST API with layered architecture: routes -> controllers -> services -> repositories -> Mongoose models. JWT auth with role middleware, multer uploads, Zod-ish validators, audit middleware.",
+      "port": 5000,
+      "entry": "backend/src/server.ts",
+      "api_prefix": "/api/v1 (mounted in backend/src/routes/index.ts)",
+      "layers": ["routes", "controllers", "services", "repositories", "models", "middlewares", "validators", "config", "seed"]
+    },
+    {
+      "name": "ai-service",
+      "role": "FastAPI microservice: OCR (tesseract/OpenCV/PyMuPDF), NLP analysis (spaCy, sentence-transformers, keybert), clustering/similarity, priority prediction, department detection, summary generation.",
+      "entry": "ai-service/app/main.py",
+      "layers": ["api/routes", "controllers", "services", "nlp/ocr/location/priority/department/summary/clustering packages", "schemas (pydantic)", "config/settings"]
+    }
+  ],
+  "database": {
+    "type": "MongoDB (Mongoose)",
+    "collections": ["users", "complaints", "complaintclusters", "statushistories", "departments", "notifications", "auditlogs", "reports", "otpverifications"]
+  },
+  "cross_service_flows": [
+    "Frontend -> backend REST (/api/v1) with JWT bearer token (axios interceptor in frontend/src/services/api/client.ts)",
+    "Backend -> ai-service HTTP calls for complaint analysis (backend/src/services/ai.service.ts)"
+  ],
+  "conventions": {
+    "backend_naming": "kebab/pascal files per layer; *.repository.ts, *.service.ts, *.controller.ts, *.routes.ts, *.model.ts",
+    "frontend_naming": "PascalCase components grouped by role under pages/",
+    "ai_service_naming": "snake_case modules; controller -> service -> domain package",
+    "tests": "pytest in ai-service/tests only; no backend/frontend tests present"
+  }
+}

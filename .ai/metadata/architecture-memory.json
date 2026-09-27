@@ -1,0 +1,49 @@
+{
+  "note": "Persistent architectural memory: constraints, cross-service contracts, and assumptions retrievable via `ai-project decisions`.",
+  "constraints": [
+    {
+      "id": "C1",
+      "title": "Frontend must never call ai-service directly",
+      "detail": "All AI endpoints are proxied by the Express backend under /api/v1/ai/*; ai-service is unauthenticated on the private network.",
+      "refs": ["backend/src/services/ai.service.ts", "backend/src/routes/ai.routes.ts", "frontend/src/services/api/client.ts"]
+    },
+    {
+      "id": "C2",
+      "title": "AI failures must not block complaint registration",
+      "detail": "MockAiService falls back to local keyword rules when the remote AI service is unreachable.",
+      "refs": ["backend/src/services/ai.service.ts"]
+    },
+    {
+      "id": "C3",
+      "title": "Volunteer is the primary registration path",
+      "detail": "Citizens may self-register, but the volunteer flow verifies citizen identity on behalf of rural users.",
+      "refs": ["frontend/src/pages/Volunteer/RegisterComplaint/RegisterComplaint.tsx"]
+    },
+    {
+      "id": "C4",
+      "title": "Role-based authorization enforced per route",
+      "detail": "Express routes use authorize(<Role>) middleware; roles: Citizen, Volunteer, Department Admin, Super Admin.",
+      "refs": ["backend/src/middlewares/auth.middleware.ts", "backend/src/routes/complaint.routes.ts"]
+    },
+    {
+      "id": "C5",
+      "title": "MongoDB accessed only via repositories",
+      "detail": "Controllers/Services never query Mongoose models directly; persistence goes through the repository layer.",
+      "refs": ["backend/src/repositories"]
+    }
+  ],
+  "api_contracts": {
+    "frontend_to_backend": "REST /api/v1/*, JWT bearer token (axios interceptor), envelope {success, message, data}",
+    "backend_to_ai": "REST /api/ai/* (settings.api_prefix), no auth, ApiResponse{success, message, data} pydantic envelope"
+  },
+  "security_assumptions": [
+    "JWT access+refresh tokens issued by backend only",
+    "ai-service reachable only on the internal docker network",
+    "uploads validated by multer + ai-service file_validation.py"
+  ],
+  "deployment_assumptions": [
+    "Each subsystem has its own Dockerfile and docker-compose",
+    "MongoDB provisioned externally to the backend container",
+    "AI_SERVICE_URL env var required by backend config (env.ts)"
+  ]
+}

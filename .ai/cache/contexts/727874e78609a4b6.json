@@ -1,0 +1,334 @@
+{
+  "task": "cluster duplicate complaints",
+  "mode": "deep",
+  "graph_version": 1,
+  "generated": "2026-09-12T07:45:41+0530",
+  "features": [
+    "duplicate-clustering",
+    "complaint-registration",
+    "complaint-tracking"
+  ],
+  "apis": [
+    "DELETE /api/v1/complaints/:id",
+    "GET /api/v1/analytics/problem-clusters",
+    "GET /api/v1/complaints",
+    "GET /api/v1/complaints/${id}",
+    "GET /api/v1/complaints/:id",
+    "GET /api/v1/complaints/:id/timeline",
+    "GET /api/v1/complaints/citizen/:id",
+    "GET /api/v1/complaints/citizen/me",
+    "GET /api/v1/complaints/department",
+    "PATCH /api/v1/complaints/:id",
+    "PATCH /api/v1/complaints/:id/status",
+    "POST /api/ai/cluster",
+    "POST /api/ai/cluster/single",
+    "POST /api/ai/similarity",
+    "POST /api/v1/complaints"
+  ],
+  "services": [
+    "ai-service",
+    "backend",
+    "frontend",
+    "mongodb"
+  ],
+  "database": [
+    "complaint_cluster_model",
+    "complaint_model",
+    "status_history_model"
+  ],
+  "tests": [],
+  "docs": [
+    ".ai/docs/features/ai-pipeline.md",
+    ".ai/docs/decisions/0001-three-service-architecture.md",
+    ".ai/docs/decisions/0002-volunteer-human-in-loop.md"
+  ],
+  "decisions": [
+    "decision:0001-three-service-architecture",
+    "decision:0002-volunteer-human-in-loop"
+  ],
+  "changes": [],
+  "confidence": 0.95,
+  "files": [
+    {
+      "path": "ai-service/app/services/clustering_service.py",
+      "reason": "dependency of ai-service/app/controllers/clustering_controller.py; dependency of ai-service/tests/test_clustering_rules.py; direct name/concept match; implements feature duplicate-clustering",
+      "priority": 1,
+      "type": "backend-service",
+      "hash": "2572726b6bdfffa68ad14c28edbc386e85f588f82dd668982bc9b43ee9f7b81b"
+    },
+    {
+      "path": "backend/src/services/complaint.service.ts",
+      "reason": "direct name/concept match; implements feature complaint-registration; implements feature complaint-tracking",
+      "priority": 2,
+      "type": "backend-service",
+      "hash": "26a74259828d19ac6ee4d2e100e053bc80af2a024d1de2e1594a369aeb5b8985"
+    },
+    {
+      "path": "ai-service/app/controllers/clustering_controller.py",
+      "reason": "direct name/concept match; implements feature duplicate-clustering",
+      "priority": 3,
+      "type": "backend-controller",
+      "hash": "9b0e7eabb683d003b59c0d4cf2345b6dda08d313d35fd9a14e97f89146ea264c"
+    },
+    {
+      "path": "ai-service/tests/test_clustering_rules.py",
+      "reason": "direct name/concept match; implements feature duplicate-clustering",
+      "priority": 4,
+      "type": "file",
+      "hash": "8853ac34ea5a28671af94883339326ac9217e15205495f7b3eb183ef6d924b4d"
+    },
+    {
+      "path": "backend/src/models/complaintCluster.model.ts",
+      "reason": "direct name/concept match; implements feature duplicate-clustering",
+      "priority": 5,
+      "type": "model",
+      "hash": "69982fe78d96a53f287ef91ac5c0e60376a5ae902b67d7477ea4886cb6401bfd"
+    },
+    {
+      "path": "backend/src/repositories/complaintCluster.repository.ts",
+      "reason": "direct name/concept match; implements feature duplicate-clustering",
+      "priority": 6,
+      "type": "backend-repository",
+      "hash": "ec56b19d9120979df9f0a880f4a930c17218fc317b9c6fc326d51f0a6ca9e80a"
+    },
+    {
+      "path": "backend/src/routes/complaint.routes.ts",
+      "reason": "direct name/concept match; implements feature complaint-registration",
+      "priority": 7,
+      "type": "module",
+      "hash": "63234b091058f40a53c237c6ff3c456fc458ab2d6b2cbdb10684edc5ccd56331"
+    },
+    {
+      "path": "frontend/src/pages/Admin/ProblemClusters/ClusterDetails.tsx",
+      "reason": "direct name/concept match; implements feature duplicate-clustering",
+      "priority": 8,
+      "type": "frontend-page",
+      "hash": "238867039c033800c1fe8fac0fb6eba5adfaaf62eb077dceaf2beb89f258c2af"
+    },
+    {
+      "path": "frontend/src/pages/Department/Complaints/DepartmentComplaints.tsx",
+      "reason": "direct name/concept match; implements feature complaint-tracking",
+      "priority": 9,
+      "type": "frontend-page",
+      "hash": "783ac7c64de2704acb8ec0b29f74e130c1ec1d555ce95df6d47eb575e25b25f6"
+    },
+    {
+      "path": "ai-service/app/clustering/similarity.py",
+      "reason": "dependency of ai-service/app/services/clustering_service.py; dependency of ai-service/tests/test_clustering_rules.py; implements feature duplicate-clustering",
+      "priority": 10,
+      "type": "file",
+      "hash": "1f353f6b5993249222758b679de124af3f3fd690640c282ef2f62bf212902e84"
+    },
+    {
+      "path": "ai-service/app/schemas/clustering.py",
+      "reason": "dependency of ai-service/app/controllers/clustering_controller.py; dependency of ai-service/app/services/clustering_service.py; dependency of ai-service/tests/test_clustering_rules.py; direct name/concept match",
+      "priority": 11,
+      "type": "file",
+      "hash": "167e57d653475c6b890c858b019a304f0eb78ef45bbc22dcad97b9d8ffbabeb6"
+    },
+    {
+      "path": "frontend/src/components/timeline/Timeline.tsx",
+      "reason": "dependency of frontend/src/pages/Admin/ProblemClusters/ClusterDetails.tsx; implements feature complaint-tracking",
+      "priority": 12,
+      "type": "frontend-component",
+      "hash": "495c71c914052db19ab97eef50566488415803d45a031fafbd8e01bfc7f480ca"
+    },
+    {
+      "path": "frontend/src/hooks/useClusters.ts",
+      "reason": "dependency of frontend/src/pages/Admin/ProblemClusters/ClusterDetails.tsx; implements feature duplicate-clustering",
+      "priority": 13,
+      "type": "service",
+      "hash": "f6b7f12c4a9382051a0f6ba5d5803d9cdd4ec078b377820fc0c320f3b5ab27e8"
+    },
+    {
+      "path": "ai-service/app/clustering/__init__.py",
+      "reason": "implements feature duplicate-clustering",
+      "priority": 14,
+      "type": "file",
+      "hash": "f5152c4cde530aba4d36531c1c0acb363ad8ce87b4c9c3e69b1d4d346919f348"
+    },
+    {
+      "path": "backend/src/controllers/complaint.controller.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 15,
+      "type": "backend-controller",
+      "hash": "d074c9c4291a47220036bf7bfab14243f473aefa9498bc2fc659cfa139a48c60"
+    },
+    {
+      "path": "backend/src/middlewares/upload.middleware.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 16,
+      "type": "file",
+      "hash": "3e2a9ee14a491ff2389a8f35e168e38cc2973209539e27b4b4450d31db95d8b9"
+    },
+    {
+      "path": "backend/src/models/complaint.model.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 17,
+      "type": "model",
+      "hash": "7d15284797fc63b1454ff63f14ac8c47486c6e65ae822cc8ffc2d78badfb2543"
+    },
+    {
+      "path": "backend/src/models/statusHistory.model.ts",
+      "reason": "implements feature complaint-tracking",
+      "priority": 18,
+      "type": "model",
+      "hash": "b47acedc8d269e6f5124b1a98855ad801c39d8256238152d01c734ee9876579a"
+    },
+    {
+      "path": "backend/src/repositories/complaint.repository.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 19,
+      "type": "backend-repository",
+      "hash": "921079ed720357bc9fddcd0fc18aab346a6c56abf82f5c0325354705cc4d5313"
+    },
+    {
+      "path": "backend/src/repositories/statusHistory.repository.ts",
+      "reason": "implements feature complaint-tracking",
+      "priority": 20,
+      "type": "backend-repository",
+      "hash": "c255205e7fa9d90fcda3955189b0e3b809b88ff3efdaea4e7f9c13f875579e70"
+    },
+    {
+      "path": "frontend/src/components/upload/UploadBox.tsx",
+      "reason": "implements feature complaint-registration",
+      "priority": 21,
+      "type": "frontend-component",
+      "hash": "d1e306a39aa0d44eefb8ebd0e7ee603dd8871e8394a0fb1bd928483a10a89857"
+    },
+    {
+      "path": "frontend/src/hooks/useComplaints.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 22,
+      "type": "service",
+      "hash": "681f52ea7c344c247c3e0135862f0a134b571c56c3b8ee7a1818c0c957cf51a9"
+    },
+    {
+      "path": "frontend/src/pages/Admin/ProblemClusters/ProblemClusters.tsx",
+      "reason": "implements feature duplicate-clustering",
+      "priority": 23,
+      "type": "frontend-page",
+      "hash": "7abadebbb6efd85f291f0f4b00464e05629261480f73309f4a0be9e82584a49d"
+    },
+    {
+      "path": "frontend/src/pages/Department/ComplaintDetails/DepartmentComplaintDetails.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 24,
+      "type": "frontend-page",
+      "hash": "c4aa9001d3af0f76ec29b2d1130574ed738f2e384ec99c7eb97780a8d93fc637"
+    },
+    {
+      "path": "frontend/src/pages/User/ComplaintDetails/ComplaintDetails.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 25,
+      "type": "frontend-page",
+      "hash": "9af1dbe258e986cfa1e4cf99a7fd898426c9d947c37971552a43de36592e3d07"
+    },
+    {
+      "path": "frontend/src/pages/User/Complaints/MyComplaints.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 26,
+      "type": "frontend-page",
+      "hash": "62d11b2299c27be8ff814b1df10c24cb124b427610277c29a9dd14e0ae2c0644"
+    },
+    {
+      "path": "frontend/src/pages/Volunteer/ComplaintDetails/VolunteerComplaintDetails.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 27,
+      "type": "frontend-page",
+      "hash": "7801eef167b75f3e135ada4d52cfd6fdfc5210c7b42f885589af647b09ce3db7"
+    },
+    {
+      "path": "frontend/src/pages/Volunteer/Complaints/VolunteerComplaints.tsx",
+      "reason": "implements feature complaint-tracking",
+      "priority": 28,
+      "type": "frontend-page",
+      "hash": "f5c5fa0de9ed18dd31ff59f03cbf15db188cf231e46bbedc1b0793d95541a58c"
+    },
+    {
+      "path": "frontend/src/pages/Volunteer/RegisterComplaint/RegisterComplaint.tsx",
+      "reason": "implements feature complaint-registration",
+      "priority": 29,
+      "type": "frontend-page",
+      "hash": "213f02e6c8076957d86caeb6e1ac36c673797ca5d6e3b50daf2c1b2ab66a9d10"
+    },
+    {
+      "path": "frontend/src/components/complaints/ComplaintInfoCards.tsx",
+      "reason": "direct name/concept match",
+      "priority": 30,
+      "type": "frontend-component",
+      "hash": "34434227eb41be5e49d71229127dbdb64298f86f5ce8c1add89146e40ad2cfb6"
+    },
+    {
+      "path": "frontend/src/components/complaints/ComplaintSummaryTable.tsx",
+      "reason": "direct name/concept match",
+      "priority": 31,
+      "type": "frontend-component",
+      "hash": "53bd83efcf8b96f8e37b4548e97a582ec180680b9400ec9f3ab0cdb81c2dbc52"
+    },
+    {
+      "path": "frontend/src/pages/Admin/Complaints/AdminComplaints.tsx",
+      "reason": "direct name/concept match",
+      "priority": 32,
+      "type": "frontend-page",
+      "hash": "20bc4eecb844742366a419482ec52ed945c2ea3d67aae08f2b286c24ad5f5b4b"
+    },
+    {
+      "path": "frontend/src/components/common/PageHeader.tsx",
+      "reason": "dependency of frontend/src/pages/Admin/Complaints/AdminComplaints.tsx; dependency of frontend/src/pages/Admin/ProblemClusters/ClusterDetails.tsx",
+      "priority": 33,
+      "type": "frontend-component",
+      "hash": "d1185b0ad2f67efb49f05a459673ad1430e257b243f30dc7e3bf060df8d58a76"
+    },
+    {
+      "path": "ai-service/app/config/settings.py",
+      "reason": "dependency of ai-service/app/services/clustering_service.py",
+      "priority": 34,
+      "type": "file",
+      "hash": "f72da53b9f5ab17eb79146319d3c117e0ffe5a685492c5d920691a9eb40486e7"
+    },
+    {
+      "path": "ai-service/app/schemas/common.py",
+      "reason": "dependency of ai-service/app/controllers/clustering_controller.py",
+      "priority": 35,
+      "type": "file",
+      "hash": "2a3161c7bba8a4a9c871f45141f7e295e8e637de2f4732996e80e05a20e54294"
+    },
+    {
+      "path": "ai-service/app/schemas/intelligence.py",
+      "reason": "dependency of ai-service/app/schemas/clustering.py",
+      "priority": 36,
+      "type": "file",
+      "hash": "6a42c3f30bf2a99f240d2432725dd0e98594fb561f6142ad4fc464ffa1572fa2"
+    },
+    {
+      "path": "frontend/src/components/common/EmptyState.tsx",
+      "reason": "dependency of frontend/src/pages/Admin/ProblemClusters/ClusterDetails.tsx",
+      "priority": 37,
+      "type": "frontend-component",
+      "hash": "5568035579515f3e5a40cb6859c30e66ce124deed3c650ac89b38e697ee7b724"
+    },
+    {
+      "path": "frontend/src/components/status/StatusBadge.tsx",
+      "reason": "dependency of frontend/src/pages/Admin/ProblemClusters/ClusterDetails.tsx",
+      "priority": 38,
+      "type": "frontend-component",
+      "hash": "c65261a8d52d03dfd3cddf87687a8d14afb72c122f62c2c08e6d90b1e800f62b"
+    },
+    {
+      "path": "frontend/src/components/tables/DataTable.tsx",
+      "reason": "dependency of frontend/src/pages/Admin/Complaints/AdminComplaints.tsx",
+      "priority": 39,
+      "type": "frontend-component",
+      "hash": "acc632720eaccba037eb2f890f7b2a970053ee2d7f3341811717902f279c95d2"
+    },
+    {
+      "path": "frontend/src/components/ui/Card.tsx",
+      "reason": "dependency of frontend/src/pages/Admin/ProblemClusters/ClusterDetails.tsx",
+      "priority": 40,
+      "type": "frontend-component",
+      "hash": "72af0b0093eda08501c0ab514841dfc18e5ff3b742cacec4e507228ec47d9044"
+    }
+  ],
+  "text": "TASK\ncluster duplicate complaints\n\nFEATURE\n  duplicate-clustering \u2014 Duplicate Detection & Problem Clustering\n  complaint-registration \u2014 Complaint Registration (Volunteer)\n  complaint-tracking \u2014 Complaint Tracking & Status History\n\nSERVICES\n  FastAPI AI Service\n  Express Backend\n  Frontend (React)\n  MongoDB\n\nRELEVANT FRONTEND\n  frontend/src/pages/Admin/ProblemClusters/ClusterDetails.tsx\n  frontend/src/pages/Department/Complaints/DepartmentComplaints.tsx\n  frontend/src/components/timeline/Timeline.tsx\n  frontend/src/hooks/useClusters.ts\n  frontend/src/components/upload/UploadBox.tsx\n  frontend/src/hooks/useComplaints.ts\n  frontend/src/pages/Admin/ProblemClusters/ProblemClusters.tsx\n  frontend/src/pages/Department/ComplaintDetails/DepartmentComplaintDetails.tsx\n  frontend/src/pages/User/ComplaintDetails/ComplaintDetails.tsx\n  frontend/src/pages/User/Complaints/MyComplaints.tsx\n\nRELEVANT EXPRESS BACKEND\n  backend/src/services/complaint.service.ts\n  backend/src/models/complaintCluster.model.ts\n  backend/src/repositories/complaintCluster.repository.ts\n  backend/src/routes/complaint.routes.ts\n  backend/src/controllers/complaint.controller.ts\n  backend/src/middlewares/upload.middleware.ts\n  backend/src/models/complaint.model.ts\n  backend/src/models/statusHistory.model.ts\n  backend/src/repositories/complaint.repository.ts\n  backend/src/repositories/statusHistory.repository.ts\n\nRELEVANT FASTAPI AI SERVICE\n  ai-service/app/services/clustering_service.py\n  ai-service/app/controllers/clustering_controller.py\n  ai-service/tests/test_clustering_rules.py\n  ai-service/app/clustering/similarity.py\n  ai-service/app/schemas/clustering.py\n  ai-service/app/clustering/__init__.py\n  ai-service/app/config/settings.py\n  ai-service/app/schemas/common.py\n  ai-service/app/schemas/intelligence.py\n\nRELEVANT DATABASE\n  complaint_cluster_model\n  complaint_model\n  status_history_model\n\nRELEVANT APIs\n  DELETE /api/v1/complaints/:id  \u2190 backend/src/routes/complaint.routes.ts, task keyword match\n  GET /api/v1/analytics/problem-clusters  \u2190 task keyword match\n  GET /api/v1/complaints  \u2190 backend/src/routes/complaint.routes.ts, task keyword match\n  GET /api/v1/complaints/${id}  \u2190 task keyword match\n  GET /api/v1/complaints/:id  \u2190 backend/src/routes/complaint.routes.ts, task keyword match\n  GET /api/v1/complaints/:id/timeline  \u2190 backend/src/routes/complaint.routes.ts\n  GET /api/v1/complaints/citizen/:id  \u2190 backend/src/routes/complaint.routes.ts\n  GET /api/v1/complaints/citizen/me  \u2190 backend/src/routes/complaint.routes.ts\n  GET /api/v1/complaints/department  \u2190 backend/src/routes/complaint.routes.ts\n  PATCH /api/v1/complaints/:id  \u2190 backend/src/routes/complaint.routes.ts\n  PATCH /api/v1/complaints/:id/status  \u2190 backend/src/routes/complaint.routes.ts\n  POST /api/ai/cluster  \u2190 ai-service/app/controllers/clustering_controller.py\n  POST /api/ai/cluster/single  \u2190 ai-service/app/controllers/clustering_controller.py\n  POST /api/ai/similarity  \u2190 ai-service/app/controllers/clustering_controller.py\n  POST /api/v1/complaints  \u2190 backend/src/routes/complaint.routes.ts\n\nARCHITECTURAL DECISIONS\n  0001-three-service-architecture \u2014 0001 Three Service Architecture (.ai/docs/decisions/0001-three-service-architecture.md)\n  0002-volunteer-human-in-loop \u2014 0002 Volunteer Human In Loop (.ai/docs/decisions/0002-volunteer-human-in-loop.md)\n\nDOCUMENTATION\n  .ai/docs/features/ai-pipeline.md \u2014 AI Analysis Pipeline\n  .ai/docs/decisions/0001-three-service-architecture.md \u2014 ADR 0001 \u2014 Three-Service Architecture\n  .ai/docs/decisions/0002-volunteer-human-in-loop.md \u2014 ADR 0002 \u2014 Volunteer as Human-in-the-Loop Access Layer\n\nRECOMMENDED FILES TO READ\n  1. ai-service/app/services/clustering_service.py  (dependency of ai-service/app/controllers/clustering_controller.py; dependency of)\n  2. backend/src/services/complaint.service.ts  (direct name/concept match; implements feature complaint-registration; implements)\n  3. ai-service/app/controllers/clustering_controller.py  (direct name/concept match; implements feature duplicate-clustering)\n  4. ai-service/tests/test_clustering_rules.py  (direct name/concept match; implements feature duplicate-clustering)\n  5. backend/src/models/complaintCluster.model.ts  (direct name/concept match; implements feature duplicate-clustering)\n  6. backend/src/repositories/complaintCluster.repository.ts  (direct name/concept match; implements feature duplicate-clustering)\n\nPOTENTIAL IMPACT\n  FastAPI AI Service \u2192 Express Backend \u2192 Frontend (React) \u2192 MongoDB\n\nCONFIDENCE\n  0.95\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}
