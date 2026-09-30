@@ -47,15 +47,21 @@ export async function autoRouteComplaint(
   const district = complaint.location.district;
   const taluk = complaint.location.mandal; // mandal/taluk field
 
-  // 1. Search for active official in this department matching taluk jurisdiction
+  // 1. Locate active Department Staff for this operational department
+  const staffUser = await User.findOne({
+    role: UserRole.DEPARTMENT_STAFF,
+    isActive: true,
+    "departmentStaffProfile.departmentCode": departmentCode,
+  });
+
+  // 2. Locate supervising Official for departmental oversight
   let official = await User.findOne({
     role: UserRole.OFFICIAL,
     isActive: true,
     "officialProfile.departmentCode": departmentCode,
-    "officialProfile.jurisdictionTaluk": taluk,
+    ...(taluk ? { "officialProfile.jurisdictionTaluk": taluk } : {}),
   });
 
-  // 2. Fallback: match by district jurisdiction
   if (!official && district) {
     official = await User.findOne({
       role: UserRole.OFFICIAL,
@@ -65,7 +71,6 @@ export async function autoRouteComplaint(
     });
   }
 
-  // 3. Fallback: any active official in this department
   if (!official) {
     official = await User.findOne({
       role: UserRole.OFFICIAL,
@@ -74,25 +79,45 @@ export async function autoRouteComplaint(
     });
   }
 
-  if (!official) {
+  if (!staffUser && !official) {
     logger.info(
-      `[ROUTING] No available official found for department '${department}' in '${taluk || district || "State"}'. Leaving in routing queue.`
+      `[ROUTING] No available Department Staff or Official found for department '${department}'. Exception state: ON_HOLD.`
     );
-    if (complaint.status === ComplaintStatus.SUBMITTED || complaint.status === ComplaintStatus.VERIFIED) {
-      complaint.status = ComplaintStatus.ROUTING;
-      await complaint.save();
-    }
+    complaint.status = ComplaintStatus.ON_HOLD;
+    complaint.timeline.push({
+      status: ComplaintStatus.ON_HOLD,
+      message: `No active Department Staff or Official found for '${department}'. Grievance queued for administrative manual assignment.`,
+      actorRole: "SYSTEM",
+      actorName: "Automated Routing Engine",
+      timestamp: new Date(),
+    });
+    await complaint.save();
+
+    await logAuditEvent({
+      entityType: "COMPLAINT",
+      entityId: complaint._id.toString(),
+      complaintNumber: complaint.complaintNumber,
+      action: "STATUS_TRANSITION",
+      actor: { name: "Automated Routing Engine", role: "SYSTEM" },
+      previousState: complaint.status,
+      newState: ComplaintStatus.ON_HOLD,
+      notes: `Unassigned exception state. No staff available for department '${department}'`,
+    });
     return { assigned: false };
   }
 
-  // Found an eligible official! Assign to complaint
+  // Assign to complaint
   const previousStatus = complaint.status;
-  complaint.assignedOfficialId = official._id as mongoose.Types.ObjectId;
-  complaint.assignedOfficialName = official.name;
+  if (official) {
+    complaint.assignedOfficialId = official._id as mongoose.Types.ObjectId;
+    complaint.assignedOfficialName = official.name;
+  }
+
   complaint.status = ComplaintStatus.ASSIGNED;
 
-  const designation = official.officialProfile?.designation || "Officer";
-  const assignMessage = `Assigned to ${official.name} (${designation}, ${department}) for departmental review and field resolution.`;
+  const staffName = staffUser?.name || "Department Staff Queue";
+  const officialName = official?.name || "Supervising Official";
+  const assignMessage = `Routed to ${department} Operational Staff (${staffName}) with supervisory oversight by ${officialName}.`;
 
   complaint.timeline.push({
     status: ComplaintStatus.ASSIGNED,
@@ -103,6 +128,8 @@ export async function autoRouteComplaint(
   });
 
   await complaint.save();
+
+  const designation = official?.officialProfile?.designation || "Officer";
 
   // Record audit log
   await logAuditEvent({
@@ -118,8 +145,8 @@ export async function autoRouteComplaint(
     newState: ComplaintStatus.ASSIGNED,
     notes: assignMessage,
     metadata: {
-      assignedOfficialId: official._id.toString(),
-      assignedOfficialName: official.name,
+      assignedOfficialId: official ? official._id.toString() : undefined,
+      assignedOfficialName: official ? official.name : undefined,
       department,
       departmentCode,
       district,
@@ -127,41 +154,45 @@ export async function autoRouteComplaint(
     },
   });
 
-  // Notify Official
-  await sendNotification({
-    recipientId: official._id,
-    role: UserRole.OFFICIAL,
-    title: `New Grievance Assigned: ${complaint.complaintNumber}`,
-    message: `A new ${complaint.priority} priority grievance has been assigned to you: "${complaint.title}". Target SLA: ${new Date(
-      complaint.sla.targetResolutionDate
-    ).toLocaleDateString()}.`,
-    type: complaint.priority === "CRITICAL" ? "URGENT" : "INFO",
-    complaintId: complaint._id,
-    complaintNumber: complaint.complaintNumber,
-  });
+  if (official) {
+    // Notify Official
+    await sendNotification({
+      recipientId: official._id,
+      role: UserRole.OFFICIAL,
+      title: `New Grievance Assigned: ${complaint.complaintNumber}`,
+      message: `A new ${complaint.priority} priority grievance has been assigned: "${complaint.title}". Target SLA: ${new Date(
+        complaint.sla.targetResolutionDate
+      ).toLocaleDateString()}.`,
+      type: complaint.priority === "CRITICAL" ? "URGENT" : "INFO",
+      complaintId: complaint._id,
+      complaintNumber: complaint.complaintNumber,
+    });
+  }
 
   // Notify Citizen
   await sendNotification({
     recipientId: complaint.citizenId,
     role: UserRole.CITIZEN,
-    title: `Grievance Assigned to Department Official`,
-    message: `Your grievance ${complaint.complaintNumber} has been assigned to ${official.name} (${designation}, ${department}).`,
+    title: `Grievance Routed to Department`,
+    message: `Your grievance ${complaint.complaintNumber} has been routed to ${department} Department (${officialName}).`,
     type: "INFO",
     complaintId: complaint._id,
     complaintNumber: complaint.complaintNumber,
   });
 
   logger.info(
-    `[ROUTING] Successfully auto-routed ${complaint.complaintNumber} to official ${official.name} (${official.email})`
+    `[ROUTING] Successfully auto-routed ${complaint.complaintNumber} to ${department} (Staff: ${staffName}, Official: ${officialName})`
   );
 
   return {
     assigned: true,
-    official: {
-      id: official._id.toString(),
-      name: official.name,
-      designation,
-    },
+    official: official
+      ? {
+          id: official._id.toString(),
+          name: official.name,
+          designation,
+        }
+      : undefined,
   };
 }
 

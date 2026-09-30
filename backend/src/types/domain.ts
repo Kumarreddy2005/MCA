@@ -309,6 +309,14 @@ export interface IAiAnalysis {
     subCategory?: string;
     alternatives: Array<{ department: string; confidence: number }>;
   };
+  classification?: {
+    primary_department?: string;
+    confidence?: number;
+    sub_category?: string;
+    alternative_departments?: Array<{ department: string; confidence: number }>;
+    needs_volunteer_review?: boolean;
+    clarification_required?: boolean;
+  };
   priorityRecommendation: {
     priority: Priority;
     urgencyScore: number;

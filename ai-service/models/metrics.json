@@ -27,9 +27,42 @@
         150
       ]
     ],
+    "per_class_report": {
+      "ELECTRICITY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 150.0
+      },
+      "ROAD": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 150.0
+      },
+      "WATER": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 150.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 450.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 450.0
+      }
+    },
     "train_size": 1050,
     "test_size": 450,
-    "random_state": 42
+    "model_filename": "department_classifier.joblib"
   },
   {
     "target": "subcategory",
@@ -591,9 +624,156 @@
         13
       ]
     ],
+    "per_class_report": {
+      "Borewell Failure": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 19.0
+      },
+      "Broken/Low-Hanging Wire": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 11.0
+      },
+      "Damaged Manhole": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "Damaged Speed Breaker": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 14.0
+      },
+      "Electrical Pole Damage": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 14.0
+      },
+      "Exposed Electrical Cable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 14.0
+      },
+      "Footpath Damage": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 15.0
+      },
+      "Low Water Pressure": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 21.0
+      },
+      "No Water Supply": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 44.0
+      },
+      "Pipeline Burst": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "Pipeline Leakage": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 14.0
+      },
+      "Pothole": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 39.0
+      },
+      "Power Outage": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 50.0
+      },
+      "Pump Failure": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 15.0
+      },
+      "Road Collapse": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 21.0
+      },
+      "Road Damage": {
+        "precision": 0.9642857142857143,
+        "recall": 1.0,
+        "f1-score": 0.9818181818181818,
+        "support": 27.0
+      },
+      "Sparking": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 16.0
+      },
+      "Streetlight Failure": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 19.0
+      },
+      "Transformer Problem": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 26.0
+      },
+      "Water Contamination": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 11.0
+      },
+      "Water Tank Problem": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 16.0
+      },
+      "Waterlogged Road": {
+        "precision": 1.0,
+        "recall": 0.9285714285714286,
+        "f1-score": 0.9629629629629629,
+        "support": 14.0
+      },
+      "accuracy": 0.9977777777777778,
+      "macro avg": {
+        "precision": 0.9983766233766235,
+        "recall": 0.9967532467532467,
+        "f1-score": 0.9974900520355067,
+        "support": 450.0
+      },
+      "weighted avg": {
+        "precision": 0.9978571428571429,
+        "recall": 0.9977777777777778,
+        "f1-score": 0.9977568275346053,
+        "support": 450.0
+      }
+    },
     "train_size": 1050,
     "test_size": 450,
-    "random_state": 42
+    "model_filename": "subcategory_classifier.joblib"
   },
   {
     "target": "priority",
@@ -633,8 +813,47 @@
         110
       ]
     ],
+    "per_class_report": {
+      "CRITICAL": {
+        "precision": 0.7161290322580646,
+        "recall": 0.8283582089552238,
+        "f1-score": 0.7681660899653979,
+        "support": 134.0
+      },
+      "HIGH": {
+        "precision": 0.8721804511278195,
+        "recall": 0.703030303030303,
+        "f1-score": 0.7785234899328859,
+        "support": 165.0
+      },
+      "LOW": {
+        "precision": 0.6956521739130435,
+        "recall": 0.9411764705882353,
+        "f1-score": 0.8,
+        "support": 17.0
+      },
+      "MEDIUM": {
+        "precision": 0.7913669064748201,
+        "recall": 0.8208955223880597,
+        "f1-score": 0.8058608058608059,
+        "support": 134.0
+      },
+      "accuracy": 0.7844444444444445,
+      "macro avg": {
+        "precision": 0.7688321409434369,
+        "recall": 0.8233651262404554,
+        "f1-score": 0.7881375964397723,
+        "support": 450.0
+      },
+      "weighted avg": {
+        "precision": 0.7949784826284857,
+        "recall": 0.7844444444444445,
+        "f1-score": 0.7843910663991943,
+        "support": 450.0
+      }
+    },
     "train_size": 1050,
     "test_size": 450,
-    "random_state": 42
+    "model_filename": "priority_classifier.joblib"
   }
 ]

@@ -95,13 +95,17 @@ export async function seedInitialUsers(): Promise<void> {
       { email: "road.staff@vcgis.gov.in", name: "Road Department Staff", phone: "9876543213", departmentCode: "ROAD" },
       { email: "electricity.staff@vcgis.gov.in", name: "Electricity Department Staff", phone: "9876543214", departmentCode: "ELECTRICITY" },
       { email: "water.staff@vcgis.gov.in", name: "Water Department Staff", phone: "9876543215", departmentCode: "WATER" },
-    ];
+    ] as const;
     for (const staff of staffSeeds) {
-      await User.findOneAndUpdate(
-        { email: staff.email },
-        { $set: { name: staff.name, phone: staff.phone, role: UserRole.DEPARTMENT_STAFF, isActive: true, isVerified: true, password: process.env.DEPARTMENT_STAFF_SEED_PASSWORD || "Staff@12345", departmentStaffProfile: { departmentCode: staff.departmentCode } } },
-        { upsert: true, new: true, setDefaultsOnInsert: true }
-      );
+      const account = (await User.findOne({ email: staff.email })) || new User({ email: staff.email });
+      account.name = staff.name;
+      account.phone = staff.phone;
+      account.role = UserRole.DEPARTMENT_STAFF;
+      account.isActive = true;
+      account.isVerified = true;
+      account.password = process.env.DEPARTMENT_STAFF_SEED_PASSWORD || "Staff@12345";
+      account.departmentStaffProfile = { departmentCode: staff.departmentCode };
+      await account.save();
     }
     logger.info(`[SEED] Provisioned ${staffSeeds.length} Department Staff demo accounts.`);
 
@@ -208,7 +212,7 @@ export async function seedInitialUsers(): Promise<void> {
 
     for (const dept of departmentsSeed) {
       await Department.findOneAndUpdate(
-        { code: dept.code },
+        { $or: [{ code: dept.code }, { name: dept.name }] },
         { ...dept },
         { upsert: true, new: true }
       );

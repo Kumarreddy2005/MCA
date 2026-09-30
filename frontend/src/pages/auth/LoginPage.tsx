@@ -124,23 +124,40 @@ export const LoginPage: React.FC = () => {
       const user = await loginStaff({ email: staffEmail, password: staffPassword });
       redirectAfterLogin(user.role);
     } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : "Login failed. Check your credentials.");
+      const status =
+        err && typeof err === "object" && "response" in err
+          ? (err as { response?: { status?: number } }).response?.status
+          : undefined;
+      if (status === 401) {
+        setError("Invalid email or password. For department demo accounts, run npm run seed from the backend folder and try again.");
+      } else {
+        setError(err instanceof Error ? err.message : "Login failed. Check your credentials.");
+      }
     } finally {
       setLoading(false);
     }
   };
 
   // Quick dev helpers
-  const fillDevCredentials = (role: "ADMIN" | "VOLUNTEER" | "OFFICIAL") => {
+  const fillDevCredentials = (role: "ADMIN" | "VOLUNTEER" | "OFFICIAL" | "WATER_STAFF" | "ELECTRICITY_STAFF" | "ROAD_STAFF") => {
     if (role === "ADMIN") {
       setStaffEmail("admin@vcgis.gov.in");
       setStaffPassword("Admin@12345");
     } else if (role === "VOLUNTEER") {
       setStaffEmail("volunteer@vcgis.gov.in");
       setStaffPassword("Volunteer@12345");
-    } else {
+    } else if (role === "OFFICIAL") {
       setStaffEmail("official@vcgis.gov.in");
       setStaffPassword("Official@12345");
+    } else if (role === "WATER_STAFF") {
+      setStaffEmail("water.staff@vcgis.gov.in");
+      setStaffPassword("Staff@12345");
+    } else if (role === "ELECTRICITY_STAFF") {
+      setStaffEmail("electricity.staff@vcgis.gov.in");
+      setStaffPassword("Staff@12345");
+    } else if (role === "ROAD_STAFF") {
+      setStaffEmail("road.staff@vcgis.gov.in");
+      setStaffPassword("Staff@12345");
     }
   };
 
@@ -404,32 +421,63 @@ export const LoginPage: React.FC = () => {
                 </form>
 
                 {/* Development Quick Fill Buttons */}
-                <div className="mt-6 pt-4 border-t border-slate-100">
-                  <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-2 text-center">
-                    Quick Dev Testing Credentials:
-                  </p>
-                  <div className="grid grid-cols-3 gap-1.5">
-                    <button
-                      type="button"
-                      onClick={() => fillDevCredentials("ADMIN")}
-                      className="py-1.5 px-2 bg-purple-50 hover:bg-purple-100 text-purple-800 rounded-lg text-xs font-medium border border-purple-200 transition text-center"
-                    >
-                      Admin
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => fillDevCredentials("VOLUNTEER")}
-                      className="py-1.5 px-2 bg-amber-50 hover:bg-amber-100 text-amber-800 rounded-lg text-xs font-medium border border-amber-200 transition text-center"
-                    >
-                      Volunteer
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => fillDevCredentials("OFFICIAL")}
-                      className="py-1.5 px-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 rounded-lg text-xs font-medium border border-emerald-200 transition text-center"
-                    >
-                      Official
-                    </button>
+                <div className="mt-6 pt-4 border-t border-slate-100 space-y-3">
+                  <div>
+                    <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-2 text-center">
+                      Quick System Roles:
+                    </p>
+                    <div className="grid grid-cols-3 gap-1.5">
+                      <button
+                        type="button"
+                        onClick={() => fillDevCredentials("ADMIN")}
+                        className="py-1.5 px-2 bg-purple-50 hover:bg-purple-100 text-purple-800 rounded-lg text-xs font-medium border border-purple-200 transition text-center"
+                      >
+                        Admin
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => fillDevCredentials("VOLUNTEER")}
+                        className="py-1.5 px-2 bg-amber-50 hover:bg-amber-100 text-amber-800 rounded-lg text-xs font-medium border border-amber-200 transition text-center"
+                      >
+                        Volunteer
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => fillDevCredentials("OFFICIAL")}
+                        className="py-1.5 px-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 rounded-lg text-xs font-medium border border-emerald-200 transition text-center"
+                      >
+                        Official
+                      </button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-2 text-center">
+                      Department Staff Quick Login:
+                    </p>
+                    <div className="grid grid-cols-3 gap-1.5">
+                      <button
+                        type="button"
+                        onClick={() => fillDevCredentials("WATER_STAFF")}
+                        className="py-1.5 px-2 bg-cyan-50 hover:bg-cyan-100 text-cyan-800 rounded-lg text-xs font-medium border border-cyan-200 transition text-center flex items-center justify-center gap-1"
+                      >
+                        💧 Water
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => fillDevCredentials("ELECTRICITY_STAFF")}
+                        className="py-1.5 px-2 bg-yellow-50 hover:bg-yellow-100 text-yellow-800 rounded-lg text-xs font-medium border border-yellow-200 transition text-center flex items-center justify-center gap-1"
+                      >
+                        ⚡ Electricity
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => fillDevCredentials("ROAD_STAFF")}
+                        className="py-1.5 px-2 bg-orange-50 hover:bg-orange-100 text-orange-800 rounded-lg text-xs font-medium border border-orange-200 transition text-center flex items-center justify-center gap-1"
+                      >
+                        🛣️ Road
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -48,7 +48,7 @@ export async function requireOfficialDepartment(
 
   if (!officialDeptCode || !complaintDeptCode || complaintDeptCode !== officialDeptCode) {
     logger.warn(
-      `[SECURITY] Department isolation breach blocked: Official ${req.user.name} (${officialDept}) attempted unauthorized action on complaint ${complaint.complaintNumber} (${complaint.department})`
+      `[SECURITY] Department isolation breach blocked: Official ${req.user.name} (${officialDeptCode}) attempted unauthorized action on complaint ${complaint.complaintNumber} (${complaint.department})`
     );
 
     // Audit the security violation
@@ -78,6 +78,63 @@ export async function requireOfficialDepartment(
   }
 
   // Attach complaint to request for subsequent handlers if needed
+  (req as Request & { complaint?: IComplaintDocument }).complaint = complaint;
+  next();
+}
+
+/**
+ * Middleware ensuring a Department Staff user can ONLY access grievances within their assigned department.
+ * Admins retain cross-department oversight.
+ */
+export async function requireDepartmentStaffDepartment(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> {
+  if (!req.user) {
+    res.status(401).json(buildError("UNAUTHORIZED", "Authentication required"));
+    return;
+  }
+
+  if (req.user.role === UserRole.ADMIN) {
+    next();
+    return;
+  }
+
+  if (req.user.role !== UserRole.DEPARTMENT_STAFF) {
+    res.status(403).json(buildError("FORBIDDEN", "Only Department Staff can access this portal"));
+    return;
+  }
+
+  const { id } = req.params;
+  if (!id) {
+    next();
+    return;
+  }
+
+  const complaint = await Complaint.findById(id);
+  if (!complaint) {
+    res.status(404).json(buildError("NOT_FOUND", "Grievance not found"));
+    return;
+  }
+
+  const staffDeptCode = req.user.departmentStaffProfile?.departmentCode;
+  const complaintDeptCode = complaint.departmentCode || normalizeDepartmentCode(complaint.department);
+
+  if (!staffDeptCode || !complaintDeptCode || complaintDeptCode !== staffDeptCode) {
+    logger.warn(
+      `[SECURITY] Staff Department isolation breach blocked: Staff ${req.user.name} (${staffDeptCode}) attempted unauthorized action on complaint ${complaint.complaintNumber} (${complaint.department})`
+    );
+
+    res.status(403).json(
+      buildError(
+        "DEPARTMENT_ISOLATION_VIOLATION",
+        `Access denied. This grievance belongs to '${complaint.department}'. Your department staff account is restricted to '${staffDeptCode || "None"}'.`
+      )
+    );
+    return;
+  }
+
   (req as Request & { complaint?: IComplaintDocument }).complaint = complaint;
   next();
 }

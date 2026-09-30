@@ -718,7 +718,7 @@ export class AdminService {
 
     user.officialProfile = {
       department: normalizedName,
-      departmentCode: normalizedCode,
+      departmentCode: normalizedCode as "ROAD" | "ELECTRICITY" | "WATER",
       designation: assignment.designation,
       jurisdictionDistrict: assignment.jurisdictionDistrict,
       jurisdictionTaluk: assignment.jurisdictionTaluk,
