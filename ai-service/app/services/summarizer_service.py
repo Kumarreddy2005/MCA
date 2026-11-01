@@ -13,7 +13,12 @@ class SummarizerService:
         title = req.title.strip()
         desc = req.description.strip()
         cat = req.category or "civic grievance"
-        loc = req.location_name or "specified village location"
+        # Un-nest any previous meta prefix
+        meta_match = re.match(r"^Citizen filed a grievance regarding ['\"]?([^'\"]+)['\"]?\s+under", title)
+        if meta_match:
+            title = meta_match.group(1).strip()
+
+        loc = req.location_name.strip() if req.location_name and req.location_name.strip() else ""
 
         # Break description into sentences
         sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", desc) if len(s.strip()) > 5]
@@ -33,7 +38,10 @@ class SummarizerService:
             key_sentences.append(desc or title)
 
         joined_facts = " ".join(key_sentences)
-        summary = f"Citizen filed a grievance regarding '{title}' under {cat} at {loc}. {joined_facts}"
+        if loc and loc.lower() not in ["unresolved", "unknown", "none", "specified village location"]:
+            summary = f"Citizen filed a grievance regarding '{title}' under {cat} at {loc}. {joined_facts}"
+        else:
+            summary = f"Citizen filed a grievance regarding '{title}' under {cat}. {joined_facts}"
 
         # Ensure summary is concise (< 350 chars if possible)
         if len(summary) > 400:
@@ -43,7 +51,7 @@ class SummarizerService:
         bullet_points = [
             f"Issue: {title}",
             f"Category: {cat}",
-            f"Location: {loc}",
+            f"Location: {loc or 'Not specified'}",
             f"Core Grievance: {sentences[0] if sentences else desc[:100]}"
         ]
 

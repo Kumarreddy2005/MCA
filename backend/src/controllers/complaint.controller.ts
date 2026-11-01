@@ -241,7 +241,8 @@ export async function createComplaint(req: Request, res: Response): Promise<void
     await complaint.save();
   }
 
-  logger.info(`[COMPLAINT] Created ${complaint.complaintNumber} by ${req.user.name} (${req.user.phone})`);
+  const maskedPhone = req.user.phone ? req.user.phone.replace(/(\d{2})\d{4}(\d{4})/, "$1****$2") : "N/A";
+  logger.info(`[COMPLAINT] Created ${complaint.complaintNumber} by ${req.user.name} (${maskedPhone})`);
 
   // 1. Immutable Audit Log
   await logAuditEvent({
@@ -276,13 +277,16 @@ export async function createComplaint(req: Request, res: Response): Promise<void
     complaintNumber: complaint.complaintNumber,
   });
 
-  // 3. Trigger Automatic Department & Officer Routing only after AI safety gate
-  if (complaint.status !== ComplaintStatus.VERIFICATION_REQUIRED) {
+  // 3. Trigger Automatic Department Routing ONLY if registered by Volunteer with immediate verification.
+  // Citizen submissions are queued for Volunteer Verification before department routing.
+  if (req.user.role === UserRole.VOLUNTEER && complaint.status === ComplaintStatus.VERIFIED) {
     try {
       await autoRouteComplaint(complaint);
     } catch (routingErr) {
       logger.warn(`[ROUTING] Auto-routing failed for ${complaint.complaintNumber}:`, routingErr);
     }
+  } else {
+    logger.info(`[ROUTING] Complaint ${complaint.complaintNumber} queued for Volunteer Verification before department routing.`);
   }
 
   // Refetch updated complaint after potential auto-routing
@@ -395,6 +399,26 @@ export async function getComplaintById(req: Request, res: Response): Promise<voi
   if (req.user.role === UserRole.CITIZEN && !complaint.citizenId.equals(req.user._id)) {
     res.status(403).json(buildError("FORBIDDEN", "You are not authorized to view this grievance"));
     return;
+  }
+
+  // Security: Officials can only inspect grievances within their department
+  if (req.user.role === UserRole.OFFICIAL) {
+    const officialDept = req.user.officialProfile?.departmentCode || normalizeDepartmentCode(req.user.officialProfile?.department);
+    const complaintDept = complaint.departmentCode || normalizeDepartmentCode(complaint.department);
+    if (officialDept && complaintDept && officialDept !== complaintDept) {
+      res.status(403).json(buildError("FORBIDDEN", `Access restricted to ${req.user.officialProfile?.department} grievances`));
+      return;
+    }
+  }
+
+  // Security: Department Staff can only inspect grievances within their department
+  if (req.user.role === UserRole.DEPARTMENT_STAFF) {
+    const staffDept = req.user.departmentStaffProfile?.departmentCode;
+    const complaintDept = complaint.departmentCode || normalizeDepartmentCode(complaint.department);
+    if (staffDept && complaintDept && staffDept !== complaintDept) {
+      res.status(403).json(buildError("FORBIDDEN", "Access restricted to your assigned department queue"));
+      return;
+    }
   }
 
   const json = complaint.toJSON() as Record<string, unknown>;
@@ -626,6 +650,21 @@ export async function assignOfficial(req: Request, res: Response): Promise<void>
     return;
   }
 
+  // Department isolation: Officials can only assign complaints within their department
+  if (req.user.role === UserRole.OFFICIAL) {
+    const complaint = await Complaint.findById(id);
+    if (!complaint) {
+      res.status(404).json(buildError("NOT_FOUND", "Grievance not found"));
+      return;
+    }
+    const officialDept = req.user.officialProfile?.departmentCode || normalizeDepartmentCode(req.user.officialProfile?.department);
+    const complaintDept = complaint.departmentCode || normalizeDepartmentCode(complaint.department);
+    if (officialDept && complaintDept && officialDept !== complaintDept) {
+      res.status(403).json(buildError("FORBIDDEN", `Access denied. Complaint belongs to ${complaint.department}`));
+      return;
+    }
+  }
+
   try {
     const updated = await manualAssignComplaint({
       complaintId: id,
@@ -680,6 +719,16 @@ export async function recordAction(req: Request, res: Response): Promise<void> {
   if (!complaint) {
     res.status(404).json(buildError("NOT_FOUND", "Grievance not found"));
     return;
+  }
+
+  // Department isolation: Officials can only record actions on complaints in their department
+  if (req.user.role === UserRole.OFFICIAL) {
+    const officialDept = req.user.officialProfile?.departmentCode || normalizeDepartmentCode(req.user.officialProfile?.department);
+    const complaintDept = complaint.departmentCode || normalizeDepartmentCode(complaint.department);
+    if (officialDept && complaintDept && officialDept !== complaintDept) {
+      res.status(403).json(buildError("FORBIDDEN", `Access denied. Complaint belongs to ${complaint.department}`));
+      return;
+    }
   }
 
   const data = parseResult.data;
@@ -846,11 +895,16 @@ export async function getAllComplaints(req: Request, res: Response): Promise<voi
 
   const filter: Record<string, unknown> = {};
 
-  // Officials are scoped to their department unless admin
+  // Officials and Department Staff are scoped to their department unless admin
   if (req.user.role === UserRole.OFFICIAL) {
     const userDept = req.user.officialProfile?.department;
     if (userDept) {
       filter.department = userDept;
+    }
+  } else if (req.user.role === UserRole.DEPARTMENT_STAFF) {
+    const staffDept = req.user.departmentStaffProfile?.departmentCode;
+    if (staffDept) {
+      filter.departmentCode = staffDept;
     }
   } else if (department && department !== "ALL") {
     filter.department = department;

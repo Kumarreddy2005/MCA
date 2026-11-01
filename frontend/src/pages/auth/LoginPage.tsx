@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
 import { authService } from "@/services/api/auth.service";
 import { UserRole } from "@/types/auth";
-import { Lock, Mail, ArrowRight, ShieldCheck, User, KeyRound, AlertCircle, CheckCircle2 } from "lucide-react";
+import { Lock, Mail, ArrowRight, ShieldCheck, User, KeyRound, AlertCircle, CheckCircle2, Droplet, Zap, Route } from "lucide-react";
 
 export const LoginPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"CITIZEN" | "STAFF">("CITIZEN");
@@ -455,27 +455,30 @@ export const LoginPage: React.FC = () => {
                     <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-2 text-center">
                       Department Staff Quick Login:
                     </p>
-                    <div className="grid grid-cols-3 gap-1.5">
+                    <div className="grid grid-cols-3 gap-2">
                       <button
                         type="button"
                         onClick={() => fillDevCredentials("WATER_STAFF")}
-                        className="py-1.5 px-2 bg-cyan-50 hover:bg-cyan-100 text-cyan-800 rounded-lg text-xs font-medium border border-cyan-200 transition text-center flex items-center justify-center gap-1"
+                        className="py-2 px-2.5 bg-cyan-50/90 hover:bg-cyan-100 text-cyan-900 rounded-xl text-xs font-semibold border border-cyan-200/80 transition flex items-center justify-center gap-1.5 shadow-2xs"
                       >
-                        💧 Water
+                        <Droplet className="w-3.5 h-3.5 text-cyan-600 shrink-0" />
+                        <span>Water</span>
                       </button>
                       <button
                         type="button"
                         onClick={() => fillDevCredentials("ELECTRICITY_STAFF")}
-                        className="py-1.5 px-2 bg-yellow-50 hover:bg-yellow-100 text-yellow-800 rounded-lg text-xs font-medium border border-yellow-200 transition text-center flex items-center justify-center gap-1"
+                        className="py-2 px-2.5 bg-amber-50/90 hover:bg-amber-100 text-amber-900 rounded-xl text-xs font-semibold border border-amber-200/80 transition flex items-center justify-center gap-1.5 shadow-2xs"
                       >
-                        ⚡ Electricity
+                        <Zap className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                        <span>Electricity</span>
                       </button>
                       <button
                         type="button"
                         onClick={() => fillDevCredentials("ROAD_STAFF")}
-                        className="py-1.5 px-2 bg-orange-50 hover:bg-orange-100 text-orange-800 rounded-lg text-xs font-medium border border-orange-200 transition text-center flex items-center justify-center gap-1"
+                        className="py-2 px-2.5 bg-orange-50/90 hover:bg-orange-100 text-orange-900 rounded-xl text-xs font-semibold border border-orange-200/80 transition flex items-center justify-center gap-1.5 shadow-2xs"
                       >
-                        🛣️ Road
+                        <Route className="w-3.5 h-3.5 text-orange-600 shrink-0" />
+                        <span>Road</span>
                       </button>
                     </div>
                   </div>

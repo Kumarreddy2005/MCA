@@ -115,6 +115,8 @@ export interface IComplaintDocument extends Document {
     }>;
   };
   aiAnalysis?: IAiAnalysis;
+  duplicateOfComplaintId?: mongoose.Types.ObjectId;
+  duplicateOfComplaintNumber?: string;
   feedback?: {
     rating: number;
     comment?: string;
@@ -348,6 +350,15 @@ const complaintSchema = new Schema<IComplaintDocument>(
     aiAnalysis: {
       type: Schema.Types.Mixed,
       default: undefined,
+    },
+    duplicateOfComplaintId: {
+      type: Schema.Types.ObjectId,
+      ref: "Complaint",
+      index: true,
+    },
+    duplicateOfComplaintNumber: {
+      type: String,
+      trim: true,
     },
     feedback: {
       rating: { type: Number, min: 1, max: 5 },

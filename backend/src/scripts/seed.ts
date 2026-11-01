@@ -76,8 +76,8 @@ export async function seedInitialUsers(): Promise<void> {
       isActive: true,
       isVerified: true,
       officialProfile: {
-        department: "Roads & Transport",
-        departmentCode: "ROAD",
+        department: "Water Supply",
+        departmentCode: "WATER",
         designation: "Executive Engineer",
         jurisdictionDistrict: "Mysuru",
         jurisdictionTaluk: "Mysuru Taluk",

@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
 import { Complaint, IComplaintDocument, IEvidenceSubdocument } from "../models/complaint.model.js";
-import { ComplaintStatus, SlaStatus, UserRole } from "../types/domain.js";
+import { ComplaintStatus, SlaStatus, UserRole, normalizeDepartmentCode } from "../types/domain.js";
 import { logAuditEvent } from "./audit.service.js";
 import { sendNotification } from "./notification.service.js";
+import { autoRouteComplaint } from "./complaint-routing.service.js";
 import { logger } from "../utils/logger.js";
 
 // Allowed transitions from each status
@@ -12,6 +13,7 @@ export const ALLOWED_TRANSITIONS: Record<ComplaintStatus, ComplaintStatus[]> = {
     ComplaintStatus.VALIDATING,
     ComplaintStatus.VERIFICATION_REQUIRED,
     ComplaintStatus.VERIFIED,
+    ComplaintStatus.INFORMATION_REQUIRED,
     ComplaintStatus.ROUTING,
     ComplaintStatus.ASSIGNED,
     ComplaintStatus.UNDER_REVIEW,
@@ -29,6 +31,7 @@ export const ALLOWED_TRANSITIONS: Record<ComplaintStatus, ComplaintStatus[]> = {
   ],
   [ComplaintStatus.VERIFICATION_REQUIRED]: [
     ComplaintStatus.VERIFIED,
+    ComplaintStatus.INFORMATION_REQUIRED,
     ComplaintStatus.REJECTED,
     ComplaintStatus.DUPLICATE,
     ComplaintStatus.CANCELLED,
@@ -124,9 +127,9 @@ export const ROLE_TRANSITION_PERMISSIONS: Partial<Record<ComplaintStatus, UserRo
   [ComplaintStatus.ASSIGNED]: [UserRole.ADMIN, UserRole.OFFICIAL],
   [ComplaintStatus.UNDER_REVIEW]: [UserRole.OFFICIAL, UserRole.DEPARTMENT_STAFF, UserRole.ADMIN, UserRole.CITIZEN], // Citizen can return from INFORMATION_REQUIRED
   [ComplaintStatus.ACTION_IN_PROGRESS]: [UserRole.OFFICIAL, UserRole.DEPARTMENT_STAFF, UserRole.ADMIN],
-  [ComplaintStatus.INFORMATION_REQUIRED]: [UserRole.OFFICIAL, UserRole.DEPARTMENT_STAFF, UserRole.ADMIN],
-  [ComplaintStatus.RESOLVED]: [UserRole.OFFICIAL, UserRole.ADMIN],
-  [ComplaintStatus.REJECTED]: [UserRole.OFFICIAL, UserRole.ADMIN],
+  [ComplaintStatus.INFORMATION_REQUIRED]: [UserRole.OFFICIAL, UserRole.DEPARTMENT_STAFF, UserRole.VOLUNTEER, UserRole.ADMIN],
+  [ComplaintStatus.RESOLVED]: [UserRole.OFFICIAL, UserRole.DEPARTMENT_STAFF, UserRole.ADMIN],
+  [ComplaintStatus.REJECTED]: [UserRole.OFFICIAL, UserRole.VOLUNTEER, UserRole.ADMIN],
   [ComplaintStatus.DUPLICATE]: [UserRole.OFFICIAL, UserRole.ADMIN],
   [ComplaintStatus.ESCALATED]: [UserRole.OFFICIAL, UserRole.ADMIN],
   [ComplaintStatus.ON_HOLD]: [UserRole.OFFICIAL, UserRole.DEPARTMENT_STAFF, UserRole.ADMIN],
@@ -203,12 +206,18 @@ export async function transitionComplaintStatus(
 
   // Department Officials must belong to the same department (unless admin)
   if (payload.actor.role === UserRole.OFFICIAL) {
-    // Official department check is enforced by route middleware.
+    const actor = await mongoose.model("User").findById(payload.actor.id).lean() as any;
+    const officialDeptCode = actor?.officialProfile?.departmentCode || normalizeDepartmentCode(actor?.officialProfile?.department);
+    const complaintDeptCode = complaint.departmentCode || normalizeDepartmentCode(complaint.department);
+    if (!officialDeptCode || !complaintDeptCode || complaintDeptCode !== officialDeptCode) {
+      throw new LifecycleError("UNAUTHORIZED_ROLE", `Officials may only modify complaints belonging to their assigned department (${actor?.officialProfile?.department || "None"})`);
+    }
   }
   if (payload.actor.role === UserRole.DEPARTMENT_STAFF) {
     const actor = await mongoose.model("User").findById(payload.actor.id).lean() as any;
     const staffDept = actor?.departmentStaffProfile?.departmentCode;
-    if (!staffDept || complaint.departmentCode !== staffDept) {
+    const complaintDeptCode = complaint.departmentCode || normalizeDepartmentCode(complaint.department);
+    if (!staffDept || !complaintDeptCode || complaintDeptCode !== staffDept) {
       throw new LifecycleError("UNAUTHORIZED_ROLE", "Department Staff may only modify complaints belonging to their assigned department");
     }
   }
@@ -265,6 +274,22 @@ export async function transitionComplaintStatus(
       complaint.informationRequested.respondedAt = new Date();
       timelineMessage = `Citizen provided clarification: "${payload.informationResponse.trim()}". Status resumed to UNDER_REVIEW.`;
     }
+  } else if (targetStatus === ComplaintStatus.DUPLICATE) {
+    if (!payload.duplicateOfComplaintNumber || payload.duplicateOfComplaintNumber.trim().length < 5) {
+      throw new LifecycleError(
+        "MISSING_REQUIRED_PAYLOAD",
+        "A valid primary complaint number is required to mark a grievance as duplicate."
+      );
+    }
+    const cleanNumber = payload.duplicateOfComplaintNumber.trim();
+    const primaryComplaint = await Complaint.findOne({ complaintNumber: cleanNumber });
+    if (primaryComplaint) {
+      complaint.duplicateOfComplaintId = primaryComplaint._id as mongoose.Types.ObjectId;
+      complaint.duplicateOfComplaintNumber = primaryComplaint.complaintNumber;
+    } else {
+      complaint.duplicateOfComplaintNumber = cleanNumber;
+    }
+    timelineMessage = `Grievance marked as DUPLICATE of primary complaint ${cleanNumber} by ${payload.actor.name}.`;
   } else if (targetStatus === ComplaintStatus.REOPENED) {
     const reopenReason = payload.remarks || "Citizen requested grievance reconsideration.";
     timelineMessage = `Grievance REOPENED. Reason: "${reopenReason}"`;
@@ -288,6 +313,15 @@ export async function transitionComplaintStatus(
   });
 
   await complaint.save();
+
+  // If verified by Volunteer, trigger department auto-routing
+  if (targetStatus === ComplaintStatus.VERIFIED) {
+    try {
+      await autoRouteComplaint(complaint);
+    } catch (routingErr) {
+      logger.warn(`[ROUTING] Auto-routing failed after verification for ${complaint.complaintNumber}:`, routingErr);
+    }
+  }
 
   // 5. Immutable Audit Log
   await logAuditEvent({

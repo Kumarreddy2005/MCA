@@ -9,7 +9,8 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "node --import ../backend/node_modules/tsx/dist/loader.mjs --test tests/frontend-flows.test.ts"
   },
   "dependencies": {
     "axios": "^1.18.1",

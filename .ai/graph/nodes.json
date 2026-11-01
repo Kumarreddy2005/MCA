@@ -12855,5 +12855,99 @@
     "path": null,
     "meta": {},
     "status": "active"
+  },
+  {
+    "id": "file:scratch\\generate_pdf.py",
+    "type": "file",
+    "label": "generate_pdf.py",
+    "path": "scratch\\generate_pdf.py",
+    "meta": {
+      "ext": ".py"
+    },
+    "status": "active"
+  },
+  {
+    "id": "symbol:scratch\\generate_pdf.py::NumberedCanvas",
+    "type": "class",
+    "label": "NumberedCanvas",
+    "path": "scratch\\generate_pdf.py",
+    "meta": {},
+    "status": "active"
+  },
+  {
+    "id": "symbol:scratch\\generate_pdf.py::create_pdf",
+    "type": "function",
+    "label": "create_pdf",
+    "path": "scratch\\generate_pdf.py",
+    "meta": {},
+    "status": "active"
+  },
+  {
+    "id": "file:backend\\src\\scripts\\verify-flow-enforcement.ts",
+    "type": "file",
+    "label": "verify-flow-enforcement.ts",
+    "path": "backend\\src\\scripts\\verify-flow-enforcement.ts",
+    "meta": {
+      "ext": ".ts"
+    },
+    "status": "active"
+  },
+  {
+    "id": "file:frontend\\src\\utils\\locationHelper.ts",
+    "type": "file",
+    "label": "locationHelper.ts",
+    "path": "frontend\\src\\utils\\locationHelper.ts",
+    "meta": {
+      "ext": ".ts"
+    },
+    "status": "active"
+  },
+  {
+    "id": "symbol:frontend\\src\\utils\\locationHelper.ts::KARNATAKA_DISTRICTS",
+    "type": "class",
+    "label": "KARNATAKA_DISTRICTS",
+    "path": "frontend\\src\\utils\\locationHelper.ts",
+    "meta": {},
+    "status": "active"
+  },
+  {
+    "id": "symbol:frontend\\src\\utils\\locationHelper.ts::DISTRICT_ALIASES",
+    "type": "class",
+    "label": "DISTRICT_ALIASES",
+    "path": "frontend\\src\\utils\\locationHelper.ts",
+    "meta": {},
+    "status": "active"
+  },
+  {
+    "id": "symbol:frontend\\src\\utils\\locationHelper.ts::resolveKarnatakaDistrict",
+    "type": "function",
+    "label": "resolveKarnatakaDistrict",
+    "path": "frontend\\src\\utils\\locationHelper.ts",
+    "meta": {},
+    "status": "active"
+  },
+  {
+    "id": "symbol:frontend\\src\\utils\\locationHelper.ts::extractLocationFromText",
+    "type": "function",
+    "label": "extractLocationFromText",
+    "path": "frontend\\src\\utils\\locationHelper.ts",
+    "meta": {},
+    "status": "active"
+  },
+  {
+    "id": "symbol:frontend\\src\\utils\\locationHelper.ts::detectLocationConflict",
+    "type": "function",
+    "label": "detectLocationConflict",
+    "path": "frontend\\src\\utils\\locationHelper.ts",
+    "meta": {},
+    "status": "active"
+  },
+  {
+    "id": "symbol:frontend\\src\\utils\\locationHelper.ts::deriveCleanProblemTitle",
+    "type": "function",
+    "label": "deriveCleanProblemTitle",
+    "path": "frontend\\src\\utils\\locationHelper.ts",
+    "meta": {},
+    "status": "active"
   }
 ]

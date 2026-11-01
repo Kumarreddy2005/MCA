@@ -41,7 +41,7 @@ export async function getAtRiskAndBreachedQueue(req: Request, res: Response): Pr
     return;
   }
 
-  const { department, tier, page = "1", limit = "20" } = req.query;
+  const { department, district, tier, page = "1", limit = "20" } = req.query;
   const pageNum = Math.max(1, parseInt(page as string, 10) || 1);
   const limitNum = Math.min(50, Math.max(1, parseInt(limit as string, 10) || 20));
   const skip = (pageNum - 1) * limitNum;
@@ -57,6 +57,10 @@ export async function getAtRiskAndBreachedQueue(req: Request, res: Response): Pr
     filter.department = req.user.officialProfile?.department;
   } else if (department && department !== "ALL") {
     filter.department = department;
+  }
+
+  if (district && district !== "ALL") {
+    filter["location.district"] = district;
   }
 
   if (tier) {

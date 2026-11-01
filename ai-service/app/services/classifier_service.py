@@ -25,7 +25,8 @@ class ClassifierService:
         has_scope_signal = any(re.search(rf"\b{re.escape(term)}\b", text, re.I) for term in [
             "pothole", "road", "footpath", "bridge", "manhole", "transformer", "electricity",
             "power", "wire", "pole", "sparking", "streetlight", "voltage", "pipeline",
-            "water", "borewell", "pump", "water tank", "leakage", "contamination"
+            "water", "borewell", "pump", "water tank", "leakage", "contamination",
+            "speed breaker", "speed braker", "speedbreaker", "culvert", "drainage"
         ])
         return (not has_scope_signal) and any(re.search(rf"\b{re.escape(term)}\b", text, re.I) for term in OUT_OF_SCOPE_TERMS)
 
@@ -46,8 +47,11 @@ class ClassifierService:
         best, best_prob = ranked[0]
         second_prob = ranked[1][1] if len(ranked) > 1 else 0.0
         margin = float(best_prob - second_prob)
-        # Conservative gate: uncertain if confidence or separation is weak.
-        uncertain = best_prob < 0.50 or margin < 0.15
+        # Multi-domain cross-cutting conflict occurs when all 3 departments have competing probabilities (> 0.24 each)
+        multi_domain_conflict = len([p for p in probs if p >= 0.24]) >= 3
+        # Conservative gate: uncertain if top-1 confidence is below 0.45, separation margin is under 0.12, or true multi-domain conflict
+        uncertain = best_prob < 0.45 or margin < 0.12 or multi_domain_conflict
+        needs_review = uncertain or (best_prob < 0.60) or multi_domain_conflict
         primary = "UNCERTAIN" if uncertain else str(best)
         alternatives = [DepartmentRecommendation(department=str(d), confidence=round(float(p), 4)) for d,p in ranked[1:3]]
 
@@ -63,7 +67,7 @@ class ClassifierService:
         return ClassifyResponse(success=True, primary_department=primary,
             confidence=round(float(best_prob), 4), sub_category=subcat,
             alternative_departments=alternatives,
-            needs_volunteer_review=uncertain,
+            needs_volunteer_review=needs_review,
             clarification_required=uncertain,
             possible_categories=possible)
 

@@ -68,7 +68,11 @@ async def analyze_complaint(req: AnalyzeComplaintRequest):
     )
 
     # 6. Factual Summarization
-    location_desc = ", ".join(filter(None, [req.village, req.taluk, req.district]))
+    location_parts = [
+        p.strip() for p in [req.village, req.taluk, req.district]
+        if p and p.strip() and p.strip().lower() not in ["unresolved", "unknown", "none"]
+    ]
+    location_desc = ", ".join(location_parts) if location_parts else None
     summary_res = summarizer_service.summarize(
         SummarizeRequest(
             title=req.title,

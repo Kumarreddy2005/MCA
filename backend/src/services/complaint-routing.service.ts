@@ -34,6 +34,20 @@ export async function autoRouteComplaint(
     return { assigned: false };
   }
 
+  // ENFORCE ROUTING PROTECTION:
+  // autoRouteComplaint CANNOT route unverified complaints (SUBMITTED or VERIFICATION_REQUIRED).
+  // It may route ONLY after successful Volunteer verification (status VERIFIED).
+  if (
+    complaint.status === ComplaintStatus.SUBMITTED ||
+    complaint.status === ComplaintStatus.VERIFICATION_REQUIRED ||
+    complaint.status === ComplaintStatus.DRAFT
+  ) {
+    logger.warn(
+      `[ROUTING PROTECTION] Complaint ${complaint.complaintNumber} is currently in unverified state '${complaint.status}'. Direct auto-routing is BLOCKED. Complaint must be verified by a Volunteer first.`
+    );
+    return { assigned: false };
+  }
+
   const departmentCode = complaint.departmentCode || normalizeDepartmentCode(complaint.department);
   const department = departmentDisplayName(departmentCode);
   if (!departmentCode || !department) {
@@ -208,6 +222,13 @@ export async function manualAssignComplaint(params: ManualAssignParams): Promise
   const official = await User.findOne({ _id: params.officialId, role: UserRole.OFFICIAL });
   if (!official) {
     throw new Error(`Official '${params.officialId}' was not found or is not active`);
+  }
+
+  // Enforce department matching: official being assigned must belong to complaint's department
+  const complaintDeptCode = complaint.departmentCode || normalizeDepartmentCode(complaint.department);
+  const targetOfficialDeptCode = official.officialProfile?.departmentCode || normalizeDepartmentCode(official.officialProfile?.department);
+  if (complaintDeptCode && targetOfficialDeptCode && complaintDeptCode !== targetOfficialDeptCode) {
+    throw new Error(`Cannot assign official from '${official.officialProfile?.department}' to grievance in '${complaint.department}'`);
   }
 
   const previousOfficialName = complaint.assignedOfficialName;

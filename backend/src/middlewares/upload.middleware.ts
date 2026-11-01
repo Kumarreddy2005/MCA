@@ -23,28 +23,38 @@ const storage = multer.diskStorage({
   },
 });
 
-// Allowed MIME types
-const allowedMimeTypes = [
-  "image/jpeg",
-  "image/png",
-  "image/webp",
-  "application/pdf",
-  "audio/mpeg",
-  "audio/wav",
-  "audio/mp4",
-  "audio/m4a",
-];
+// Whitelist of allowed extensions matched to their permitted MIME types
+const ALLOWED_EXTENSIONS_MAP: Record<string, string[]> = {
+  ".jpg": ["image/jpeg"],
+  ".jpeg": ["image/jpeg"],
+  ".png": ["image/png"],
+  ".webp": ["image/webp"],
+  ".pdf": ["application/pdf"],
+  ".mp3": ["audio/mpeg"],
+  ".wav": ["audio/wav"],
+  ".mp4": ["audio/mp4", "video/mp4"],
+  ".m4a": ["audio/mp4", "audio/m4a", "audio/x-m4a"],
+};
 
 const fileFilter = (
   _req: Request,
   file: Express.Multer.File,
   cb: FileFilterCallback
 ) => {
-  if (allowedMimeTypes.includes(file.mimetype)) {
-    cb(null, true);
-  } else {
-    cb(new Error(`Unsupported file format (${file.mimetype}). Allowed formats: JPG, PNG, WEBP, PDF, Audio.`));
+  const ext = path.extname(file.originalname).toLowerCase();
+  const allowedMimesForExt = ALLOWED_EXTENSIONS_MAP[ext];
+
+  if (!allowedMimesForExt) {
+    cb(new Error(`File extension '${ext}' is not permitted. Allowed extensions: .jpg, .jpeg, .png, .webp, .pdf, .mp3, .wav, .mp4, .m4a.`));
+    return;
   }
+
+  if (!allowedMimesForExt.includes(file.mimetype)) {
+    cb(new Error(`MIME type mismatch (${file.mimetype}) for extension '${ext}'.`));
+    return;
+  }
+
+  cb(null, true);
 };
 
 export const uploadEvidence = multer({

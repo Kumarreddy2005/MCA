@@ -396,11 +396,14 @@ export async function escalateComplaintManually(
  */
 export async function getSlaAnalytics(
   department?: string,
-  _district?: string
+  district?: string
 ): Promise<ISlaAnalyticsData> {
   const matchFilter: Record<string, unknown> = {};
   if (department && department !== "ALL") {
     matchFilter.department = department;
+  }
+  if (district && district !== "ALL") {
+    matchFilter["location.district"] = district;
   }
 
   const complaints = await Complaint.find(matchFilter).exec();

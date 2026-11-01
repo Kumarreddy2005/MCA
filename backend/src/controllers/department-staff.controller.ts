@@ -9,6 +9,7 @@ import { logAuditEvent } from "../services/audit.service.js";
 const statusSchema = z.object({
   status: z.nativeEnum(ComplaintStatus),
   remarks: z.string().trim().min(3).max(2000),
+  resolutionSummary: z.string().trim().min(5).max(2000).optional(),
 });
 const actionSchema = z.object({ actionType: z.string().trim().min(2), remarks: z.string().trim().min(3).max(2000) });
 
@@ -20,7 +21,20 @@ export async function getStaffQueue(req: Request, res: Response) {
   if (!dept) return res.status(400).json(buildError("CONFIG_ERROR", "Department Staff account has no department assignment"));
   const page = Math.max(1, Number(req.query.page) || 1), limit = Math.min(50, Math.max(1, Number(req.query.limit) || 20));
   const filter: any = { departmentCode: dept };
-  if (req.query.status && req.query.status !== "ALL") filter.status = req.query.status;
+  
+  // Department Staff receives complaints ONLY AFTER Volunteer Verification (VERIFIED -> AUTO ROUTING -> ASSIGNED).
+  // Unverified complaints (SUBMITTED, VERIFICATION_REQUIRED, DRAFT) are strictly excluded from Staff Queue.
+  const UNVERIFIED_STATUSES: string[] = [ComplaintStatus.DRAFT, ComplaintStatus.SUBMITTED, ComplaintStatus.VERIFICATION_REQUIRED];
+  if (req.query.status && req.query.status !== "ALL") {
+    if (UNVERIFIED_STATUSES.includes(req.query.status as string)) {
+      filter.status = { $in: [] }; // Explicitly block unverified status queries
+    } else {
+      filter.status = req.query.status;
+    }
+  } else {
+    filter.status = { $nin: UNVERIFIED_STATUSES };
+  }
+
   if (req.query.priority && req.query.priority !== "ALL") filter.priority = req.query.priority;
   if (req.query.search) { const r = new RegExp(String(req.query.search).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"); filter.$or=[{complaintNumber:r},{title:r},{description:r},{"location.village":r}]; }
   const [complaints,total]=await Promise.all([Complaint.find(filter).sort({priority:-1,createdAt:-1}).skip((page-1)*limit).limit(limit),Complaint.countDocuments(filter)]);
@@ -33,7 +47,12 @@ export async function updateStaffStatus(req: Request, res: Response) {
   const complaint=await Complaint.findById(req.params.id); if(!complaint) return res.status(404).json(buildError("NOT_FOUND","Complaint not found"));
   const dept=department(req); if(!dept || (complaint.departmentCode || normalizeDepartmentCode(complaint.department))!==dept) return res.status(403).json(buildError("DEPARTMENT_ISOLATION_VIOLATION","Complaint is outside your department"));
   try {
-    const updated=await transitionComplaintStatus(complaint._id.toString(),{newStatus:parsed.data.status,remarks:parsed.data.remarks,actor:{id:req.user._id.toString(),name:req.user.name,role:UserRole.DEPARTMENT_STAFF,phone:req.user.phone,email:req.user.email,ipAddress:req.ip}});
+    const updated=await transitionComplaintStatus(complaint._id.toString(),{
+      newStatus:parsed.data.status,
+      remarks:parsed.data.remarks,
+      resolutionSummary:parsed.data.resolutionSummary || (parsed.data.status === ComplaintStatus.RESOLVED ? parsed.data.remarks : undefined),
+      actor:{id:req.user._id.toString(),name:req.user.name,role:UserRole.DEPARTMENT_STAFF,phone:req.user.phone,email:req.user.email,ipAddress:req.ip}
+    });
     res.json(buildSuccess(updated,"Complaint status updated"));
   } catch(e){ if(e instanceof LifecycleError) return res.status(400).json(buildError(e.code,e.message)); throw e; }
 }

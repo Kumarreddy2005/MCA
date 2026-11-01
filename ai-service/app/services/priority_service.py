@@ -8,7 +8,7 @@ CRITICAL_HAZARD_FACTORS = [
     (r"\b(live wire|fallen electric wire|wire snapped|sparking|electrocution|electric shock)\b", "Severe electrocution hazard endangering public life"),
     (r"\b(open borewell|uncovered borewell|trapped child|open manhole)\b", "Fatal fall hazard in unbarricaded cavity"),
     (r"\b(bridge collapse|culvert collapsed|road caved in|landslide)\b", "Catastrophic structural failure blocking transit"),
-    (r"\b(cholera|water poisoning|toxic water|contagious|death|fatal accident)\b", "Imminent public health emergency"),
+    (r"\b(cholera|water poisoning|toxic water|contagious|death|fatal accident|contaminated water|yellowish.*water|sewage.*mixed|sewage.*line.*drinking)\b", "Imminent public health emergency"),
     (r"\b(phc power cut|hospital power failure|oxygen supply failure)\b", "Critical healthcare lifeline failure")
 ]
 

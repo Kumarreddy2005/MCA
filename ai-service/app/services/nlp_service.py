@@ -14,6 +14,39 @@ KARNATAKA_DISTRICTS = {
     "ramanagara", "shivamogga", "tumakuru", "udupi", "uttara kannada", "vijayanagara", "yadgir"
 }
 
+DISTRICT_ALIASES = {
+    "bangalore": "Bengaluru Urban",
+    "bangalore urban": "Bengaluru Urban",
+    "bangalore rural": "Bengaluru Rural",
+    "bengaluru": "Bengaluru Urban",
+    "bengaluru urban": "Bengaluru Urban",
+    "bengaluru rural": "Bengaluru Rural",
+    "mysore": "Mysuru",
+    "mysuru": "Mysuru",
+    "belgaum": "Belagavi",
+    "belagavi": "Belagavi",
+    "gulbarga": "Kalaburagi",
+    "kalaburagi": "Kalaburagi",
+    "hubli": "Dharwad",
+    "hubballi": "Dharwad",
+    "dharwad": "Dharwad",
+    "mangalore": "Dakshina Kannada",
+    "mangaluru": "Dakshina Kannada",
+    "dakshina kannada": "Dakshina Kannada",
+    "bellary": "Ballari",
+    "ballari": "Ballari",
+    "bijapur": "Vijayapura",
+    "vijayapura": "Vijayapura",
+    "shimoga": "Shivamogga",
+    "shivamogga": "Shivamogga",
+    "chikmagalur": "Chikkamagaluru",
+    "chikkamagaluru": "Chikkamagaluru",
+    "chickballapur": "Chikkaballapura",
+    "chikkaballapur": "Chikkaballapura",
+    "tumkur": "Tumakuru",
+    "tumakuru": "Tumakuru",
+}
+
 ADMIN_KEYWORDS = {
     "taluk": "TALUK",
     "tahsil": "TALUK",
@@ -103,7 +136,13 @@ class NLPService:
         entities: List[EntityItem] = []
         seen_entities: Set[str] = set()
 
-        # 1. Karnataka Districts
+        # 1. Karnataka Districts & Aliases
+        for alias, canonical in DISTRICT_ALIASES.items():
+            if re.search(rf"\b{re.escape(alias)}\b", text_lower):
+                if canonical not in seen_entities:
+                    seen_entities.add(canonical)
+                    entities.append(EntityItem(text=canonical, type="DISTRICT"))
+
         for district in KARNATAKA_DISTRICTS:
             if re.search(rf"\b{re.escape(district)}\b", text_lower):
                 val = district.title()
@@ -111,14 +150,24 @@ class NLPService:
                     seen_entities.add(val)
                     entities.append(EntityItem(text=val, type="DISTRICT"))
 
-        # 2. Administrative divisions (Taluk / GP / Village / Ward)
-        admin_match = re.findall(r"([A-Za-z]+)\s+(taluk|panchayat|village|ward|gp|circle|road)", text, re.IGNORECASE)
+        # 2. Administrative divisions (Taluk / GP / Village / Ward / Road / Layout / Puram / Palya)
+        admin_match = re.findall(r"([A-Za-z0-9/.'-]+(?:\s+[A-Za-z0-9/.'-]+)?)\s+(taluk|panchayat|village|ward|gp|circle|road|main road|cross|layout|nagar|puram|palya|halli)", text, re.IGNORECASE)
         for name, unit in admin_match:
             full = f"{name} {unit}".title()
             ent_type = ADMIN_KEYWORDS.get(unit.lower(), "LOCATION")
             if full not in seen_entities:
                 seen_entities.add(full)
                 entities.append(EntityItem(text=full, type=ent_type))
+
+        # Prepositional location phrases (e.g. "in KR Puram, Bangalore", "near TC Palya Main Road")
+        prep_matches = re.findall(r"\b(?:in|at|near|around)\s+([A-Z0-9][A-Za-z0-9/.,'\s-]{2,40}?)(?=\s+(?:since|for|due to|because|where|having|and|\.|\!|\?|$))", text)
+        for loc in prep_matches:
+            clean_loc = loc.strip().rstrip(".,;")
+            if clean_loc and clean_loc.lower() not in ["our village", "my village", "the village", "the road", "this area"]:
+                val = clean_loc.title()
+                if val not in seen_entities:
+                    seen_entities.add(val)
+                    entities.append(EntityItem(text=val, type="LOCATION"))
 
         # 3. Facilities
         for pattern, ftype in FACILITY_PATTERNS:

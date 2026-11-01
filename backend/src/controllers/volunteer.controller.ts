@@ -318,14 +318,16 @@ export async function getWorkQueue(req: Request, res: Response): Promise<void> {
     clusterConditions.push({ "location.village": { $regex: `^${assignedVillage}$`, $options: "i" } });
   }
 
-  const filter: Record<string, unknown> = {
-    $or: clusterConditions,
-  };
+  const filter: Record<string, unknown> = {};
 
   if (tab === "verifications") {
+    // Show all grievances requiring volunteer verification
     filter.status = { $in: [ComplaintStatus.SUBMITTED, ComplaintStatus.VERIFICATION_REQUIRED] };
-  } else if (statusFilter && statusFilter !== "ALL") {
-    filter.status = statusFilter;
+  } else {
+    filter.$or = clusterConditions;
+    if (statusFilter && statusFilter !== "ALL") {
+      filter.status = statusFilter;
+    }
   }
 
   if (priorityFilter && priorityFilter !== "ALL") {
@@ -423,11 +425,9 @@ export async function submitFieldVerification(req: Request, res: Response): Prom
 
   const vp = req.user.volunteerProfile;
   const sameDistrict = !vp?.district || !complaint.location?.district || vp.district.toLowerCase() === complaint.location.district.toLowerCase();
-  const sameVillage = !vp?.assignedVillage || !complaint.location?.village || vp.assignedVillage.toLowerCase() === complaint.location.village.toLowerCase();
-  const sameWard = !vp?.assignedWard || !complaint.location?.ward || vp.assignedWard.toLowerCase() === complaint.location.ward.toLowerCase();
-  if (!sameDistrict || (!sameVillage && !sameWard)) {
-    await logAuditEvent({ entityType:"COMPLAINT", entityId:complaint._id.toString(), complaintNumber:complaint.complaintNumber, action:"STATUS_TRANSITION", actor:{id:req.user._id.toString(),name:req.user.name,role:req.user.role,phone:req.user.phone,email:req.user.email,ipAddress:req.ip}, notes:"Blocked volunteer verification outside assigned jurisdiction" });
-    res.status(403).json(buildError("VOLUNTEER_JURISDICTION_VIOLATION", "This grievance is outside your assigned village/ward jurisdiction"));
+  if (!sameDistrict) {
+    await logAuditEvent({ entityType:"COMPLAINT", entityId:complaint._id.toString(), complaintNumber:complaint.complaintNumber, action:"STATUS_TRANSITION", actor:{id:req.user._id.toString(),name:req.user.name,role:req.user.role,phone:req.user.phone,email:req.user.email,ipAddress:req.ip}, notes:"Blocked volunteer verification outside assigned district jurisdiction" });
+    res.status(403).json(buildError("VOLUNTEER_JURISDICTION_VIOLATION", "This grievance is outside your assigned district jurisdiction"));
     return;
   }
 
@@ -485,11 +485,14 @@ export async function submitFieldVerification(req: Request, res: Response): Prom
   complaint.assignedVolunteerId = req.user._id;
   await complaint.save();
 
-  const target = data.result === FieldVerificationResult.REQUIRES_INFO ? complaint.status : nextStatus;
+  const target = data.result === FieldVerificationResult.REQUIRES_INFO ? ComplaintStatus.INFORMATION_REQUIRED : nextStatus;
   if (target !== complaint.status) {
     try {
       await transitionComplaintStatus(complaint._id.toString(), {
-        newStatus: target, remarks: `Field verification result: ${data.result}. ${data.notes}`,
+        newStatus: target,
+        remarks: `Field verification result: ${data.result}. ${data.notes}`,
+        rejectionReason: data.result === FieldVerificationResult.REJECTED ? data.notes : undefined,
+        informationQuery: data.result === FieldVerificationResult.REQUIRES_INFO ? data.notes : undefined,
         actor: { id:req.user._id.toString(), name:req.user.name, role:UserRole.VOLUNTEER, phone:req.user.phone, email:req.user.email, ipAddress:req.ip },
       });
     } catch (err) {
