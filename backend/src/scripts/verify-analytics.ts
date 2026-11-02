@@ -157,12 +157,12 @@ async function runAnalyticsVerification() {
       throw new Error(`Invalid departments performance payload: ${JSON.stringify(deptJson)}`);
     }
 
-    // Verify presence of core Karnataka departments
+    // Verify presence of the three active VCGIS operational departments
     const deptCodes = deptJson.data.map((d) => d.code);
-    const hasPanchayat = deptCodes.includes("RDPR");
-    const hasRevenue = deptCodes.includes("REV");
-    if (!hasPanchayat || !hasRevenue) {
-      throw new Error(`Missing expected core Karnataka departments in matrix: ${deptCodes.join(", ")}`);
+    const expectedDepartmentCodes = ["ROAD", "ELECTRICITY", "WATER"];
+    const missingDepartmentCodes = expectedDepartmentCodes.filter((code) => !deptCodes.includes(code));
+    if (missingDepartmentCodes.length > 0) {
+      throw new Error(`Missing expected VCGIS departments in matrix: ${missingDepartmentCodes.join(", ")}`);
     }
 
     passedTests++;
