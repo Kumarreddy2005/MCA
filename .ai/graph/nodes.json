@@ -13049,5 +13049,21 @@
       "ext": ".ts"
     },
     "status": "active"
+  },
+  {
+    "id": "endpoint:PATCH /api/v1/department-staff/complaints/${selectedComplaint.id || selectedComplaint._id}/status",
+    "type": "endpoint",
+    "label": "PATCH /api/v1/department-staff/complaints/${selectedComplaint.id || selectedComplaint._id}/status",
+    "path": null,
+    "meta": {},
+    "status": "active"
+  },
+  {
+    "id": "endpoint:POST /api/v1/department-staff/complaints/${selectedComplaint.id || selectedComplaint._id}/actions",
+    "type": "endpoint",
+    "label": "POST /api/v1/department-staff/complaints/${selectedComplaint.id || selectedComplaint._id}/actions",
+    "path": null,
+    "meta": {},
+    "status": "active"
   }
 ]

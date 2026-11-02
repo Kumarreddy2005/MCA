@@ -245,7 +245,9 @@
     "GET /api/v1/department-staff/queue",
     "PATCH /api/v1/department-staff/complaints/${id}/status",
     "PATCH /api/v1/department-staff/complaints/${selectedComplaint.id || (selectedComplaint as any)._id}/status",
-    "POST /api/v1/department-staff/complaints/${selectedComplaint.id || (selectedComplaint as any)._id}/actions"
+    "POST /api/v1/department-staff/complaints/${selectedComplaint.id || (selectedComplaint as any)._id}/actions",
+    "PATCH /api/v1/department-staff/complaints/${selectedComplaint.id || selectedComplaint._id}/status",
+    "POST /api/v1/department-staff/complaints/${selectedComplaint.id || selectedComplaint._id}/actions"
   ],
   "features": [
     "Citizen OTP Authentication",
@@ -273,5 +275,5 @@
     "ai_model",
     "user"
   ],
-  "graph_version": 44
+  "graph_version": 45
 }

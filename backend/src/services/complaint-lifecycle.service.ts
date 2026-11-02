@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import type { IUserDocument } from "../models/user.model.js";
 import { Complaint, IComplaintDocument, IEvidenceSubdocument } from "../models/complaint.model.js";
 import { ComplaintStatus, SlaStatus, UserRole, normalizeDepartmentCode } from "../types/domain.js";
 import { logAuditEvent } from "./audit.service.js";
@@ -206,7 +207,7 @@ export async function transitionComplaintStatus(
 
   // Department Officials must belong to the same department (unless admin)
   if (payload.actor.role === UserRole.OFFICIAL) {
-    const actor = await mongoose.model("User").findById(payload.actor.id).lean() as any;
+    const actor = await mongoose.model("User").findById(payload.actor.id).lean() as Pick<IUserDocument, "officialProfile"> | null;
     const officialDeptCode = actor?.officialProfile?.departmentCode || normalizeDepartmentCode(actor?.officialProfile?.department);
     const complaintDeptCode = complaint.departmentCode || normalizeDepartmentCode(complaint.department);
     if (!officialDeptCode || !complaintDeptCode || complaintDeptCode !== officialDeptCode) {
@@ -214,7 +215,7 @@ export async function transitionComplaintStatus(
     }
   }
   if (payload.actor.role === UserRole.DEPARTMENT_STAFF) {
-    const actor = await mongoose.model("User").findById(payload.actor.id).lean() as any;
+    const actor = await mongoose.model("User").findById(payload.actor.id).lean() as Pick<IUserDocument, "departmentStaffProfile"> | null;
     const staffDept = actor?.departmentStaffProfile?.departmentCode;
     const complaintDeptCode = complaint.departmentCode || normalizeDepartmentCode(complaint.department);
     if (!staffDept || !complaintDeptCode || complaintDeptCode !== staffDept) {

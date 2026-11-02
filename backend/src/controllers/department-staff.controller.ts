@@ -1,6 +1,7 @@
 import type { Request, Response } from "express";
+import type { FilterQuery } from "mongoose";
 import { z } from "zod";
-import { Complaint } from "../models/complaint.model.js";
+import { Complaint, type IComplaintDocument } from "../models/complaint.model.js";
 import { ComplaintStatus, UserRole, normalizeDepartmentCode } from "../types/domain.js";
 import { buildError, buildSuccess } from "../utils/apiResponse.js";
 import { transitionComplaintStatus, LifecycleError } from "../services/complaint-lifecycle.service.js";
@@ -20,7 +21,7 @@ export async function getStaffQueue(req: Request, res: Response) {
   const dept = department(req);
   if (!dept) return res.status(400).json(buildError("CONFIG_ERROR", "Department Staff account has no department assignment"));
   const page = Math.max(1, Number(req.query.page) || 1), limit = Math.min(50, Math.max(1, Number(req.query.limit) || 20));
-  const filter: any = { departmentCode: dept };
+  const filter: FilterQuery<IComplaintDocument> = { departmentCode: dept };
   
   // Department Staff receives complaints ONLY AFTER Volunteer Verification (VERIFIED -> AUTO ROUTING -> ASSIGNED).
   // Unverified complaints (SUBMITTED, VERIFICATION_REQUIRED, DRAFT) are strictly excluded from Staff Queue.

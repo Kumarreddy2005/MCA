@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import { connectDatabase } from "../config/database.js";
 import { Complaint } from "../models/complaint.model.js";
 import { User } from "../models/user.model.js";
-import { ComplaintStatus, Priority, UserRole } from "../types/domain.js";
+import { ComplaintStatus, DepartmentCode, Priority, UserRole } from "../types/domain.js";
 import { autoRouteComplaint } from "../services/complaint-routing.service.js";
 import { transitionComplaintStatus } from "../services/complaint-lifecycle.service.js";
 
@@ -30,7 +30,15 @@ async function runVerification() {
   console.log(`✓ Demo Volunteer: ${volunteer.name}`);
   console.log(`✓ Demo Water Staff: ${waterStaff.name}`);
 
-  const testCases = [
+  type RoutableDepartmentCode = Exclude<DepartmentCode, "UNCERTAIN" | "OUT_OF_SCOPE">;
+  const testCases: Array<{
+    name: string;
+    title: string;
+    description: string;
+    department: string;
+    departmentCode: RoutableDepartmentCode;
+    category: string;
+  }> = [
     {
       name: "Water Supply Complaint",
       title: "No water supply and leaking pipeline",
@@ -82,7 +90,7 @@ async function runVerification() {
       description: tc.description,
       category: tc.category,
       department: tc.department,
-      departmentCode: tc.departmentCode as any,
+      departmentCode: tc.departmentCode,
       status: ComplaintStatus.SUBMITTED,
       priority: Priority.MEDIUM,
       location: {

@@ -167,6 +167,7 @@ export interface IInformationRequested {
 
 export interface IComplaint {
   id: string;
+  _id?: string;
   complaintNumber: string;
   citizenId: string;
   citizenName: string;

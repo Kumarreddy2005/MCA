@@ -38,6 +38,49 @@ interface CreateGrievanceModalProps {
 
 type WizardStep = 1 | 2 | 3 | 4 | 5 | "CONFIRMATION";
 
+interface SpeechRecognitionAlternativeLike {
+  transcript: string;
+}
+
+interface SpeechRecognitionResultLike {
+  isFinal: boolean;
+  [index: number]: SpeechRecognitionAlternativeLike;
+}
+
+interface SpeechRecognitionEventLike {
+  results: {
+    length: number;
+    [index: number]: SpeechRecognitionResultLike;
+  };
+}
+
+interface SpeechRecognitionErrorEventLike {
+  error?: string;
+}
+
+interface SpeechRecognitionLike {
+  continuous: boolean;
+  interimResults: boolean;
+  lang: string;
+  onstart: (() => void) | null;
+  onresult: ((event: SpeechRecognitionEventLike) => void) | null;
+  onerror: ((event: SpeechRecognitionErrorEventLike) => void) | null;
+  onend: (() => void) | null;
+  start: () => void;
+  stop: () => void;
+}
+
+interface SpeechRecognitionConstructor {
+  new (): SpeechRecognitionLike;
+}
+
+declare global {
+  interface Window {
+    SpeechRecognition?: SpeechRecognitionConstructor;
+    webkitSpeechRecognition?: SpeechRecognitionConstructor;
+  }
+}
+
 export const CreateGrievanceModal: React.FC<CreateGrievanceModalProps> = ({
   isOpen,
   onClose,
@@ -91,14 +134,13 @@ export const CreateGrievanceModal: React.FC<CreateGrievanceModalProps> = ({
   const [submittedComplaintNumber, setSubmittedComplaintNumber] = useState<string | null>(null);
 
   // Speech Recognition Refs & Cleanup
-  const recognitionRef = useRef<any>(null);
+  const recognitionRef = useRef<SpeechRecognitionLike | null>(null);
   const baseTextRef = useRef<string>("");
 
   // Initialize Speech Recognition Support
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const SpeechRecognition =
-        (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       if (SpeechRecognition) {
         setSpeechSupported(true);
       }
@@ -161,8 +203,7 @@ export const CreateGrievanceModal: React.FC<CreateGrievanceModalProps> = ({
       return;
     }
 
-    const SpeechRecognition =
-      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) return;
 
     try {
@@ -177,12 +218,13 @@ export const CreateGrievanceModal: React.FC<CreateGrievanceModalProps> = ({
         setIsListening(true);
       };
 
-      recognition.onresult = (event: any) => {
+      recognition.onresult = (event: SpeechRecognitionEventLike) => {
         let sessionFinal = "";
         let sessionInterim = "";
 
         for (let i = 0; i < event.results.length; i++) {
           const res = event.results[i];
+          if (!res) continue;
           const text = res[0]?.transcript || "";
           if (res.isFinal) {
             sessionFinal += text;
@@ -206,7 +248,7 @@ export const CreateGrievanceModal: React.FC<CreateGrievanceModalProps> = ({
         setDescription(fullText);
       };
 
-      recognition.onerror = (errEvent: any) => {
+      recognition.onerror = (errEvent: SpeechRecognitionErrorEventLike) => {
         if (errEvent?.error !== "no-speech") {
           console.warn(`[SpeechRecognition] Error: ${errEvent?.error || "unknown"}`);
         }

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
+import axios from "axios";
 import { useAuth } from "@/context/AuthContext";
 import { apiClient } from "@/services/api/client";
 import {
@@ -17,6 +18,15 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { IComplaint, ComplaintStatus, Priority } from "@/types/complaint";
+
+type ApiErrorResponse = { error?: { message?: string } };
+
+function getApiErrorMessage(error: unknown, fallback: string): string {
+  if (axios.isAxiosError<ApiErrorResponse>(error)) {
+    return error.response?.data?.error?.message || fallback;
+  }
+  return fallback;
+}
 
 export const DepartmentStaffDashboard: React.FC = () => {
   const { user } = useAuth();
@@ -93,8 +103,8 @@ export const DepartmentStaffDashboard: React.FC = () => {
 
       const res = await apiClient.get("/department-staff/queue", { params });
       setItems(res.data?.data?.complaints || []);
-    } catch (e: any) {
-      setError(e?.response?.data?.error?.message || "Unable to load department queue");
+    } catch (e: unknown) {
+      setError(getApiErrorMessage(e, "Unable to load department queue"));
     } finally {
       setLoading(false);
     }
@@ -114,13 +124,13 @@ export const DepartmentStaffDashboard: React.FC = () => {
     setSuccessMsg("");
     try {
       if (modalAction === "STATUS") {
-        await apiClient.patch(`/department-staff/complaints/${selectedComplaint.id || (selectedComplaint as any)._id}/status`, {
+        await apiClient.patch(`/department-staff/complaints/${selectedComplaint.id || selectedComplaint._id}/status`, {
           status: newStatus,
           remarks: remarks.trim(),
         });
         setSuccessMsg(`Complaint ${selectedComplaint.complaintNumber} updated to ${newStatus.replace(/_/g, " ")}`);
       } else {
-        await apiClient.post(`/department-staff/complaints/${selectedComplaint.id || (selectedComplaint as any)._id}/actions`, {
+        await apiClient.post(`/department-staff/complaints/${selectedComplaint.id || selectedComplaint._id}/actions`, {
           actionType,
           remarks: remarks.trim(),
         });
@@ -129,8 +139,8 @@ export const DepartmentStaffDashboard: React.FC = () => {
       setSelectedComplaint(null);
       setRemarks("");
       await loadQueue();
-    } catch (e: any) {
-      setError(e?.response?.data?.error?.message || "Operation failed");
+    } catch (e: unknown) {
+      setError(getApiErrorMessage(e, "Operation failed"));
     } finally {
       setActionLoading(false);
     }
@@ -272,7 +282,7 @@ export const DepartmentStaffDashboard: React.FC = () => {
         ) : (
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {items.map((complaint) => {
-              const cid = complaint.id || (complaint as any)._id;
+              const cid = complaint.id || complaint._id;
               const isUrgent = complaint.priority === Priority.CRITICAL || complaint.priority === Priority.HIGH;
 
               return (

@@ -1,0 +1,327 @@
+{
+  "task": "Fix failed GitHub Actions backend lint typecheck tests and frontend lint build",
+  "mode": "normal",
+  "graph_version": 44,
+  "generated": "2026-11-02T06:28:06+0530",
+  "features": [
+    "audit-logging",
+    "frontend-shell"
+  ],
+  "apis": [
+    "GET /",
+    "GET /:id",
+    "GET /:id/audit-trail",
+    "GET /api/audit/complaints/:id",
+    "GET /api/complaints",
+    "GET /api/complaints/:id",
+    "GET /api/complaints/:id/audit-trail",
+    "GET /api/complaints/categories",
+    "GET /api/complaints/my",
+    "GET /api/v1/admin/audit?${query.toString()}",
+    "GET /api/v1/admin/departments",
+    "GET /api/v1/admin/officials?${query.toString()}",
+    "GET /api/v1/admin/stats",
+    "GET /api/v1/admin/users/${id}",
+    "GET /api/v1/admin/users?${query.toString()}",
+    "GET /api/v1/ai/health",
+    "GET /api/v1/analytics/ai",
+    "GET /api/v1/analytics/categories?${query.toString()}",
+    "GET /api/v1/analytics/departments?${query.toString()}",
+    "GET /api/v1/analytics/export/csv?${query.toString()}",
+    "GET /api/v1/analytics/export/report?${query.toString()}",
+    "GET /api/v1/analytics/geo?${query.toString()}",
+    "GET /api/v1/analytics/overview?${query.toString()}",
+    "GET /api/v1/analytics/trends?${query.toString()}",
+    "GET /api/v1/auth/me",
+    "GET /api/v1/complaints/${id}",
+    "GET /api/v1/complaints/${id}/audit-trail",
+    "GET /api/v1/complaints/categories",
+    "GET /api/v1/complaints/my?${params.toString()}",
+    "GET /api/v1/complaints?${params.toString()}",
+    "GET /api/v1/notifications?page=${page}&limit=${limit}&unreadOnly=${unreadOnly}",
+    "GET /api/v1/officials/metrics",
+    "GET /api/v1/officials/queue?${params.toString()}",
+    "GET /api/v1/rag/documents/${encodeURIComponent(id)}",
+    "GET /api/v1/sla/analytics?${params.toString()}",
+    "GET /api/v1/sla/queue?${query.toString()}",
+    "GET /api/v1/volunteers/citizens?${params.toString()}",
+    "GET /api/v1/volunteers/work-queue?${params.toString()}",
+    "GET /categories",
+    "GET /complaints/:id",
+    "GET /my",
+    "GET /queue",
+    "PATCH /:id/status",
+    "PATCH /api/complaints/:id/status",
+    "PATCH /api/v1/admin/departments/${id}",
+    "PATCH /api/v1/admin/departments/${id}/sla",
+    "PATCH /api/v1/admin/officials/${id}/assignment",
+    "PATCH /api/v1/admin/users/${id}",
+    "PATCH /api/v1/admin/users/${id}/status",
+    "PATCH /api/v1/admin/volunteers/${id}/jurisdiction",
+    "PATCH /api/v1/complaints/${id}/status",
+    "PATCH /api/v1/notifications/${id}/read",
+    "PATCH /api/v1/notifications/read-all",
+    "PATCH /complaints/:id/status",
+    "POST /",
+    "POST /:id/actions",
+    "POST /:id/assign",
+    "POST /:id/feedback",
+    "POST /:id/reopen",
+    "POST /:id/respond-info",
+    "POST /api/complaints",
+    "POST /api/complaints/:id/actions",
+    "POST /api/complaints/:id/assign",
+    "POST /api/complaints/:id/feedback",
+    "POST /api/complaints/:id/reopen",
+    "POST /api/complaints/:id/respond-info",
+    "POST /api/v1/admin/users",
+    "POST /api/v1/ai/analyze",
+    "POST /api/v1/ai/classify",
+    "POST /api/v1/ai/duplicates",
+    "POST /api/v1/ai/ocr",
+    "POST /api/v1/ai/priority",
+    "POST /api/v1/auth/citizen/send-otp",
+    "POST /api/v1/auth/citizen/verify-otp",
+    "POST /api/v1/auth/logout",
+    "POST /api/v1/auth/refresh",
+    "POST /api/v1/auth/staff/login",
+    "POST /api/v1/complaints",
+    "POST /api/v1/complaints/${id}/actions",
+    "POST /api/v1/complaints/${id}/assign",
+    "POST /api/v1/complaints/${id}/feedback",
+    "POST /api/v1/complaints/${id}/reopen",
+    "POST /api/v1/complaints/${id}/respond-info",
+    "POST /api/v1/genai/admin/summary",
+    "POST /api/v1/genai/citizen/assist",
+    "POST /api/v1/genai/official/draft-response",
+    "POST /api/v1/genai/translate",
+    "POST /api/v1/genai/volunteer/structure",
+    "POST /api/v1/officials/complaints/${id}/escalate",
+    "POST /api/v1/officials/complaints/${id}/reject",
+    "POST /api/v1/officials/complaints/${id}/resolve",
+    "POST /api/v1/officials/complaints/${id}/transfer",
+    "POST /api/v1/rag/query",
+    "POST /api/v1/sla/complaints/${id}/escalate",
+    "POST /api/v1/sla/sweep",
+    "POST /api/v1/volunteers/assistant",
+    "POST /api/v1/volunteers/citizens",
+    "POST /api/v1/volunteers/complaints",
+    "POST /api/v1/volunteers/complaints/${complaintId}/verify",
+    "POST /complaints/:id/actions"
+  ],
+  "services": [
+    "backend"
+  ],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/decisions/0001-three-service-architecture.md",
+    ".ai\\docs\\decisions\\0001-three-service-architecture.md",
+    ".ai/docs/decisions/0002-volunteer-human-in-loop.md"
+  ],
+  "decisions": [
+    "decision:0001-three-service-architecture",
+    "decision:0002-volunteer-human-in-loop",
+    "decision:0003-backend-calls-ai-service"
+  ],
+  "changes": [
+    "change-2026-11-02-044",
+    "change-2026-10-11-043",
+    "change-2026-09-30-042",
+    "change-2026-09-30-041",
+    "change-2026-09-30-040"
+  ],
+  "confidence": 0.95,
+  "files": [
+    {
+      "path": "backend\\src\\controllers\\audit.controller.ts",
+      "reason": "implements feature audit-logging",
+      "priority": 1,
+      "type": "file",
+      "hash": "578c4248e8d89edaa98a209487d9648bfbd107b89f95a7fa20133fdc44676bc6"
+    },
+    {
+      "path": "backend\\src\\routes\\audit.routes.ts",
+      "reason": "implements feature audit-logging",
+      "priority": 2,
+      "type": "file",
+      "hash": "b8e2d9f02f30c9be5cc1e691a5eb3acaa371d3e3f4b8a1d87e80720ac604fb7e"
+    },
+    {
+      "path": "backend\\src\\services\\audit.service.ts",
+      "reason": "implements feature audit-logging",
+      "priority": 3,
+      "type": "file",
+      "hash": "f8aae9fce5cd60000cf55c1e20ca15a65f566e9b89dc360a77ddc86a639e21d8"
+    },
+    {
+      "path": "frontend\\src\\App.tsx",
+      "reason": "implements feature frontend-shell",
+      "priority": 4,
+      "type": "file",
+      "hash": "4b745574cd31baa986523a9722fe5ad59d3741e83a38532cec178686a282b087"
+    },
+    {
+      "path": "frontend\\src\\components\\layout\\Navbar.tsx",
+      "reason": "implements feature frontend-shell",
+      "priority": 5,
+      "type": "file",
+      "hash": "5dd2e6a7902649ef76f77278384ce81f68c40ef313640f6f2ba6a0ee92601e25"
+    },
+    {
+      "path": "frontend\\src\\main.tsx",
+      "reason": "implements feature frontend-shell",
+      "priority": 6,
+      "type": "file",
+      "hash": "98a79386f627bc8c87f45067dc3439d8913f8cd6d1653836517589d76add02bf"
+    },
+    {
+      "path": "frontend\\src\\services\\api\\admin.service.ts",
+      "reason": "implements feature frontend-shell",
+      "priority": 7,
+      "type": "file",
+      "hash": "26dd29919970c7ee6582fefbfca905b78968e889aeb8e4221eb11302f202987e"
+    },
+    {
+      "path": "frontend\\src\\services\\api\\ai.service.ts",
+      "reason": "implements feature frontend-shell",
+      "priority": 8,
+      "type": "file",
+      "hash": "a6aa8d029384924fc5c5eec398e898d16d319c444d7d0372eae86be276a5a40e"
+    },
+    {
+      "path": "frontend\\src\\services\\api\\analytics.service.ts",
+      "reason": "implements feature frontend-shell",
+      "priority": 9,
+      "type": "file",
+      "hash": "2b28612b4dad8deebe88296052386cade4720fe62f1ce1b7c5b251dffeaa3e24"
+    },
+    {
+      "path": "frontend\\src\\services\\api\\auth.service.ts",
+      "reason": "implements feature frontend-shell",
+      "priority": 10,
+      "type": "file",
+      "hash": "112822e0319bf84e68bd4e9b45e01febc484dcd7fcd1046d08d69c43861e0a95"
+    },
+    {
+      "path": "frontend\\src\\services\\api\\client.ts",
+      "reason": "implements feature frontend-shell",
+      "priority": 11,
+      "type": "file",
+      "hash": "07ce29f3660548ec5151df36266e9ebdb26606f85b9bc441dc9b6da9744e5c4d"
+    },
+    {
+      "path": "frontend\\src\\services\\api\\complaint.service.ts",
+      "reason": "implements feature frontend-shell",
+      "priority": 12,
+      "type": "file",
+      "hash": "b40e4e6b08ac1f86c36d15b6ebb30043fe665e3a35dbf3b1f4332ee279273137"
+    },
+    {
+      "path": "frontend\\src\\services\\api\\genai.service.ts",
+      "reason": "implements feature frontend-shell",
+      "priority": 13,
+      "type": "file",
+      "hash": "61417321dfb97e09839ba988baa62282669989544caa8267ff5b1adc110e33d8"
+    },
+    {
+      "path": "frontend\\src\\services\\api\\notification.service.ts",
+      "reason": "implements feature frontend-shell",
+      "priority": 14,
+      "type": "file",
+      "hash": "c683998408a73ae5b4f53b14aa2f3922754d566211e24c3fead66d5fd2746689"
+    },
+    {
+      "path": "frontend\\src\\services\\api\\official.service.ts",
+      "reason": "implements feature frontend-shell",
+      "priority": 15,
+      "type": "file",
+      "hash": "14b2854a6848d43b61cd643be0edd95c8aae34182873c875d879b76c70519182"
+    },
+    {
+      "path": "frontend\\src\\services\\api\\rag.service.ts",
+      "reason": "implements feature frontend-shell",
+      "priority": 16,
+      "type": "file",
+      "hash": "55d073c4622b231c33f27c0275d39a6e8a58314bcad5ed1d82c904c254c8d8bd"
+    },
+    {
+      "path": "frontend\\src\\services\\api\\sla.service.ts",
+      "reason": "implements feature frontend-shell",
+      "priority": 17,
+      "type": "file",
+      "hash": "dcc8857154b812edcce74bd7388574a0de7075c221d7aeeba0262fc18393a53c"
+    },
+    {
+      "path": "frontend\\src\\services\\api\\volunteer.service.ts",
+      "reason": "implements feature frontend-shell",
+      "priority": 18,
+      "type": "file",
+      "hash": "e8043f7e7118d9802642edd69e635f859acd05d38ed3ba8eb54f3bd7fa96af94"
+    },
+    {
+      "path": ".github\\copilot-instructions.md",
+      "reason": "direct name/concept match",
+      "priority": 19,
+      "type": "file",
+      "hash": "cea3a9eba3b057cd25c76b08630cf6d87a90ddb518d295d42c637c933cbaee48"
+    },
+    {
+      "path": "backend/src/routes/complaint.routes.ts",
+      "reason": "direct name/concept match",
+      "priority": 20,
+      "type": "endpoint",
+      "hash": "91ebfea87da2729fa1a915bfd5a522d42ea913d58664b9716cd01f704191d5ca"
+    },
+    {
+      "path": "backend\\src\\controllers\\complaint.controller.ts",
+      "reason": "direct name/concept match",
+      "priority": 21,
+      "type": "file",
+      "hash": "5b442c263887b141ceddfe4ddb6c25daf58f359679dbe662e910400095f86193"
+    },
+    {
+      "path": "backend\\src\\routes\\complaint.routes.ts",
+      "reason": "direct name/concept match",
+      "priority": 22,
+      "type": "file",
+      "hash": "91ebfea87da2729fa1a915bfd5a522d42ea913d58664b9716cd01f704191d5ca"
+    },
+    {
+      "path": "backend\\src\\routes\\department-staff.routes.ts",
+      "reason": "direct name/concept match",
+      "priority": 23,
+      "type": "file",
+      "hash": "9d362509acbb4c27b7ae0f163e6c9d1728ef17214f7ebed89d8ea41bac22519d"
+    },
+    {
+      "path": "backend\\src\\utils\\apiResponse.ts",
+      "reason": "direct name/concept match",
+      "priority": 24,
+      "type": "file",
+      "hash": "3ab1cb25de12807288f7390bbf96082feebe5b076274fc8a9f265d41293f02dc"
+    },
+    {
+      "path": "backend\\tests\\analytics-sla.test.ts",
+      "reason": "direct name/concept match",
+      "priority": 25,
+      "type": "file",
+      "hash": "fa9545677d1d789ba488fb360a14ed36ffa59e5cd3eea08bccb2ea48f7f9a976"
+    },
+    {
+      "path": "backend\\tests\\core-workflow.test.ts",
+      "reason": "direct name/concept match",
+      "priority": 26,
+      "type": "file",
+      "hash": "6ab84c833e7b69b58ecf3b017d6b6b388b09e3f69e1563296f9e779cbcccccde"
+    },
+    {
+      "path": "frontend\\tests\\frontend-flows.test.ts",
+      "reason": "direct name/concept match",
+      "priority": 27,
+      "type": "file",
+      "hash": "fbc678a8a003b95852c1c20e28b07f3e1a1987610a117a7f7030e2ebd5d07d99"
+    }
+  ],
+  "text": "TASK\nFix failed GitHub Actions backend lint typecheck tests and frontend lint build\n\nFEATURE\n  audit-logging \u2014 Audit Logging\n  frontend-shell \u2014 Frontend App Shell & Routing\n\nSERVICES\n  Express Backend\n\nRELEVANT EXPRESS BACKEND\n  backend/src/routes/complaint.routes.ts\n\nRELEVANT OTHER\n  backend\\src\\controllers\\audit.controller.ts\n  backend\\src\\routes\\audit.routes.ts\n  backend\\src\\services\\audit.service.ts\n  frontend\\src\\App.tsx\n  frontend\\src\\components\\layout\\Navbar.tsx\n  frontend\\src\\main.tsx\n  frontend\\src\\services\\api\\admin.service.ts\n  frontend\\src\\services\\api\\ai.service.ts\n  frontend\\src\\services\\api\\analytics.service.ts\n  frontend\\src\\services\\api\\auth.service.ts\n\nRELEVANT APIs\n  GET /  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /:id  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /:id/audit-trail  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/audit/complaints/:id  \u2190 backend\\src\\routes\\audit.routes.ts\n  GET /api/complaints  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/complaints/:id  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/complaints/:id/audit-trail  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/complaints/categories  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/complaints/my  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/v1/admin/audit?${query.toString()}  \u2190 frontend\\src\\services\\api\\admin.service.ts\n  GET /api/v1/admin/departments  \u2190 frontend\\src\\services\\api\\admin.service.ts\n  GET /api/v1/admin/officials?${query.toString()}  \u2190 frontend\\src\\services\\api\\admin.service.ts\n  GET /api/v1/admin/stats  \u2190 frontend\\src\\services\\api\\admin.service.ts\n  GET /api/v1/admin/users/${id}  \u2190 frontend\\src\\services\\api\\admin.service.ts\n  GET /api/v1/admin/users?${query.toString()}  \u2190 frontend\\src\\services\\api\\admin.service.ts\n  GET /api/v1/ai/health  \u2190 frontend\\src\\services\\api\\ai.service.ts\n  GET /api/v1/analytics/ai  \u2190 frontend\\src\\services\\api\\analytics.service.ts\n  GET /api/v1/analytics/categories?${query.toString()}  \u2190 frontend\\src\\services\\api\\analytics.service.ts\n  GET /api/v1/analytics/departments?${query.toString()}  \u2190 frontend\\src\\services\\api\\analytics.service.ts\n  GET /api/v1/analytics/export/csv?${query.toString()}  \u2190 frontend\\src\\services\\api\\analytics.service.ts\n  GET /api/v1/analytics/export/report?${query.toString()}  \u2190 frontend\\src\\services\\api\\analytics.service.ts\n  GET /api/v1/analytics/geo?${query.toString()}  \u2190 frontend\\src\\services\\api\\analytics.service.ts\n  GET /api/v1/analytics/overview?${query.toString()}  \u2190 frontend\\src\\services\\api\\analytics.service.ts\n  GET /api/v1/analytics/trends?${query.toString()}  \u2190 frontend\\src\\services\\api\\analytics.service.ts\n  GET /api/v1/auth/me  \u2190 frontend\\src\\services\\api\\auth.service.ts\n  GET /api/v1/complaints/${id}  \u2190 frontend\\src\\services\\api\\complaint.service.ts\n  GET /api/v1/complaints/${id}/audit-trail  \u2190 frontend\\src\\services\\api\\complaint.service.ts\n  GET /api/v1/complaints/categories  \u2190 frontend\\src\\services\\api\\complaint.service.ts\n  GET /api/v1/complaints/my?${params.toString()}  \u2190 frontend\\src\\services\\api\\complaint.service.ts\n  GET /api/v1/complaints?${params.toString()}  \u2190 frontend\\src\\services\\api\\complaint.service.ts\n  GET /api/v1/notifications?page=${page}&limit=${limit}&unreadOnly=${unreadOnly}  \u2190 frontend\\src\\services\\api\\notification.service.ts\n  GET /api/v1/officials/metrics  \u2190 frontend\\src\\services\\api\\official.service.ts\n  GET /api/v1/officials/queue?${params.toString()}  \u2190 frontend\\src\\services\\api\\official.service.ts\n  GET /api/v1/rag/documents/${encodeURIComponent(id)}  \u2190 frontend\\src\\services\\api\\rag.service.ts\n  GET /api/v1/sla/analytics?${params.toString()}  \u2190 frontend\\src\\services\\api\\sla.service.ts\n  GET /api/v1/sla/queue?${query.toString()}  \u2190 frontend\\src\\services\\api\\sla.service.ts\n  GET /api/v1/volunteers/citizens?${params.toString()}  \u2190 frontend\\src\\services\\api\\volunteer.service.ts\n  GET /api/v1/volunteers/work-queue?${params.toString()}  \u2190 frontend\\src\\services\\api\\volunteer.service.ts\n  GET /categories  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /complaints/:id  \u2190 backend\\src\\routes\\audit.routes.ts\n  GET /my  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /queue  \u2190 backend\\src\\routes\\department-staff.routes.ts\n  PATCH /:id/status  \u2190 backend\\src\\routes\\complaint.routes.ts\n  PATCH /api/complaints/:id/status  \u2190 backend\\src\\routes\\complaint.routes.ts\n  PATCH /api/v1/admin/departments/${id}  \u2190 frontend\\src\\services\\api\\admin.service.ts\n  PATCH /api/v1/admin/departments/${id}/sla  \u2190 frontend\\src\\services\\api\\admin.service.ts\n  PATCH /api/v1/admin/officials/${id}/assignment  \u2190 frontend\\src\\services\\api\\admin.service.ts\n  PATCH /api/v1/admin/users/${id}  \u2190 frontend\\src\\services\\api\\admin.service.ts\n  PATCH /api/v1/admin/users/${id}/status  \u2190 frontend\\src\\services\\api\\admin.service.ts\n  PATCH /api/v1/admin/volunteers/${id}/jurisdiction  \u2190 frontend\\src\\services\\api\\admin.service.ts\n  PATCH /api/v1/complaints/${id}/status  \u2190 frontend\\src\\services\\api\\complaint.service.ts\n  PATCH /api/v1/notifications/${id}/read  \u2190 frontend\\src\\services\\api\\notification.service.ts\n  PATCH /api/v1/notifications/read-all  \u2190 frontend\\src\\services\\api\\notification.service.ts\n  PATCH /complaints/:id/status  \u2190 backend\\src\\routes\\department-staff.routes.ts\n  POST /  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /:id/actions  \u2190 backend\\src\\routes\\complaint.routes.ts, task keyword match\n  POST /:id/assign  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /:id/feedback  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /:id/reopen  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /:id/respond-info  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints/:id/actions  \u2190 backend\\src\\routes\\complaint.routes.ts, task keyword match\n  POST /api/complaints/:id/assign  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints/:id/feedback  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints/:id/reopen  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints/:id/respond-info  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/v1/admin/users  \u2190 frontend\\src\\services\\api\\admin.service.ts\n  POST /api/v1/ai/analyze  \u2190 frontend\\src\\services\\api\\ai.service.ts\n  POST /api/v1/ai/classify  \u2190 frontend\\src\\services\\api\\ai.service.ts\n  POST /api/v1/ai/duplicates  \u2190 frontend\\src\\services\\api\\ai.service.ts\n  POST /api/v1/ai/ocr  \u2190 frontend\\src\\services\\api\\ai.service.ts\n  POST /api/v1/ai/priority  \u2190 frontend\\src\\services\\api\\ai.service.ts\n  POST /api/v1/auth/citizen/send-otp  \u2190 frontend\\src\\services\\api\\auth.service.ts\n  POST /api/v1/auth/citizen/verify-otp  \u2190 frontend\\src\\services\\api\\auth.service.ts\n  POST /api/v1/auth/logout  \u2190 frontend\\src\\services\\api\\auth.service.ts\n  POST /api/v1/auth/refresh  \u2190 frontend\\src\\services\\api\\auth.service.ts\n  POST /api/v1/auth/staff/login  \u2190 frontend\\src\\services\\api\\auth.service.ts\n  POST /api/v1/complaints  \u2190 frontend\\src\\services\\api\\complaint.service.ts\n  POST /api/v1/complaints/${id}/actions  \u2190 frontend\\src\\services\\api\\complaint.service.ts\n  POST /api/v1/complaints/${id}/assign  \u2190 frontend\\src\\services\\api\\complaint.service.ts\n  POST /api/v1/complaints/${id}/feedback  \u2190 frontend\\src\\services\\api\\complaint.service.ts\n  POST /api/v1/complaints/${id}/reopen  \u2190 frontend\\src\\services\\api\\complaint.service.ts\n  POST /api/v1/complaints/${id}/respond-info  \u2190 frontend\\src\\services\\api\\complaint.service.ts\n  POST /api/v1/genai/admin/summary  \u2190 frontend\\src\\services\\api\\genai.service.ts\n  POST /api/v1/genai/citizen/assist  \u2190 frontend\\src\\services\\api\\genai.service.ts\n  POST /api/v1/genai/official/draft-response  \u2190 frontend\\src\\services\\api\\genai.service.ts\n  POST /api/v1/genai/translate  \u2190 frontend\\src\\services\\api\\genai.service.ts\n  POST /api/v1/genai/volunteer/structure  \u2190 frontend\\src\\services\\api\\genai.service.ts\n  POST /api/v1/officials/complaints/${id}/escalate  \u2190 frontend\\src\\services\\api\\official.service.ts\n  POST /api/v1/officials/complaints/${id}/reject  \u2190 frontend\\src\\services\\api\\official.service.ts\n  POST /api/v1/officials/complaints/${id}/resolve  \u2190 frontend\\src\\services\\api\\official.service.ts\n  POST /api/v1/officials/complaints/${id}/transfer  \u2190 frontend\\src\\services\\api\\official.service.ts\n  POST /api/v1/rag/query  \u2190 frontend\\src\\services\\api\\rag.service.ts\n  POST /api/v1/sla/complaints/${id}/escalate  \u2190 frontend\\src\\services\\api\\sla.service.ts\n  POST /api/v1/sla/sweep  \u2190 frontend\\src\\services\\api\\sla.service.ts\n  POST /api/v1/volunteers/assistant  \u2190 frontend\\src\\services\\api\\volunteer.service.ts\n  POST /api/v1/volunteers/citizens  \u2190 frontend\\src\\services\\api\\volunteer.service.ts\n  POST /api/v1/volunteers/complaints  \u2190 frontend\\src\\services\\api\\volunteer.service.ts\n  POST /api/v1/volunteers/complaints/${complaintId}/verify  \u2190 frontend\\src\\services\\api\\volunteer.service.ts\n  POST /complaints/:id/actions  \u2190 backend\\src\\routes\\department-staff.routes.ts, task keyword match\n\nRECENT RELATED CHANGES\n  [change-2026-11-02-044] Push the entire current project to the configured GitHub repository (github_copilot_vscode_agent, 2026-11-02, confirmed)\n  [change-2026-10-11-043] Fix location and complaint formatting in citizen grievance submission (unknown, 2026-10-11, confirmed)\n  [change-2026-09-30-042] Convert GIS & Analytics page to light theme (unknown, 2026-09-30, confirmed)\n  [change-2026-09-30-041] Convert GIS & Analytics page to light theme (unknown, 2026-09-30, confirmed)\n  [change-2026-09-30-040] Change GIS & Analytics button background to white matching header navigation (unknown, 2026-09-30, confirmed)\n\nARCHITECTURAL DECISIONS\n  0001-three-service-architecture \u2014 0001 Three Service Architecture (.ai/docs/decisions/0001-three-service-architecture.md)\n  0002-volunteer-human-in-loop \u2014 0002 Volunteer Human In Loop (.ai/docs/decisions/0002-volunteer-human-in-loop.md)\n  0003-backend-calls-ai-service \u2014 0003 Backend Calls Ai Service (.ai/docs/decisions/0003-backend-calls-ai-service.md)\n\nDOCUMENTATION\n  .ai/docs/decisions/0001-three-service-architecture.md \u2014 ADR 0001 \u00e2\u20ac\u201d Three-Service Architecture\n  .ai\\docs\\decisions\\0001-three-service-architecture.md \u2014 ADR 0001 \u00e2\u20ac\u201d Three-Service Architecture\n  .ai/docs/decisions/0002-volunteer-human-in-loop.md \u2014 ADR 0002 \u00e2\u20ac\u201d Volunteer as Human-in-the-Loop Access Layer\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: Volunteer_CGIS_Final_Architecture.pdf, architecture.jpeg\n  Relevant relationships:\n    Citizen --SUBMITS_TO--> Web App / Frontend (confidence 0.96)\n    Village Volunteer --REGISTERS_THROUGH--> Web App / Frontend (confidence 0.96)\n    Department Official --UPDATES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Administrator --MANAGES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Web App / Frontend --CALLS--> Application Backend (confidence 0.98)\n    Application Backend --CALLS--> AI Intelligence Service (confidence 0.98)\n    AI Intelligence Service --RETURNS_RESULTS_TO--> Application Backend (confidence 0.98)\n    Application Backend --READS_WRITES--> Data & Storage / MongoDB (confidence 0.97)\n    Application Backend --INTEGRATES_WITH--> External Services (confidence 0.86)\n    Application Backend --SENDS_COMPLAINT_DATA--> FastAPI AI Service (confidence 0.9)\n\nRECOMMENDED FILES TO READ\n  1. backend\\src\\controllers\\audit.controller.ts  (implements feature audit-logging)\n  2. backend\\src\\routes\\audit.routes.ts  (implements feature audit-logging)\n  3. backend\\src\\services\\audit.service.ts  (implements feature audit-logging)\n  4. frontend\\src\\App.tsx  (implements feature frontend-shell)\n  5. frontend\\src\\components\\layout\\Navbar.tsx  (implements feature frontend-shell)\n  6. frontend\\src\\main.tsx  (implements feature frontend-shell)\n\nPOTENTIAL IMPACT\n  Express Backend\n\nCONFIDENCE\n  0.95\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}
