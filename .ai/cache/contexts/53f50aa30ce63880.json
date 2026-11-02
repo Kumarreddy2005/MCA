@@ -1,0 +1,44 @@
+{
+  "task": "Push the entire current project to the configured GitHub repository",
+  "mode": "normal",
+  "graph_version": 44,
+  "generated": "2026-11-02T06:24:44+0530",
+  "features": [],
+  "apis": [],
+  "services": [],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/decisions/0002-volunteer-human-in-loop.md",
+    ".ai\\docs\\decisions\\0002-volunteer-human-in-loop.md",
+    ".ai/docs/features/auth-otp.md"
+  ],
+  "decisions": [
+    "decision:0002-volunteer-human-in-loop"
+  ],
+  "changes": [
+    "change-2026-09-30-036",
+    "change-2026-09-28-032",
+    "change-2026-09-12-013",
+    "change-2026-09-12-012",
+    "change-2026-09-12-008"
+  ],
+  "confidence": 0.34,
+  "files": [
+    {
+      "path": ".github\\copilot-instructions.md",
+      "reason": "direct name/concept match",
+      "priority": 1,
+      "type": "file",
+      "hash": "cea3a9eba3b057cd25c76b08630cf6d87a90ddb518d295d42c637c933cbaee48"
+    },
+    {
+      "path": "backend\\src\\controllers\\auth.controller.ts",
+      "reason": "direct name/concept match",
+      "priority": 2,
+      "type": "file",
+      "hash": "7cebf9357a05c773ab3454a7c02c1ed21619ce70eb4da6209a2c87bd55df283d"
+    }
+  ],
+  "text": "TASK\nPush the entire current project to the configured GitHub repository\n\nFEATURE\n  (no strong feature match)\n\nSERVICES\n  (undetermined)\n\nRELEVANT OTHER\n  .github\\copilot-instructions.md\n  backend\\src\\controllers\\auth.controller.ts\n\nRECENT RELATED CHANGES\n  [change-2026-09-30-036] Generated VCGIS Current Architecture and User Flow PDF document (unknown, 2026-09-30, confirmed)\n  [change-2026-09-28-032] VCGIS master iterative completion (unknown, 2026-09-28, confirmed)\n  [change-2026-09-12-013] ai/architecture/architecture-summary.md; .ai/architecture/discrepancies.json (unknown, 2026-09-12, confirmed)\n  [change-2026-09-12-012] VCGIS Phase 0 Foundation: clean reset, project state, frontend/backend/AI service setup (unknown, 2026-09-12, confirmed)\n  [change-2026-09-12-008] Implement citizen signup, authentication, admin staff creation, RBAC, account status, and frontend auth integration (github_copilot_vscode_agent, 2026-09-12, confirmed)\n\nARCHITECTURAL DECISIONS\n  0002-volunteer-human-in-loop \u2014 0002 Volunteer Human In Loop (.ai/docs/decisions/0002-volunteer-human-in-loop.md)\n\nDOCUMENTATION\n  .ai/docs/decisions/0002-volunteer-human-in-loop.md \u2014 ADR 0002 \u00e2\u20ac\u201d Volunteer as Human-in-the-Loop Access Layer\n  .ai\\docs\\decisions\\0002-volunteer-human-in-loop.md \u2014 ADR 0002 \u00e2\u20ac\u201d Volunteer as Human-in-the-Loop Access Layer\n  .ai/docs/features/auth-otp.md \u2014 Citizen OTP & Staff Authentication\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: architecture.jpeg\n  Relevant relationships:\n    Citizen --SUBMITS_TO--> Web App / Frontend (confidence 0.96)\n    Village Volunteer --REGISTERS_THROUGH--> Web App / Frontend (confidence 0.96)\n    Department Official --UPDATES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Administrator --MANAGES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Web App / Frontend --CALLS--> Application Backend (confidence 0.98)\n    Application Backend --CALLS--> AI Intelligence Service (confidence 0.98)\n    AI Intelligence Service --RETURNS_RESULTS_TO--> Application Backend (confidence 0.98)\n    Application Backend --READS_WRITES--> Data & Storage / MongoDB (confidence 0.97)\n\nRECOMMENDED FILES TO READ\n  1. .github\\copilot-instructions.md  (direct name/concept match)\n  2. backend\\src\\controllers\\auth.controller.ts  (direct name/concept match)\n\nPOTENTIAL IMPACT\n  local\n\nCONFIDENCE\n  0.34\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

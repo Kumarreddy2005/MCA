@@ -12949,5 +12949,105 @@
     "path": "frontend\\src\\utils\\locationHelper.ts",
     "meta": {},
     "status": "active"
+  },
+  {
+    "id": "file:ai-service\\data\\realistic_eval_dataset.py",
+    "type": "file",
+    "label": "realistic_eval_dataset.py",
+    "path": "ai-service\\data\\realistic_eval_dataset.py",
+    "meta": {
+      "ext": ".py"
+    },
+    "status": "active"
+  },
+  {
+    "id": "file:ai-service\\tests\\test_realistic_benchmark.py",
+    "type": "file",
+    "label": "test_realistic_benchmark.py",
+    "path": "ai-service\\tests\\test_realistic_benchmark.py",
+    "meta": {
+      "ext": ".py"
+    },
+    "status": "active"
+  },
+  {
+    "id": "symbol:ai-service\\tests\\test_realistic_benchmark.py::test_realistic_department_classification",
+    "type": "function",
+    "label": "test_realistic_department_classification",
+    "path": "ai-service\\tests\\test_realistic_benchmark.py",
+    "meta": {},
+    "status": "active"
+  },
+  {
+    "id": "symbol:ai-service\\tests\\test_realistic_benchmark.py::test_ambiguous_and_low_confidence_abstention",
+    "type": "function",
+    "label": "test_ambiguous_and_low_confidence_abstention",
+    "path": "ai-service\\tests\\test_realistic_benchmark.py",
+    "meta": {},
+    "status": "active"
+  },
+  {
+    "id": "symbol:ai-service\\tests\\test_realistic_benchmark.py::test_out_of_scope_detection",
+    "type": "function",
+    "label": "test_out_of_scope_detection",
+    "path": "ai-service\\tests\\test_realistic_benchmark.py",
+    "meta": {},
+    "status": "active"
+  },
+  {
+    "id": "symbol:ai-service\\tests\\test_realistic_benchmark.py::test_location_precedence_and_kr_puram_regression",
+    "type": "function",
+    "label": "test_location_precedence_and_kr_puram_regression",
+    "path": "ai-service\\tests\\test_realistic_benchmark.py",
+    "meta": {},
+    "status": "active"
+  },
+  {
+    "id": "symbol:ai-service\\tests\\test_realistic_benchmark.py::test_priority_urgency_for_hazards",
+    "type": "function",
+    "label": "test_priority_urgency_for_hazards",
+    "path": "ai-service\\tests\\test_realistic_benchmark.py",
+    "meta": {},
+    "status": "active"
+  },
+  {
+    "id": "file:backend\\tests\\analytics-sla.test.ts",
+    "type": "file",
+    "label": "analytics-sla.test.ts",
+    "path": "backend\\tests\\analytics-sla.test.ts",
+    "meta": {
+      "ext": ".ts"
+    },
+    "status": "active"
+  },
+  {
+    "id": "file:backend\\tests\\core-workflow.test.ts",
+    "type": "file",
+    "label": "core-workflow.test.ts",
+    "path": "backend\\tests\\core-workflow.test.ts",
+    "meta": {
+      "ext": ".ts"
+    },
+    "status": "active"
+  },
+  {
+    "id": "file:backend\\tests\\security-integrity.test.ts",
+    "type": "file",
+    "label": "security-integrity.test.ts",
+    "path": "backend\\tests\\security-integrity.test.ts",
+    "meta": {
+      "ext": ".ts"
+    },
+    "status": "active"
+  },
+  {
+    "id": "file:frontend\\tests\\frontend-flows.test.ts",
+    "type": "file",
+    "label": "frontend-flows.test.ts",
+    "path": "frontend\\tests\\frontend-flows.test.ts",
+    "meta": {
+      "ext": ".ts"
+    },
+    "status": "active"
   }
 ]

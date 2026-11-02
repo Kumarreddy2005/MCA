@@ -1,0 +1,135 @@
+{
+  "task": "Fix and enforce citizen -> volunteer -> department complaint routing flow",
+  "mode": "compact",
+  "graph_version": 36,
+  "generated": "2026-09-30T11:28:05+0530",
+  "features": [
+    "complaint-tracking",
+    "complaint-registration"
+  ],
+  "apis": [
+    "GET /",
+    "GET /:id",
+    "GET /:id/audit-trail",
+    "GET /api/complaints",
+    "GET /api/complaints/:id",
+    "GET /api/complaints/:id/audit-trail",
+    "GET /api/complaints/categories",
+    "GET /api/complaints/my",
+    "GET /api/v1/volunteers/citizens?${params.toString()}",
+    "GET /api/volunteers/citizens",
+    "GET /api/volunteers/work-queue",
+    "GET /categories",
+    "GET /citizens",
+    "GET /my",
+    "GET /work-queue",
+    "PATCH /:id/status",
+    "PATCH /api/complaints/:id/status",
+    "POST /",
+    "POST /:id/actions",
+    "POST /:id/assign",
+    "POST /:id/feedback",
+    "POST /:id/reopen",
+    "POST /:id/respond-info",
+    "POST /api/complaints",
+    "POST /api/complaints/:id/actions",
+    "POST /api/complaints/:id/assign",
+    "POST /api/complaints/:id/feedback",
+    "POST /api/complaints/:id/reopen",
+    "POST /api/complaints/:id/respond-info",
+    "POST /api/v1/volunteers/citizens",
+    "POST /api/volunteers/assistant",
+    "POST /api/volunteers/citizens",
+    "POST /api/volunteers/complaints",
+    "POST /api/volunteers/complaints/:id/verify",
+    "POST /assistant",
+    "POST /citizens",
+    "POST /complaints",
+    "POST /complaints/:id/verify"
+  ],
+  "services": [
+    "backend"
+  ],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/features/auth-otp.md"
+  ],
+  "decisions": [
+    "decision:0002-volunteer-human-in-loop"
+  ],
+  "changes": [
+    "change-2026-09-30-036",
+    "change-2026-09-30-035",
+    "change-2026-09-29-034",
+    "change-2026-09-28-033",
+    "change-2026-09-28-032"
+  ],
+  "confidence": 0.95,
+  "files": [
+    {
+      "path": "backend\\src\\controllers\\complaint.controller.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 1,
+      "type": "file",
+      "hash": "ca510392f8f1db86f52331b03bec000932e13181ee65271d1b6b505fb32a7f82"
+    },
+    {
+      "path": "backend\\src\\middlewares\\upload.middleware.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 2,
+      "type": "file",
+      "hash": "5e8a5a1756bf8b7cc320d5b3216efaf21c38d2c7f37cfd61f9ed22cc9690d2b9"
+    },
+    {
+      "path": "backend\\src\\models\\complaint.model.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 3,
+      "type": "file",
+      "hash": "e0b05c6f415ef2b4f164165f0f0756615e562f51bb75bb3a5ded7b9836e6ad79"
+    },
+    {
+      "path": "backend\\src\\routes\\complaint.routes.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 4,
+      "type": "file",
+      "hash": "91ebfea87da2729fa1a915bfd5a522d42ea913d58664b9716cd01f704191d5ca"
+    },
+    {
+      "path": "backend/src/routes/volunteer.routes.ts",
+      "reason": "direct name/concept match",
+      "priority": 5,
+      "type": "endpoint",
+      "hash": "8e90181232c325c566551b449aa12c922ca5e2fe89a9e404b92e0ef06a8a2774"
+    },
+    {
+      "path": "backend\\src\\controllers\\volunteer.controller.ts",
+      "reason": "direct name/concept match",
+      "priority": 6,
+      "type": "file",
+      "hash": "b6ab60606ebbea4580d107e2b80dfbd796047914f03f0475b5962320610a0be6"
+    },
+    {
+      "path": "backend\\src\\routes\\volunteer.routes.ts",
+      "reason": "direct name/concept match",
+      "priority": 7,
+      "type": "file",
+      "hash": "8e90181232c325c566551b449aa12c922ca5e2fe89a9e404b92e0ef06a8a2774"
+    },
+    {
+      "path": "docs\\DEPARTMENT_ROUTING.md",
+      "reason": "direct name/concept match",
+      "priority": 8,
+      "type": "file",
+      "hash": "50bff7e15c16691da34db3a09ae7fdc056a7d351b7a6d03a04ee515a778e89ac"
+    },
+    {
+      "path": "frontend\\src\\components\\volunteer\\RegisterCitizenModal.tsx",
+      "reason": "direct name/concept match",
+      "priority": 9,
+      "type": "file",
+      "hash": "802dab4cb0f1fe8a9adeef463a67a517dcf015c6166cca33ae7e94ff5ab98bf9"
+    }
+  ],
+  "text": "TASK\nFix and enforce citizen -> volunteer -> department complaint routing flow\n\nFEATURE\n  complaint-tracking \u2014 Complaint Tracking & Status History\n  complaint-registration \u2014 Complaint Registration (Volunteer)\n\nSERVICES\n  Express Backend\n\nRELEVANT EXPRESS BACKEND\n  backend/src/routes/volunteer.routes.ts\n\nRELEVANT OTHER\n  backend\\src\\controllers\\complaint.controller.ts\n  backend\\src\\middlewares\\upload.middleware.ts\n  backend\\src\\models\\complaint.model.ts\n  backend\\src\\routes\\complaint.routes.ts\n  backend\\src\\controllers\\volunteer.controller.ts\n  backend\\src\\routes\\volunteer.routes.ts\n  docs\\DEPARTMENT_ROUTING.md\n  frontend\\src\\components\\volunteer\\RegisterCitizenModal.tsx\n\nRELEVANT APIs\n  GET /  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /:id  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /:id/audit-trail  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/complaints  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/complaints/:id  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/complaints/:id/audit-trail  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/complaints/categories  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/complaints/my  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/v1/volunteers/citizens?${params.toString()}  \u2190 task keyword match\n  GET /api/volunteers/citizens  \u2190 backend\\src\\routes\\volunteer.routes.ts, task keyword match\n  GET /api/volunteers/work-queue  \u2190 backend\\src\\routes\\volunteer.routes.ts\n  GET /categories  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /citizens  \u2190 backend\\src\\routes\\volunteer.routes.ts, task keyword match\n  GET /my  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /work-queue  \u2190 backend\\src\\routes\\volunteer.routes.ts\n  PATCH /:id/status  \u2190 backend\\src\\routes\\complaint.routes.ts\n  PATCH /api/complaints/:id/status  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /:id/actions  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /:id/assign  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /:id/feedback  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /:id/reopen  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /:id/respond-info  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints/:id/actions  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints/:id/assign  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints/:id/feedback  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints/:id/reopen  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints/:id/respond-info  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/v1/volunteers/citizens  \u2190 task keyword match\n  POST /api/volunteers/assistant  \u2190 backend\\src\\routes\\volunteer.routes.ts\n  POST /api/volunteers/citizens  \u2190 backend\\src\\routes\\volunteer.routes.ts, task keyword match\n  POST /api/volunteers/complaints  \u2190 backend\\src\\routes\\volunteer.routes.ts\n  POST /api/volunteers/complaints/:id/verify  \u2190 backend\\src\\routes\\volunteer.routes.ts\n  POST /assistant  \u2190 backend\\src\\routes\\volunteer.routes.ts\n  POST /citizens  \u2190 backend\\src\\routes\\volunteer.routes.ts, task keyword match\n  POST /complaints  \u2190 backend\\src\\routes\\volunteer.routes.ts\n  POST /complaints/:id/verify  \u2190 backend\\src\\routes\\volunteer.routes.ts\n\nRECENT RELATED CHANGES\n  [change-2026-09-30-036] Generated VCGIS Current Architecture and User Flow PDF document (unknown, 2026-09-30, confirmed)\n  [change-2026-09-30-035] Simplify citizen grievance submission with AI Assist and voice input (unknown, 2026-09-30, confirmed)\n  [change-2026-09-29-034] Fix department staff database seeding (unknown, 2026-09-29, confirmed)\n  [change-2026-09-28-033] VCGIS master iterative completion (unknown, 2026-09-28, confirmed)\n  [change-2026-09-28-032] VCGIS master iterative completion (unknown, 2026-09-28, confirmed)\n\nARCHITECTURAL DECISIONS\n  0002-volunteer-human-in-loop \u2014 0002 Volunteer Human In Loop (.ai/docs/decisions/0002-volunteer-human-in-loop.md)\n\nDOCUMENTATION\n  .ai/docs/features/auth-otp.md \u2014 Citizen OTP & Staff Authentication\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: Volunteer_CGIS_Final_Architecture.pdf, architecture.jpeg\n  Relevant relationships:\n    Citizen --SUBMITS_TO--> Web App / Frontend (confidence 0.96)\n    Village Volunteer --REGISTERS_THROUGH--> Web App / Frontend (confidence 0.96)\n    Department Official --UPDATES_THROUGH--> Web App / Frontend (confidence 0.94)\n    Application Backend --SENDS_COMPLAINT_DATA--> FastAPI AI Service (confidence 0.9)\n\nRECOMMENDED FILES TO READ\n  1. backend\\src\\controllers\\complaint.controller.ts  (implements feature complaint-registration)\n  2. backend\\src\\middlewares\\upload.middleware.ts  (implements feature complaint-registration)\n  3. backend\\src\\models\\complaint.model.ts  (implements feature complaint-registration)\n  4. backend\\src\\routes\\complaint.routes.ts  (implements feature complaint-registration)\n  5. backend/src/routes/volunteer.routes.ts  (direct name/concept match)\n  6. backend\\src\\controllers\\volunteer.controller.ts  (direct name/concept match)\n\nPOTENTIAL IMPACT\n  Express Backend\n\nCONFIDENCE\n  0.95\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`."
+}

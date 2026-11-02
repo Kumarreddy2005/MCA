@@ -1,0 +1,169 @@
+{
+  "task": "fix location and complaint formatting in citizen grievance submission",
+  "mode": "compact",
+  "graph_version": 42,
+  "generated": "2026-10-11T11:32:58+0530",
+  "features": [
+    "complaint-registration",
+    "auth-otp"
+  ],
+  "apis": [
+    "GET /",
+    "GET /:id",
+    "GET /:id/audit-trail",
+    "GET /api/auth/me",
+    "GET /api/complaints",
+    "GET /api/complaints/:id",
+    "GET /api/complaints/:id/audit-trail",
+    "GET /api/complaints/categories",
+    "GET /api/complaints/my",
+    "GET /categories",
+    "GET /me",
+    "GET /my",
+    "PATCH /:id/status",
+    "PATCH /api/complaints/:id/status",
+    "POST /",
+    "POST /:id/actions",
+    "POST /:id/assign",
+    "POST /:id/feedback",
+    "POST /:id/reopen",
+    "POST /:id/respond-info",
+    "POST /api/auth/citizen/send-otp",
+    "POST /api/auth/citizen/verify-otp",
+    "POST /api/auth/logout",
+    "POST /api/auth/refresh",
+    "POST /api/auth/staff",
+    "POST /api/auth/staff/login",
+    "POST /api/complaints",
+    "POST /api/complaints/:id/actions",
+    "POST /api/complaints/:id/assign",
+    "POST /api/complaints/:id/feedback",
+    "POST /api/complaints/:id/reopen",
+    "POST /api/complaints/:id/respond-info",
+    "POST /citizen/send-otp",
+    "POST /citizen/verify-otp",
+    "POST /logout",
+    "POST /refresh",
+    "POST /staff",
+    "POST /staff/login"
+  ],
+  "services": [],
+  "database": [],
+  "tests": [],
+  "docs": [
+    ".ai/docs/features/complaint-tracking.md"
+  ],
+  "decisions": [
+    "decision:0002-volunteer-human-in-loop"
+  ],
+  "changes": [
+    "change-2026-09-30-042",
+    "change-2026-09-30-038",
+    "change-2026-09-30-037",
+    "change-2026-09-30-035",
+    "change-2026-09-28-032"
+  ],
+  "confidence": 0.95,
+  "files": [
+    {
+      "path": "backend\\src\\controllers\\auth.controller.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 1,
+      "type": "file",
+      "hash": "7cebf9357a05c773ab3454a7c02c1ed21619ce70eb4da6209a2c87bd55df283d"
+    },
+    {
+      "path": "backend\\src\\controllers\\complaint.controller.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 2,
+      "type": "file",
+      "hash": "ca510392f8f1db86f52331b03bec000932e13181ee65271d1b6b505fb32a7f82"
+    },
+    {
+      "path": "backend\\src\\middlewares\\upload.middleware.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 3,
+      "type": "file",
+      "hash": "5e8a5a1756bf8b7cc320d5b3216efaf21c38d2c7f37cfd61f9ed22cc9690d2b9"
+    },
+    {
+      "path": "backend\\src\\models\\complaint.model.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 4,
+      "type": "file",
+      "hash": "e0b05c6f415ef2b4f164165f0f0756615e562f51bb75bb3a5ded7b9836e6ad79"
+    },
+    {
+      "path": "backend\\src\\models\\user.model.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 5,
+      "type": "file",
+      "hash": "d895ca699d813f49d9e34474e66aabbed7c35735b7019f5e4eb95ab8fdb77e63"
+    },
+    {
+      "path": "backend\\src\\routes\\auth.routes.ts",
+      "reason": "implements feature auth-otp",
+      "priority": 6,
+      "type": "file",
+      "hash": "43a6f9b232b47de965438f0f10dbd23bf2d14755f8788924a536157b9be2b5a0"
+    },
+    {
+      "path": "backend\\src\\routes\\complaint.routes.ts",
+      "reason": "implements feature complaint-registration",
+      "priority": 7,
+      "type": "file",
+      "hash": "91ebfea87da2729fa1a915bfd5a522d42ea913d58664b9716cd01f704191d5ca"
+    },
+    {
+      "path": "frontend\\src\\pages\\auth\\LoginPage.tsx",
+      "reason": "implements feature auth-otp",
+      "priority": 8,
+      "type": "file",
+      "hash": "42fa820324daa425be3e102084349704e24def5ff2fad48adc650d5881a5765f"
+    },
+    {
+      "path": "ai-service\\app\\schemas\\genai.py",
+      "reason": "direct name/concept match",
+      "priority": 9,
+      "type": "file",
+      "hash": "2af602fdb8c84d771d3dbc3138bd6c8deab93831523724f933f6eb4cb8f82d9d"
+    },
+    {
+      "path": "frontend\\src\\components\\citizen\\CreateGrievanceModal.tsx",
+      "reason": "direct name/concept match",
+      "priority": 10,
+      "type": "file",
+      "hash": "4b3ceb4cb9f5697954db3955999fb279f18db1fb9c8a2e7c5ed98c96646feec4"
+    },
+    {
+      "path": "frontend\\src\\components\\citizen\\GrievanceCard.tsx",
+      "reason": "direct name/concept match",
+      "priority": 11,
+      "type": "file",
+      "hash": "9767b79e87cc83160f652e6c12fe58370fc685874931c3912c10beb1c42f3e6a"
+    },
+    {
+      "path": "frontend\\src\\components\\citizen\\GrievanceDetailModal.tsx",
+      "reason": "direct name/concept match",
+      "priority": 12,
+      "type": "file",
+      "hash": "104d6ff0eff7ea554cfac28fd8abfcce4b880bf884d63801e4686ac6d8add325"
+    },
+    {
+      "path": "frontend\\src\\components\\genai\\CitizenAiAssistantModal.tsx",
+      "reason": "direct name/concept match",
+      "priority": 13,
+      "type": "file",
+      "hash": "23054a21503d83c646e06b8dcae4a4270b1293aef988148ac6ed872c76197e3b"
+    },
+    {
+      "path": "frontend\\src\\pages\\citizen\\CitizenDashboard.tsx",
+      "reason": "direct name/concept match",
+      "priority": 14,
+      "type": "file",
+      "hash": "98e877b696a67accd19393528e503cc873ecaf1f8052366e84b1febcd3020920"
+    }
+  ],
+  "text": "TASK\nfix location and complaint formatting in citizen grievance submission\n\nFEATURE\n  complaint-registration \u2014 Complaint Registration (Volunteer)\n  auth-otp \u2014 Citizen OTP Authentication\n\nSERVICES\n  (undetermined)\n\nRELEVANT OTHER\n  backend\\src\\controllers\\auth.controller.ts\n  backend\\src\\controllers\\complaint.controller.ts\n  backend\\src\\middlewares\\upload.middleware.ts\n  backend\\src\\models\\complaint.model.ts\n  backend\\src\\models\\user.model.ts\n  backend\\src\\routes\\auth.routes.ts\n  backend\\src\\routes\\complaint.routes.ts\n  frontend\\src\\pages\\auth\\LoginPage.tsx\n  ai-service\\app\\schemas\\genai.py\n  frontend\\src\\components\\citizen\\CreateGrievanceModal.tsx\n\nRELEVANT APIs\n  GET /  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /:id  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /:id/audit-trail  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/auth/me  \u2190 backend\\src\\routes\\auth.routes.ts\n  GET /api/complaints  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/complaints/:id  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/complaints/:id/audit-trail  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/complaints/categories  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /api/complaints/my  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /categories  \u2190 backend\\src\\routes\\complaint.routes.ts\n  GET /me  \u2190 backend\\src\\routes\\auth.routes.ts\n  GET /my  \u2190 backend\\src\\routes\\complaint.routes.ts\n  PATCH /:id/status  \u2190 backend\\src\\routes\\complaint.routes.ts\n  PATCH /api/complaints/:id/status  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /:id/actions  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /:id/assign  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /:id/feedback  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /:id/reopen  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /:id/respond-info  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/auth/citizen/send-otp  \u2190 backend\\src\\routes\\auth.routes.ts\n  POST /api/auth/citizen/verify-otp  \u2190 backend\\src\\routes\\auth.routes.ts\n  POST /api/auth/logout  \u2190 backend\\src\\routes\\auth.routes.ts\n  POST /api/auth/refresh  \u2190 backend\\src\\routes\\auth.routes.ts\n  POST /api/auth/staff  \u2190 backend\\src\\routes\\auth.routes.ts\n  POST /api/auth/staff/login  \u2190 backend\\src\\routes\\auth.routes.ts\n  POST /api/complaints  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints/:id/actions  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints/:id/assign  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints/:id/feedback  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints/:id/reopen  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /api/complaints/:id/respond-info  \u2190 backend\\src\\routes\\complaint.routes.ts\n  POST /citizen/send-otp  \u2190 backend\\src\\routes\\auth.routes.ts\n  POST /citizen/verify-otp  \u2190 backend\\src\\routes\\auth.routes.ts\n  POST /logout  \u2190 backend\\src\\routes\\auth.routes.ts\n  POST /refresh  \u2190 backend\\src\\routes\\auth.routes.ts\n  POST /staff  \u2190 backend\\src\\routes\\auth.routes.ts\n  POST /staff/login  \u2190 backend\\src\\routes\\auth.routes.ts\n\nRECENT RELATED CHANGES\n  [change-2026-09-30-042] Convert GIS & Analytics page to light theme (unknown, 2026-09-30, confirmed)\n  [change-2026-09-30-038] Fix speech-to-text duplication bug in CreateGrievanceModal speech recognition (unknown, 2026-09-30, confirmed)\n  [change-2026-09-30-037] Fix and enforce citizen -> volunteer -> department complaint routing flow (unknown, 2026-09-30, confirmed)\n  [change-2026-09-30-035] Simplify citizen grievance submission with AI Assist and voice input (unknown, 2026-09-30, confirmed)\n  [change-2026-09-28-032] VCGIS master iterative completion (unknown, 2026-09-28, confirmed)\n\nARCHITECTURAL DECISIONS\n  0002-volunteer-human-in-loop \u2014 0002 Volunteer Human In Loop (.ai/docs/decisions/0002-volunteer-human-in-loop.md)\n\nDOCUMENTATION\n  .ai/docs/features/complaint-tracking.md \u2014 Citizen Complaint Submission & Tracking\n\nARCHITECTURE\n  Intended: Web App / Frontend -> Application Backend -> AI Intelligence Service / MongoDB\n  Evidence: Volunteer_CGIS_Final_Architecture.pdf, architecture.jpeg\n  Relevant relationships:\n    Citizen --SUBMITS_TO--> Web App / Frontend (confidence 0.96)\n    Application Backend --SENDS_COMPLAINT_DATA--> FastAPI AI Service (confidence 0.9)\n\nRECOMMENDED FILES TO READ\n  1. backend\\src\\controllers\\auth.controller.ts  (implements feature auth-otp)\n  2. backend\\src\\controllers\\complaint.controller.ts  (implements feature complaint-registration)\n  3. backend\\src\\middlewares\\upload.middleware.ts  (implements feature complaint-registration)\n  4. backend\\src\\models\\complaint.model.ts  (implements feature complaint-registration)\n  5. backend\\src\\models\\user.model.ts  (implements feature auth-otp)\n  6. backend\\src\\routes\\auth.routes.ts  (implements feature auth-otp)\n\nPOTENTIAL IMPACT\n  local\n\nCONFIDENCE\n  0.95\n\nNext: `ai-project impact-task` before editing; after editing run `sync` + `record-change --confirm`.",
+  "last_used": "2026-10-11T11:33:06+0530"
+}

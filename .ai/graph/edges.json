@@ -5,7 +5,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "project:vcgis",
@@ -13,7 +13,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "project:vcgis",
@@ -21,7 +21,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "project:vcgis",
@@ -29,7 +29,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "project:vcgis",
@@ -37,7 +37,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "project:vcgis",
@@ -45,7 +45,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "project:vcgis",
@@ -53,7 +53,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "project:vcgis",
@@ -61,7 +61,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "project:vcgis",
@@ -69,7 +69,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "project:vcgis",
@@ -77,7 +77,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "project:vcgis",
@@ -85,7 +85,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:complaint-registration",
@@ -157,7 +157,7 @@
     "type": "HTTP_CALLS",
     "confidence": 0.95,
     "method": "axios-baseurl",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -165,7 +165,7 @@
     "type": "FORWARDS_TO",
     "confidence": 0.95,
     "method": "backend-remote-fetch",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -173,7 +173,7 @@
     "type": "CONNECTS_TO",
     "confidence": 0.7,
     "method": "architecture-config",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\config\\settings.py",
@@ -629,7 +629,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\main.py",
@@ -765,7 +765,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -773,7 +773,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -781,7 +781,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -789,7 +789,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -797,7 +797,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -805,7 +805,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -813,7 +813,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -821,7 +821,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -829,7 +829,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -837,7 +837,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -845,7 +845,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -853,7 +853,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -861,7 +861,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -869,7 +869,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -877,7 +877,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -885,7 +885,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -893,7 +893,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -901,7 +901,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -909,7 +909,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -917,7 +917,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -925,7 +925,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -933,7 +933,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -941,7 +941,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -949,7 +949,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -957,7 +957,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -965,7 +965,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -973,7 +973,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -981,7 +981,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -989,7 +989,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -997,7 +997,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1005,7 +1005,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1013,7 +1013,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1021,7 +1021,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1029,7 +1029,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1037,7 +1037,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1045,7 +1045,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1053,7 +1053,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1061,7 +1061,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1069,7 +1069,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1077,7 +1077,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1085,7 +1085,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1093,7 +1093,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1101,7 +1101,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1109,7 +1109,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1117,7 +1117,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1125,7 +1125,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1133,7 +1133,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1141,7 +1141,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1149,7 +1149,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1157,7 +1157,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1165,7 +1165,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1173,7 +1173,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1181,7 +1181,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1189,7 +1189,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1197,7 +1197,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1205,7 +1205,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1213,7 +1213,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1221,7 +1221,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1229,7 +1229,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1245,7 +1245,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -1261,7 +1261,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1269,7 +1269,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1277,7 +1277,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1317,7 +1317,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1325,7 +1325,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1333,7 +1333,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1341,7 +1341,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1349,7 +1349,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1357,7 +1357,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1365,7 +1365,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1381,7 +1381,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1397,7 +1397,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1405,7 +1405,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1413,7 +1413,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1429,7 +1429,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1445,7 +1445,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1453,7 +1453,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1461,7 +1461,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1469,7 +1469,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1477,7 +1477,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1485,7 +1485,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1493,7 +1493,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1501,7 +1501,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1509,7 +1509,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1517,7 +1517,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1525,7 +1525,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1533,7 +1533,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1541,7 +1541,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1549,7 +1549,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1597,7 +1597,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1605,7 +1605,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1629,7 +1629,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1637,7 +1637,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1645,7 +1645,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1661,7 +1661,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1669,7 +1669,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1677,7 +1677,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1685,7 +1685,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1693,7 +1693,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1701,7 +1701,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1709,7 +1709,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1725,7 +1725,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1733,7 +1733,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1741,7 +1741,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1749,7 +1749,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1757,7 +1757,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1765,7 +1765,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1773,7 +1773,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1781,7 +1781,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -1797,7 +1797,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1805,7 +1805,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1813,7 +1813,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1821,7 +1821,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1829,7 +1829,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1837,7 +1837,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1845,7 +1845,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1853,7 +1853,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1861,7 +1861,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1869,7 +1869,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1877,7 +1877,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1885,7 +1885,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1893,7 +1893,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1901,7 +1901,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1909,7 +1909,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1917,7 +1917,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1925,7 +1925,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1933,7 +1933,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1941,7 +1941,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1949,7 +1949,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1957,7 +1957,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1965,7 +1965,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1973,7 +1973,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1981,7 +1981,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1989,7 +1989,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -1997,7 +1997,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2005,7 +2005,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2013,7 +2013,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2021,7 +2021,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2029,7 +2029,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2037,7 +2037,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2045,7 +2045,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2053,7 +2053,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2061,7 +2061,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2069,7 +2069,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2077,7 +2077,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2085,7 +2085,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2093,7 +2093,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2101,7 +2101,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2109,7 +2109,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2117,7 +2117,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2125,7 +2125,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2133,7 +2133,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2141,7 +2141,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2157,7 +2157,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2165,7 +2165,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2173,7 +2173,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2181,7 +2181,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2189,7 +2189,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2197,7 +2197,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2205,7 +2205,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2213,7 +2213,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2221,7 +2221,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2229,7 +2229,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2237,7 +2237,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -2245,7 +2245,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\middlewares\\auth.middleware.ts",
@@ -2565,7 +2565,7 @@
     "type": "IMPLEMENTS_FEATURE",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-09-30T21:43:18+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\context\\AuthContext.tsx",
@@ -2925,7 +2925,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\middlewares\\upload.middleware.ts",
@@ -2941,7 +2941,7 @@
     "type": "IMPLEMENTS_FEATURE",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\routes\\complaint.routes.ts",
@@ -3133,7 +3133,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\components\\citizen\\GrievanceCard.tsx",
@@ -4261,7 +4261,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T21:43:18+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\components\\notifications\\NotificationBell.tsx",
@@ -4821,7 +4821,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\sla.controller.ts",
@@ -4861,7 +4861,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\routes\\sla.routes.ts",
@@ -5165,7 +5165,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\routers\\pipeline.py",
@@ -5173,7 +5173,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\routers\\pipeline.py",
@@ -5181,7 +5181,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\routers\\pipeline.py",
@@ -5189,7 +5189,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\routers\\pipeline.py",
@@ -5205,7 +5205,7 @@
     "type": "EXPOSES",
     "confidence": 0.98,
     "method": "fastapi-route",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\routers\\priority.py",
@@ -5285,7 +5285,7 @@
     "type": "IMPLEMENTS_FEATURE",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\services\\priority_service.py",
@@ -5301,7 +5301,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\services\\similarity_service.py",
@@ -6733,7 +6733,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T21:43:18+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\components\\rag\\KnowledgeAssistantModal.tsx",
@@ -7445,7 +7445,7 @@
     "type": "STORES_IN",
     "confidence": 0.95,
     "method": "mongoose-model",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:analytics-reporting",
@@ -7453,7 +7453,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\components\\analytics\\DepartmentPerformanceTable.tsx",
@@ -7501,7 +7501,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\components\\analytics\\GisMapViewer.tsx",
@@ -7533,7 +7533,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:analytics-reporting",
@@ -7541,7 +7541,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\pages\\admin\\AdminDashboard.tsx",
@@ -7557,7 +7557,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\pages\\admin\\AnalyticsDashboardPage.tsx",
@@ -7565,7 +7565,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\pages\\admin\\AnalyticsDashboardPage.tsx",
@@ -7573,7 +7573,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\pages\\admin\\AnalyticsDashboardPage.tsx",
@@ -7581,7 +7581,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\pages\\admin\\AnalyticsDashboardPage.tsx",
@@ -7589,7 +7589,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\pages\\admin\\AnalyticsDashboardPage.tsx",
@@ -7597,7 +7597,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\pages\\admin\\AnalyticsDashboardPage.tsx",
@@ -7613,7 +7613,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:admin-user-management",
@@ -7621,7 +7621,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\services\\api\\analytics.service.ts",
@@ -8093,7 +8093,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\routers\\pipeline.py",
@@ -8101,7 +8101,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\routers\\pipeline.py",
@@ -8109,7 +8109,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\routers\\pipeline.py",
@@ -8117,7 +8117,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\routers\\priority.py",
@@ -8501,7 +8501,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\services\\classifier_service.py",
@@ -8509,7 +8509,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\services\\genai_service.py",
@@ -8533,7 +8533,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\services\\nlp_service.py",
@@ -8541,7 +8541,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\services\\ocr_service.py",
@@ -8573,7 +8573,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\services\\priority_service.py",
@@ -8581,7 +8581,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\services\\rag_service.py",
@@ -8621,7 +8621,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\app\\services\\summarizer_service.py",
@@ -8629,7 +8629,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\scripts\\train_models.py",
@@ -9413,7 +9413,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9421,7 +9421,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9429,7 +9429,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9437,7 +9437,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9445,7 +9445,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9453,7 +9453,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9461,7 +9461,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9469,7 +9469,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9477,7 +9477,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9485,7 +9485,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9493,7 +9493,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9501,7 +9501,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9509,7 +9509,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9517,7 +9517,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9525,7 +9525,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9533,7 +9533,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9541,7 +9541,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9549,7 +9549,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9557,7 +9557,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9565,7 +9565,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9573,7 +9573,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9581,7 +9581,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9589,7 +9589,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9597,7 +9597,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9605,7 +9605,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9613,7 +9613,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9621,7 +9621,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9629,7 +9629,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9637,7 +9637,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\complaint.controller.ts",
@@ -9645,7 +9645,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:complaint-registration",
@@ -9653,7 +9653,7 @@
     "type": "IMPLEMENTS_FEATURE",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\department-staff.controller.ts",
@@ -9661,7 +9661,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\department-staff.controller.ts",
@@ -9669,7 +9669,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\department-staff.controller.ts",
@@ -9677,7 +9677,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\department-staff.controller.ts",
@@ -9685,7 +9685,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\department-staff.controller.ts",
@@ -9693,7 +9693,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\department-staff.controller.ts",
@@ -9701,7 +9701,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\department-staff.controller.ts",
@@ -9709,7 +9709,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\department-staff.controller.ts",
@@ -9717,7 +9717,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:ai-nlp-analysis",
@@ -9725,7 +9725,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:admin-user-management",
@@ -9733,7 +9733,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\genai.controller.ts",
@@ -9893,7 +9893,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\sla.controller.ts",
@@ -9901,7 +9901,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\sla.controller.ts",
@@ -9909,7 +9909,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\sla.controller.ts",
@@ -9917,7 +9917,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\sla.controller.ts",
@@ -9925,7 +9925,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\sla.controller.ts",
@@ -9933,7 +9933,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\sla.controller.ts",
@@ -9941,7 +9941,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -9949,7 +9949,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -9957,7 +9957,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -9965,7 +9965,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -9973,7 +9973,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -9981,7 +9981,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -9989,7 +9989,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -9997,7 +9997,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -10005,7 +10005,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -10013,7 +10013,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -10021,7 +10021,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -10029,7 +10029,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -10037,7 +10037,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -10045,7 +10045,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -10053,7 +10053,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -10061,7 +10061,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -10069,7 +10069,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\controllers\\volunteer.controller.ts",
@@ -10077,7 +10077,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:admin-user-management",
@@ -10085,7 +10085,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\middlewares\\auth.middleware.ts",
@@ -10213,7 +10213,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:27+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\models\\audit-log.model.ts",
@@ -10237,7 +10237,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\models\\complaint.model.ts",
@@ -10245,7 +10245,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:complaint-registration",
@@ -10253,7 +10253,7 @@
     "type": "IMPLEMENTS_FEATURE",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\models\\department.model.ts",
@@ -12157,7 +12157,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-29T06:42:25+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\scripts\\seed.ts",
@@ -12165,7 +12165,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-29T06:42:25+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\scripts\\seed.ts",
@@ -12173,7 +12173,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-29T06:42:25+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\scripts\\seed.ts",
@@ -12181,7 +12181,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-29T06:42:25+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\scripts\\seed.ts",
@@ -12189,7 +12189,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-29T06:42:25+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\scripts\\seed.ts",
@@ -12197,7 +12197,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-29T06:42:25+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\scripts\\seed.ts",
@@ -12205,7 +12205,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-29T06:42:25+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\scripts\\seed.ts",
@@ -12213,7 +12213,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-29T06:42:25+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\scripts\\verify-admin.ts",
@@ -12589,7 +12589,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-lifecycle.service.ts",
@@ -12597,7 +12597,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-lifecycle.service.ts",
@@ -12605,7 +12605,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-lifecycle.service.ts",
@@ -12613,7 +12613,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-lifecycle.service.ts",
@@ -12621,7 +12621,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-lifecycle.service.ts",
@@ -12629,7 +12629,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-lifecycle.service.ts",
@@ -12637,7 +12637,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-lifecycle.service.ts",
@@ -12645,7 +12645,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-lifecycle.service.ts",
@@ -12653,7 +12653,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-lifecycle.service.ts",
@@ -12661,7 +12661,7 @@
     "type": "STORES_IN",
     "confidence": 0.95,
     "method": "mongoose-model",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:complaint-registration",
@@ -12669,7 +12669,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-routing.service.ts",
@@ -12677,7 +12677,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-routing.service.ts",
@@ -12685,7 +12685,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-routing.service.ts",
@@ -12693,7 +12693,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-routing.service.ts",
@@ -12701,7 +12701,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-routing.service.ts",
@@ -12709,7 +12709,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-routing.service.ts",
@@ -12717,7 +12717,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-routing.service.ts",
@@ -12725,7 +12725,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\complaint-routing.service.ts",
@@ -12733,7 +12733,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:complaint-registration",
@@ -12741,7 +12741,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:frontend-shell",
@@ -12749,7 +12749,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\genai.service.ts",
@@ -12829,7 +12829,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\sla.service.ts",
@@ -12837,7 +12837,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\sla.service.ts",
@@ -12845,7 +12845,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\sla.service.ts",
@@ -12853,7 +12853,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\sla.service.ts",
@@ -12861,7 +12861,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\sla.service.ts",
@@ -12869,7 +12869,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\sla.service.ts",
@@ -12877,7 +12877,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\sla.service.ts",
@@ -12885,7 +12885,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\sla.service.ts",
@@ -12893,7 +12893,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\sla.service.ts",
@@ -12901,7 +12901,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\sla.service.ts",
@@ -12909,7 +12909,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\sla.service.ts",
@@ -12917,7 +12917,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\services\\sla.service.ts",
@@ -12925,7 +12925,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:analytics-reporting",
@@ -12933,7 +12933,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-28T20:18:28+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\types\\domain.ts",
@@ -13197,7 +13197,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\components\\analytics\\DepartmentPerformanceTable.tsx",
@@ -13213,7 +13213,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\components\\analytics\\GisMapViewer.tsx",
@@ -13229,7 +13229,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\components\\auth\\ProtectedRoute.tsx",
@@ -13245,7 +13245,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\components\\citizen\\GrievanceCard.tsx",
@@ -13293,7 +13293,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T21:43:18+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\components\\notifications\\NotificationBell.tsx",
@@ -13429,7 +13429,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T21:53:11+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\pages\\auth\\LoginPage.tsx",
@@ -13437,7 +13437,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-09-30T21:34:58+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:auth-otp",
@@ -13445,7 +13445,7 @@
     "type": "IMPLEMENTS_FEATURE",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-09-30T21:34:58+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:audit-logging",
@@ -13453,7 +13453,7 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-09-30T21:34:58+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\pages\\citizen\\CitizenDashboard.tsx",
@@ -13893,7 +13893,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -13901,7 +13901,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -13909,7 +13909,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -13917,7 +13917,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -13925,7 +13925,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:frontend",
@@ -13933,7 +13933,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -13941,7 +13941,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -13949,7 +13949,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -13957,7 +13957,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -13965,7 +13965,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -13973,7 +13973,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -13981,7 +13981,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -13989,7 +13989,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -13997,7 +13997,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -14005,7 +14005,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -14013,7 +14013,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -14021,7 +14021,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -14029,7 +14029,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -14037,7 +14037,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -14045,7 +14045,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -14053,7 +14053,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -14061,7 +14061,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -14069,7 +14069,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:backend",
@@ -14077,7 +14077,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -14085,7 +14085,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -14093,7 +14093,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -14101,7 +14101,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -14109,7 +14109,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -14117,7 +14117,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -14125,7 +14125,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "service:ai-service",
@@ -14133,7 +14133,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "constraint:C1",
@@ -14141,7 +14141,7 @@
     "type": "AFFECTS",
     "confidence": 0.9,
     "method": "architecture-memory",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "constraint:C4",
@@ -14149,7 +14149,7 @@
     "type": "AFFECTS",
     "confidence": 0.9,
     "method": "architecture-memory",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:ai-service\\scripts\\train_models.py",
@@ -14229,7 +14229,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T10:45:44+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:scratch\\generate_pdf.py",
@@ -14261,7 +14261,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\scripts\\verify-flow-enforcement.ts",
@@ -14269,7 +14269,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\scripts\\verify-flow-enforcement.ts",
@@ -14277,7 +14277,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\scripts\\verify-flow-enforcement.ts",
@@ -14285,7 +14285,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\scripts\\verify-flow-enforcement.ts",
@@ -14293,7 +14293,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:backend\\src\\scripts\\verify-flow-enforcement.ts",
@@ -14301,7 +14301,7 @@
     "type": "IMPORTS",
     "confidence": 0.98,
     "method": "static-import",
-    "detected_at": "2026-09-30T11:52:37+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\utils\\locationHelper.ts",
@@ -14309,7 +14309,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\utils\\locationHelper.ts",
@@ -14317,7 +14317,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\utils\\locationHelper.ts",
@@ -14325,7 +14325,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\utils\\locationHelper.ts",
@@ -14333,7 +14333,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\utils\\locationHelper.ts",
@@ -14341,7 +14341,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "file:frontend\\src\\utils\\locationHelper.ts",
@@ -14349,7 +14349,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "source-scan",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
   },
   {
     "src": "feature:ai-nlp-analysis",
@@ -14357,6 +14357,222 @@
     "type": "RELATED_TO",
     "confidence": 0.6,
     "method": "keyword-path",
-    "detected_at": "2026-10-11T11:50:59+0530"
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:ai-service\\tests\\test_realistic_benchmark.py",
+    "dst": "file:ai-service\\app\\services\\classifier_service.py",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:ai-service\\tests\\test_realistic_benchmark.py",
+    "dst": "file:ai-service\\app\\services\\nlp_service.py",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:ai-service\\tests\\test_realistic_benchmark.py",
+    "dst": "file:ai-service\\app\\services\\priority_service.py",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:ai-service\\tests\\test_realistic_benchmark.py",
+    "dst": "file:ai-service\\app\\services\\summarizer_service.py",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:ai-service\\tests\\test_realistic_benchmark.py",
+    "dst": "file:ai-service\\app\\schemas\\ai.py",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:ai-service\\tests\\test_realistic_benchmark.py",
+    "dst": "symbol:ai-service\\tests\\test_realistic_benchmark.py::test_realistic_department_classification",
+    "type": "CONTAINS",
+    "confidence": 1.0,
+    "method": "source-scan",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:ai-service\\tests\\test_realistic_benchmark.py",
+    "dst": "symbol:ai-service\\tests\\test_realistic_benchmark.py::test_ambiguous_and_low_confidence_abstention",
+    "type": "CONTAINS",
+    "confidence": 1.0,
+    "method": "source-scan",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:ai-service\\tests\\test_realistic_benchmark.py",
+    "dst": "symbol:ai-service\\tests\\test_realistic_benchmark.py::test_out_of_scope_detection",
+    "type": "CONTAINS",
+    "confidence": 1.0,
+    "method": "source-scan",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:ai-service\\tests\\test_realistic_benchmark.py",
+    "dst": "symbol:ai-service\\tests\\test_realistic_benchmark.py::test_location_precedence_and_kr_puram_regression",
+    "type": "CONTAINS",
+    "confidence": 1.0,
+    "method": "source-scan",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:ai-service\\tests\\test_realistic_benchmark.py",
+    "dst": "symbol:ai-service\\tests\\test_realistic_benchmark.py::test_priority_urgency_for_hazards",
+    "type": "CONTAINS",
+    "confidence": 1.0,
+    "method": "source-scan",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\analytics-sla.test.ts",
+    "dst": "file:backend\\src\\app.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\analytics-sla.test.ts",
+    "dst": "file:backend\\src\\config\\database.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\analytics-sla.test.ts",
+    "dst": "file:backend\\src\\models\\user.model.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\analytics-sla.test.ts",
+    "dst": "file:backend\\src\\models\\complaint.model.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\analytics-sla.test.ts",
+    "dst": "file:backend\\src\\types\\domain.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "feature:analytics-reporting",
+    "dst": "file:backend\\tests\\analytics-sla.test.ts",
+    "type": "RELATED_TO",
+    "confidence": 0.6,
+    "method": "keyword-path",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\core-workflow.test.ts",
+    "dst": "file:backend\\src\\app.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\core-workflow.test.ts",
+    "dst": "file:backend\\src\\config\\database.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\core-workflow.test.ts",
+    "dst": "file:backend\\src\\models\\user.model.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\core-workflow.test.ts",
+    "dst": "file:backend\\src\\models\\complaint.model.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\core-workflow.test.ts",
+    "dst": "file:backend\\src\\types\\domain.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\security-integrity.test.ts",
+    "dst": "file:backend\\src\\app.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\security-integrity.test.ts",
+    "dst": "file:backend\\src\\config\\database.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\security-integrity.test.ts",
+    "dst": "file:backend\\src\\models\\user.model.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\security-integrity.test.ts",
+    "dst": "file:backend\\src\\models\\complaint.model.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:backend\\tests\\security-integrity.test.ts",
+    "dst": "file:backend\\src\\types\\domain.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
+  },
+  {
+    "src": "file:frontend\\tests\\frontend-flows.test.ts",
+    "dst": "file:frontend\\src\\utils\\locationHelper.ts",
+    "type": "IMPORTS",
+    "confidence": 0.98,
+    "method": "static-import",
+    "detected_at": "2026-11-02T06:24:19+0530"
   }
 ]
