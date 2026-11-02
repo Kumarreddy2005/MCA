@@ -5,7 +5,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "project:vcgis",
@@ -13,7 +13,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "project:vcgis",
@@ -21,7 +21,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "project:vcgis",
@@ -29,7 +29,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "project:vcgis",
@@ -37,7 +37,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "project:vcgis",
@@ -45,7 +45,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "project:vcgis",
@@ -53,7 +53,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "project:vcgis",
@@ -61,7 +61,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "project:vcgis",
@@ -69,7 +69,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "project:vcgis",
@@ -77,7 +77,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "project:vcgis",
@@ -85,7 +85,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "feature-registry",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "feature:complaint-registration",
@@ -157,7 +157,7 @@
     "type": "HTTP_CALLS",
     "confidence": 0.95,
     "method": "axios-baseurl",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -165,7 +165,7 @@
     "type": "FORWARDS_TO",
     "confidence": 0.95,
     "method": "backend-remote-fetch",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -173,7 +173,7 @@
     "type": "CONNECTS_TO",
     "confidence": 0.7,
     "method": "architecture-config",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "file:ai-service\\app\\config\\settings.py",
@@ -629,7 +629,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "file:ai-service\\app\\main.py",
@@ -765,7 +765,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -773,7 +773,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -781,7 +781,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -789,7 +789,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -797,7 +797,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -805,7 +805,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -813,7 +813,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -821,7 +821,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -829,7 +829,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -837,7 +837,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -845,7 +845,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -853,7 +853,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -861,7 +861,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -869,7 +869,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -877,7 +877,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -885,7 +885,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -893,7 +893,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -901,7 +901,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -909,7 +909,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -917,7 +917,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -925,7 +925,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -933,7 +933,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -941,7 +941,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -949,7 +949,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -957,7 +957,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -965,7 +965,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -973,7 +973,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -981,7 +981,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -989,7 +989,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -997,7 +997,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1005,7 +1005,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1013,7 +1013,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1021,7 +1021,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1029,7 +1029,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1037,7 +1037,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1045,7 +1045,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1053,7 +1053,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1061,7 +1061,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1069,7 +1069,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1077,7 +1077,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1085,7 +1085,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1093,7 +1093,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1101,7 +1101,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1109,7 +1109,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1117,7 +1117,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1125,7 +1125,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1133,7 +1133,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1141,7 +1141,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1149,7 +1149,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1157,7 +1157,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1165,7 +1165,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1173,7 +1173,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1181,7 +1181,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1189,7 +1189,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1197,7 +1197,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1205,7 +1205,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1213,7 +1213,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1221,7 +1221,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1229,7 +1229,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1245,7 +1245,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -1261,7 +1261,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1269,7 +1269,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1277,7 +1277,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1317,7 +1317,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1325,7 +1325,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1333,7 +1333,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1341,7 +1341,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1349,7 +1349,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1357,7 +1357,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1365,7 +1365,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1381,7 +1381,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1397,7 +1397,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1405,7 +1405,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1413,7 +1413,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1429,7 +1429,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1445,7 +1445,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1453,7 +1453,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1461,7 +1461,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1469,7 +1469,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1477,7 +1477,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1485,7 +1485,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1493,7 +1493,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1501,7 +1501,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1509,7 +1509,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1517,7 +1517,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1525,7 +1525,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1533,7 +1533,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1541,7 +1541,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1549,7 +1549,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1597,7 +1597,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1605,7 +1605,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1629,7 +1629,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1637,7 +1637,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1645,7 +1645,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1661,7 +1661,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1669,7 +1669,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1677,7 +1677,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1685,7 +1685,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1693,7 +1693,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1701,7 +1701,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1709,7 +1709,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1725,7 +1725,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1733,7 +1733,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1741,7 +1741,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1749,7 +1749,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1757,7 +1757,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1765,7 +1765,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1773,7 +1773,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1781,7 +1781,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -1797,7 +1797,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1805,7 +1805,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1813,7 +1813,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1821,7 +1821,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1829,7 +1829,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1837,7 +1837,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1845,7 +1845,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1853,7 +1853,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1861,7 +1861,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1869,7 +1869,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1877,7 +1877,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1885,7 +1885,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1893,7 +1893,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1901,7 +1901,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1909,7 +1909,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1917,7 +1917,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1925,7 +1925,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1933,7 +1933,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1941,7 +1941,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1949,7 +1949,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1957,7 +1957,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1965,7 +1965,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1973,7 +1973,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1981,7 +1981,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1989,7 +1989,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -1997,7 +1997,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2005,7 +2005,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2013,7 +2013,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2021,7 +2021,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2029,7 +2029,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2037,7 +2037,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2045,7 +2045,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2053,7 +2053,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2061,7 +2061,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2069,7 +2069,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2077,7 +2077,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2085,7 +2085,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2093,7 +2093,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2101,7 +2101,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2109,7 +2109,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2117,7 +2117,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2125,7 +2125,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2133,7 +2133,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2141,7 +2141,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2157,7 +2157,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2165,7 +2165,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2173,7 +2173,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2181,7 +2181,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2189,7 +2189,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2197,7 +2197,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2205,7 +2205,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2213,7 +2213,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2221,7 +2221,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2229,7 +2229,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2237,7 +2237,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -2245,7 +2245,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "file:backend\\src\\middlewares\\auth.middleware.ts",
@@ -13893,7 +13893,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -13901,7 +13901,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -13909,7 +13909,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -13917,7 +13917,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -13925,7 +13925,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:frontend",
@@ -13933,7 +13933,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -13941,7 +13941,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -13949,7 +13949,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -13957,7 +13957,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -13965,7 +13965,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -13973,7 +13973,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -13981,7 +13981,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -13989,7 +13989,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -13997,7 +13997,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -14005,7 +14005,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -14013,7 +14013,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -14021,7 +14021,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -14029,7 +14029,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -14037,7 +14037,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -14045,7 +14045,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -14053,7 +14053,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -14061,7 +14061,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -14069,7 +14069,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:backend",
@@ -14077,7 +14077,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -14085,7 +14085,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -14093,7 +14093,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -14101,7 +14101,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -14109,7 +14109,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -14117,7 +14117,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -14125,7 +14125,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "service:ai-service",
@@ -14133,7 +14133,7 @@
     "type": "CONTAINS",
     "confidence": 1.0,
     "method": "path-prefix",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "constraint:C1",
@@ -14141,7 +14141,7 @@
     "type": "AFFECTS",
     "confidence": 0.9,
     "method": "architecture-memory",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "constraint:C4",
@@ -14149,7 +14149,7 @@
     "type": "AFFECTS",
     "confidence": 0.9,
     "method": "architecture-memory",
-    "detected_at": "2026-11-02T06:24:19+0530"
+    "detected_at": "2026-11-02T06:25:12+0530"
   },
   {
     "src": "file:ai-service\\scripts\\train_models.py",
